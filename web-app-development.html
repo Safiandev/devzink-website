@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Product Engineering — SaaS, Web &amp; Mobile Apps | Devzink</title>
+  <meta name="description" content="We build AI-native SaaS platforms, web apps, and cross-platform mobile products. Architected for AI from day one — from MVP to Series A without a rewrite." />
+  <meta name="keywords" content="AI product engineering, AI-native SaaS, custom web apps, cross-platform mobile, Flutter, LLM integration, RAG architecture, product development agency" />
+  <meta name="author" content="Devzink" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://devzink.com/web-app-development.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devzink.com/web-app-development.html" />
+  <meta property="og:title" content="AI Product Engineering — Devzink" />
+  <meta property="og:description" content="AI-native SaaS, web, and mobile products built to scale." />
+  <meta property="og:site_name" content="Devzink" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Product Engineering — Devzink" />
+  <meta name="twitter:description" content="AI-native SaaS, web, and mobile products built to scale." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-web-app">
+
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Circuit traces (AI data flow) — global -->
+<div class="bg-circuit" aria-hidden="true">
+
+  <!-- Horizontal traces — left to right -->
+  <span class="trace-h" style="top: 128px;  animation-duration: 28s; animation-delay: 0s;"></span>
+  <span class="trace-h" style="top: 320px;  animation-duration: 32s; animation-delay: -8s;"></span>
+  <span class="trace-h" style="top: 576px;  animation-duration: 30s; animation-delay: -14s;"></span>
+  <span class="trace-h" style="top: 832px;  animation-duration: 34s; animation-delay: -4s;"></span>
+  <span class="trace-h" style="top: 1088px; animation-duration: 31s; animation-delay: -11s;"></span>
+  <span class="trace-h" style="top: 1344px; animation-duration: 33s; animation-delay: -18s;"></span>
+
+  <!-- Horizontal traces — right to left -->
+  <span class="trace-h rev" style="top: 192px;  animation-duration: 30s; animation-delay: -7s;"></span>
+  <span class="trace-h rev" style="top: 448px;  animation-duration: 29s; animation-delay: -15s;"></span>
+  <span class="trace-h rev" style="top: 704px;  animation-duration: 33s; animation-delay: -3s;"></span>
+  <span class="trace-h rev" style="top: 960px;  animation-duration: 36s; animation-delay: -20s;"></span>
+  <span class="trace-h rev" style="top: 1216px; animation-duration: 31s; animation-delay: -9s;"></span>
+  <span class="trace-h rev" style="top: 1472px; animation-duration: 32s; animation-delay: -14s;"></span>
+
+  <!-- Vertical traces — top to bottom -->
+  <span class="trace-v" style="left: 192px;  animation-duration: 34s; animation-delay: -10s;"></span>
+  <span class="trace-v" style="left: 576px;  animation-duration: 29s; animation-delay: -5s;"></span>
+  <span class="trace-v" style="left: 960px;  animation-duration: 32s; animation-delay: -18s;"></span>
+  <span class="trace-v" style="left: 1344px; animation-duration: 36s; animation-delay: -8s;"></span>
+
+  <!-- Vertical traces — bottom to top -->
+  <span class="trace-v rev" style="left: 384px;  animation-duration: 38s; animation-delay: -9s;"></span>
+  <span class="trace-v rev" style="left: 768px;  animation-duration: 34s; animation-delay: -2s;"></span>
+  <span class="trace-v rev" style="left: 1152px; animation-duration: 36s; animation-delay: -14s;"></span>
+
+  <!-- Node flashes -->
+  <span class="node" style="top: 192px;  left: 192px;  animation-duration: 11s; animation-delay: 0s;"></span>
+  <span class="node" style="top: 448px;  left: 384px;  animation-duration: 13s; animation-delay: -3s;"></span>
+  <span class="node" style="top: 704px;  left: 576px;  animation-duration: 12s; animation-delay: -6s;"></span>
+  <span class="node" style="top: 256px;  left: 768px;  animation-duration: 14s; animation-delay: -2s;"></span>
+  <span class="node" style="top: 512px;  left: 960px;  animation-duration: 12.5s; animation-delay: -8s;"></span>
+  <span class="node" style="top: 832px;  left: 320px;  animation-duration: 13.5s; animation-delay: -5s;"></span>
+  <span class="node" style="top: 128px;  left: 1152px; animation-duration: 11.5s; animation-delay: -9s;"></span>
+  <span class="node" style="top: 640px;  left: 128px;  animation-duration: 14.5s; animation-delay: -4s;"></span>
+  <span class="node" style="top: 1088px; left: 512px;  animation-duration: 12.2s; animation-delay: -11s;"></span>
+  <span class="node" style="top: 1216px; left: 896px;  animation-duration: 13.8s; animation-delay: -7s;"></span>
+  <span class="node" style="top: 1472px; left: 640px;  animation-duration: 11.8s; animation-delay: -2.5s;"></span>
+  <span class="node" style="top: 960px;  left: 1088px; animation-duration: 14.2s; animation-delay: -10s;"></span>
+
+</div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Devzink home">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" fill="#fff"/>
+          </svg>
+        </span>
+        Devzink
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-trigger is-active" aria-expanded="false" aria-haspopup="true">
+            Services
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4.5L6 7.5L9 4.5"/>
+            </svg>
+          </button>
+
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="ai-automation.html" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+                  <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+                  <path d="M12 8V4"/>
+                  <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
+                  <path d="M2 14h2M20 14h2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>AI Agents &amp; Automation</strong>
+                <em>Run your operations without the manual work.</em>
+              </span>
+            </a>
+
+            <a href="web-app-development.html" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>AI Product Engineering</strong>
+                <em>SaaS platforms &amp; apps with AI at the core.</em>
+              </span>
+            </a>
+
+            <a href="services.html#web" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2"/>
+                  <path d="M8 20h8M12 18v2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>Web Engineering</strong>
+                <em>GSAP, Spline 3D, corporate platforms</em>
+              </span>
+            </a>
+
+            <a href="services.html#mobile" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
+                  <path d="M11 18h2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>Cross-Platform Mobile</strong>
+                <em>iOS &amp; Android with Flutter</em>
+              </span>
+            </a>
+
+            <a href="services.html#uiux" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
+                  <path d="m2 17 10 5 10-5"/>
+                  <path d="m2 12 10 5 10-5"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>UI/UX &amp; Design Systems</strong>
+                <em>Prototypes, design tokens, Figma</em>
+              </span>
+            </a>
+
+            <a href="services.html" class="nav__dropdown-all" role="menuitem">
+              View all services
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--primary btn--sm"><span class="btn__dot" aria-hidden="true"></span>Book a Call</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile">
+      <div class="nav__mobile-inner">
+        <a href="ai-automation.html">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="8" width="16" height="12" rx="3"/>
+              <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+              <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+              <path d="M12 8V4"/>
+              <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
+              <path d="M2 14h2M20 14h2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>AI Agents &amp; Automation</strong>
+            <em>Run your operations without the manual work.</em>
+          </span>
+        </a>
+
+        <a href="web-app-development.html">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>AI Product Engineering</strong>
+            <em>SaaS platforms &amp; apps with AI at the core.</em>
+          </span>
+        </a>
+
+        <a href="services.html#web">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="14" rx="2"/>
+              <path d="M8 20h8M12 18v2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>Web Engineering</strong>
+            <em>GSAP, Spline 3D, corporate platforms</em>
+          </span>
+        </a>
+
+        <a href="services.html#mobile">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="2" width="12" height="20" rx="2.5"/>
+              <path d="M11 18h2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>Cross-Platform Mobile</strong>
+            <em>iOS &amp; Android with Flutter</em>
+          </span>
+        </a>
+
+        <a href="services.html#uiux">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
+              <path d="m2 17 10 5 10-5"/>
+              <path d="m2 12 10 5 10-5"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>UI/UX &amp; Design Systems</strong>
+            <em>Prototypes, design tokens, Figma</em>
+          </span>
+        </a>
+
+        <a href="services.html" class="nav__mobile-all">
+          View all services
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+
+        <div class="nav__mobile-divider" aria-hidden="true"></div>
+
+        <a href="work.html" class="nav__mobile-simple">Work</a>
+        <a href="about.html" class="nav__mobile-simple">About</a>
+
+        <a href="contact.html" class="btn btn--primary nav__mobile-cta">
+          <span class="btn__dot" aria-hidden="true"></span>Book a Discovery Call
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <!-- ================= INTRO + COST ================= -->
+    <section class="aa-intro">
+      <div class="container">
+        <div class="aa-intro__head reveal">
+          <span class="eyebrow">AI Product Engineering</span>
+          <h1>
+            Your product deserves better<br />
+            <span class="accent">than a bolt-on AI feature.</span>
+          </h1>
+          <p>
+            We build AI-native SaaS platforms, web apps, and mobile products — architected for AI from day one, not patched in after launch.
+          </p>
+        </div>
+
+        <div class="cost-grid">
+          <article class="cost-card premium-card reveal" style="--d:0ms">
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">3–6 months</div>
+            <h3>The wrong build timeline</h3>
+            <p>Most agencies take 3–6 months to ship an MVP. By the time it's live, your market has moved and your competitors have already learned from real users.</p>
+          </article>
+
+          <article class="cost-card premium-card reveal" style="--d:80ms">
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">2×</div>
+            <h3>The rewrite tax</h3>
+            <p>Every product that isn't architected for AI from day one gets rewritten after PMF. That rewrite costs 2× the original build — and months you can't get back.</p>
+          </article>
+
+          <article class="cost-card premium-card reveal" style="--d:160ms">
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">40%</div>
+            <h3>Of AI features fail</h3>
+            <p>Not because the model is bad — because they were bolted on. Wrong architecture, no vector layer, prompts hardcoded in the frontend. They break under load.</p>
+          </article>
+        </div>
+
+        <p class="aa-intro__foot reveal">
+          Every product we ship is AI-native from the first commit.<br />
+          <strong>No rewrites. No bolt-ons. No surprises at scale.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 4 JOBS ================= -->
+    <section class="section aa-section" id="jobs">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">What we build</span>
+          <h2>Four products we ship <span class="accent">better than anyone else.</span></h2>
+          <p>Each engagement starts with one deliverable. Click a card to see exactly what we build and how.</p>
+        </div>
+
+        <div class="jobs-grid">
+
+          <!-- JOB 1 -->
+          <article class="job reveal" data-job style="--d:0ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>AI-native SaaS MVP</strong>
+                <em>Ship a working product in 4–6 weeks, not 6 months</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>You've validated the idea. Now you need a real product — auth, billing, dashboards, LLM pipelines, vector search — shipped to production and ready for real users.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Full-stack web app (Next.js + Supabase / Postgres)</li>
+                    <li>Authentication, billing, and role management</li>
+                    <li>LLM pipeline with streaming and guardrails</li>
+                    <li>Vector search layer (RAG, semantic search)</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical timeline</span>
+                  <strong>4–6 weeks</strong>
+                  <em>MVP to production</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- JOB 2 -->
+          <article class="job reveal" data-job style="--d:80ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
+                  <path d="M11 18h2"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Cross-platform mobile app</strong>
+                <em>One Flutter codebase for iOS &amp; Android, with AI built in</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>You need a mobile app that feels native on both stores but only one codebase to maintain. Plus an AI assistant your users actually use, not a novelty button.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Flutter app for iOS &amp; Android from one codebase</li>
+                    <li>Firebase / Supabase backend with real-time sync</li>
+                    <li>Push notifications, payments, deep linking</li>
+                    <li>Embedded AI assistant and RAG search</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical timeline</span>
+                  <strong>6–10 weeks</strong>
+                  <em>Both stores, live</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- JOB 3 -->
+          <article class="job reveal" data-job style="--d:160ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  <circle cx="12" cy="12" r="3.2"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>AI features into an existing product</strong>
+                <em>RAG, assistants, and workflows — without a rewrite</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>Your product works — but users keep asking for AI features your competitors already shipped. You need to add them without tearing down what's already running.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>RAG assistant wired into your existing data</li>
+                    <li>Semantic search over your product's content</li>
+                    <li>LLM-powered workflows inside your current UI</li>
+                    <li>Backend AI services without downtime</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical timeline</span>
+                  <strong>3–5 weeks</strong>
+                  <em>First AI feature live</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- JOB 4 -->
+          <article class="job reveal" data-job style="--d:240ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Internal portals &amp; dashboards</strong>
+                <em>Replace the spreadsheets with a real tool your team uses</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>Your operations team runs on Google Sheets, email threads, and duct-taped tools. You need a real internal portal — with AI workflows that automate the busywork.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Internal admin portal and dashboards</li>
+                    <li>Role-based access and audit logging</li>
+                    <li>AI workflows that replace manual ops</li>
+                    <li>Integrations with your existing tools</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical timeline</span>
+                  <strong>4–6 weeks</strong>
+                  <em>Portal live + team trained</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEFORE / AFTER ================= -->
+    <section class="section aa-section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Same idea, two build paths</span>
+          <h2>What actually changes when <span class="accent">AI is in the architecture.</span></h2>
+        </div>
+
+        <div class="ba-grid">
+          <article class="ba-card ba-card--before premium-card reveal" style="--d:0ms">
+            <span class="ba-card__label">Bolted on later</span>
+            <h3>Six months after launch</h3>
+            <ul class="ba-card__list">
+              <li>Prompts hardcoded in the frontend</li>
+              <li>No vector layer — every "AI feature" is a fresh API call</li>
+              <li>API keys exposed in the browser</li>
+              <li>Users hit rate limits the moment traffic grows</li>
+              <li>Engineering team spends 3 months on a rewrite</li>
+              <li>Competitor shipped the same feature 4 months ago</li>
+            </ul>
+          </article>
+
+          <article class="ba-card ba-card--after premium-card reveal" style="--d:80ms">
+            <span class="ba-card__label">AI-native from day one</span>
+            <h3>Six months after launch</h3>
+            <ul class="ba-card__list">
+              <li>Prompts versioned, tested, and server-side</li>
+              <li>Vector DB handles retrieval + semantic search</li>
+              <li>Keys secured behind a proper AI gateway</li>
+              <li>Scales to 10× traffic without architecture changes</li>
+              <li>Team ships new AI features in days, not quarters</li>
+              <li>Product roadmap keeps moving — no rewrite in sight</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="ba-footnote reveal">
+          Same product idea. Same 6-month window. <strong>The difference is whether you build for AI first, or retrofit it later.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section aa-section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Common questions</span>
+          <h2>Things founders <span class="accent">usually ask.</span></h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>How fast can you ship an MVP?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>A focused AI-native SaaS MVP ships in 4–6 weeks. Cross-platform mobile apps take 6–10 weeks for both stores. You'll have a fixed timeline before we start building.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>Flutter, React Native, or native?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Flutter for most products — one codebase, native performance, fastest time to both stores. React Native if you already have a JS team. Pure native only if your app needs deep hardware integrations.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>Can you add AI to our existing product?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Yes — that's most of our engagements. We add RAG assistants, semantic search, and LLM-powered workflows into products already in production, without downtime or a full rewrite.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>Who owns the code and IP?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>You do — 100%. Full code, full IP, full ownership from day one. We hand over clean repositories with documentation so your team can take it forward whenever you want. NDAs and IP agreements signed before kickoff.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>What happens after launch?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>We monitor the launch, tune prompts based on real usage, and hand over full docs. Optional monthly retainers available for ongoing feature work — most clients start with a project and add support once the product is live and proving value.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>What does it cost?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Focused MVPs start in the mid five figures. Full product builds with custom AI pipelines run higher. Every project gets a fixed-price blueprint before we build — no hourly surprises, no scope creep.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <span class="eyebrow">Get Started</span>
+          <h2 style="margin-top:18px;">Have an idea you want <span class="accent">built this quarter?</span></h2>
+          <p>Book a call. We'll scope the product live, show you exactly what ships in the first 4 weeks, and send a fixed-price blueprint within 72 hours.</p>
+          <div class="cta-band__ctas">
+            <a href="contact.html" class="btn btn--primary btn--lg">Book a Discovery Call</a>
+            <a href="work.html" class="btn btn--ghost btn--lg">See Our Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" fill="#fff"/>
+              </svg>
+            </span>
+            Devzink
+          </a>
+          <p>AI automation and product engineering agency building autonomous workflows and scalable AI software.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="ai-automation.html">AI Automation</a></li>
+            <li><a href="web-app-development.html">Web &amp; App Development</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devzink.com">hello@devzink.com</a></li>
+            <li><a href="contact.html">Book a Call</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Devzink. All rights reserved.</span>
+        <span>Built with precision · Serving global clients</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="contact.html" aria-label="Contact Devzink">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agents & Automation — Cut the Manual Work | Devzink</title>
+  <meta name="description" content="Autonomous AI agents that qualify leads, resolve support, and run ops 24/7. Cut hours of manual work every week. Shipped to production in weeks." />
+  <meta name="keywords" content="AI agents, n8n workflows, RAG assistants, autonomous agents, LangGraph, lead qualification, support automation" />
+  <meta name="author" content="Devzink" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://devzink.com/ai-automation.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devzink.com/ai-automation.html" />
+  <meta property="og:title" content="AI Agents & Automation — Devzink" />
+  <meta property="og:description" content="Autonomous AI agents that run your operations 24/7." />
+  <meta property="og:site_name" content="Devzink" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-ai-automation">
+
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Circuit traces (AI data flow) — global -->
+<div class="bg-circuit" aria-hidden="true">
+
+  <!-- Horizontal traces — left to right -->
+  <span class="trace-h" style="top: 128px;  animation-duration: 28s; animation-delay: 0s;"></span>
+  <span class="trace-h" style="top: 320px;  animation-duration: 32s; animation-delay: -8s;"></span>
+  <span class="trace-h" style="top: 576px;  animation-duration: 30s; animation-delay: -14s;"></span>
+  <span class="trace-h" style="top: 832px;  animation-duration: 34s; animation-delay: -4s;"></span>
+  <span class="trace-h" style="top: 1088px; animation-duration: 31s; animation-delay: -11s;"></span>
+  <span class="trace-h" style="top: 1344px; animation-duration: 33s; animation-delay: -18s;"></span>
+
+  <!-- Horizontal traces — right to left -->
+  <span class="trace-h rev" style="top: 192px;  animation-duration: 30s; animation-delay: -7s;"></span>
+  <span class="trace-h rev" style="top: 448px;  animation-duration: 29s; animation-delay: -15s;"></span>
+  <span class="trace-h rev" style="top: 704px;  animation-duration: 33s; animation-delay: -3s;"></span>
+  <span class="trace-h rev" style="top: 960px;  animation-duration: 36s; animation-delay: -20s;"></span>
+  <span class="trace-h rev" style="top: 1216px; animation-duration: 31s; animation-delay: -9s;"></span>
+  <span class="trace-h rev" style="top: 1472px; animation-duration: 32s; animation-delay: -14s;"></span>
+
+  <!-- Vertical traces — top to bottom -->
+  <span class="trace-v" style="left: 192px;  animation-duration: 34s; animation-delay: -10s;"></span>
+  <span class="trace-v" style="left: 576px;  animation-duration: 29s; animation-delay: -5s;"></span>
+  <span class="trace-v" style="left: 960px;  animation-duration: 32s; animation-delay: -18s;"></span>
+  <span class="trace-v" style="left: 1344px; animation-duration: 36s; animation-delay: -8s;"></span>
+
+  <!-- Vertical traces — bottom to top -->
+  <span class="trace-v rev" style="left: 384px;  animation-duration: 38s; animation-delay: -9s;"></span>
+  <span class="trace-v rev" style="left: 768px;  animation-duration: 34s; animation-delay: -2s;"></span>
+  <span class="trace-v rev" style="left: 1152px; animation-duration: 36s; animation-delay: -14s;"></span>
+
+  <!-- Node flashes -->
+  <span class="node" style="top: 192px;  left: 192px;  animation-duration: 11s; animation-delay: 0s;"></span>
+  <span class="node" style="top: 448px;  left: 384px;  animation-duration: 13s; animation-delay: -3s;"></span>
+  <span class="node" style="top: 704px;  left: 576px;  animation-duration: 12s; animation-delay: -6s;"></span>
+  <span class="node" style="top: 256px;  left: 768px;  animation-duration: 14s; animation-delay: -2s;"></span>
+  <span class="node" style="top: 512px;  left: 960px;  animation-duration: 12.5s; animation-delay: -8s;"></span>
+  <span class="node" style="top: 832px;  left: 320px;  animation-duration: 13.5s; animation-delay: -5s;"></span>
+  <span class="node" style="top: 128px;  left: 1152px; animation-duration: 11.5s; animation-delay: -9s;"></span>
+  <span class="node" style="top: 640px;  left: 128px;  animation-duration: 14.5s; animation-delay: -4s;"></span>
+  <span class="node" style="top: 1088px; left: 512px;  animation-duration: 12.2s; animation-delay: -11s;"></span>
+  <span class="node" style="top: 1216px; left: 896px;  animation-duration: 13.8s; animation-delay: -7s;"></span>
+  <span class="node" style="top: 1472px; left: 640px;  animation-duration: 11.8s; animation-delay: -2.5s;"></span>
+  <span class="node" style="top: 960px;  left: 1088px; animation-duration: 14.2s; animation-delay: -10s;"></span>
+
+</div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Devzink home">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" fill="#fff"/>
+          </svg>
+        </span>
+        Devzink
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-trigger is-active" aria-expanded="false" aria-haspopup="true">
+            Services
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4.5L6 7.5L9 4.5"/>
+            </svg>
+          </button>
+
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="ai-automation.html" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+                  <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+                  <path d="M12 8V4"/>
+                  <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
+                  <path d="M2 14h2M20 14h2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>AI Agents &amp; Automation</strong>
+                <em>Run your operations without the manual work.</em>
+              </span>
+            </a>
+
+            <a href="web-app-development.html" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>AI Product Engineering</strong>
+                <em>SaaS platforms &amp; apps with AI at the core.</em>
+              </span>
+            </a>
+
+            <a href="services.html#web" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2"/>
+                  <path d="M8 20h8M12 18v2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>Web Engineering</strong>
+                <em>GSAP, Spline 3D, corporate platforms</em>
+              </span>
+            </a>
+
+            <a href="services.html#mobile" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
+                  <path d="M11 18h2"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>Cross-Platform Mobile</strong>
+                <em>iOS &amp; Android with Flutter</em>
+              </span>
+            </a>
+
+            <a href="services.html#uiux" role="menuitem">
+              <span class="nav__dropdown-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
+                  <path d="m2 17 10 5 10-5"/>
+                  <path d="m2 12 10 5 10-5"/>
+                </svg>
+              </span>
+              <span class="nav__dropdown-body">
+                <strong>UI/UX &amp; Design Systems</strong>
+                <em>Prototypes, design tokens, Figma</em>
+              </span>
+            </a>
+
+            <a href="services.html" class="nav__dropdown-all" role="menuitem">
+              View all services
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--primary btn--sm"><span class="btn__dot" aria-hidden="true"></span>Book a Call</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile">
+      <div class="nav__mobile-inner">
+        <a href="ai-automation.html">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="8" width="16" height="12" rx="3"/>
+              <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+              <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+              <path d="M12 8V4"/>
+              <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
+              <path d="M2 14h2M20 14h2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>AI Agents &amp; Automation</strong>
+            <em>Run your operations without the manual work.</em>
+          </span>
+        </a>
+
+        <a href="web-app-development.html">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>AI Product Engineering</strong>
+            <em>SaaS platforms &amp; apps with AI at the core.</em>
+          </span>
+        </a>
+
+        <a href="services.html#web">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="14" rx="2"/>
+              <path d="M8 20h8M12 18v2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>Web Engineering</strong>
+            <em>GSAP, Spline 3D, corporate platforms</em>
+          </span>
+        </a>
+
+        <a href="services.html#mobile">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="2" width="12" height="20" rx="2.5"/>
+              <path d="M11 18h2"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>Cross-Platform Mobile</strong>
+            <em>iOS &amp; Android with Flutter</em>
+          </span>
+        </a>
+
+        <a href="services.html#uiux">
+          <span class="nav__dropdown-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
+              <path d="m2 17 10 5 10-5"/>
+              <path d="m2 12 10 5 10-5"/>
+            </svg>
+          </span>
+          <span class="nav__dropdown-body">
+            <strong>UI/UX &amp; Design Systems</strong>
+            <em>Prototypes, design tokens, Figma</em>
+          </span>
+        </a>
+
+        <a href="services.html" class="nav__mobile-all">
+          View all services
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+
+        <div class="nav__mobile-divider" aria-hidden="true"></div>
+
+        <a href="work.html" class="nav__mobile-simple">Work</a>
+        <a href="about.html" class="nav__mobile-simple">About</a>
+
+        <a href="contact.html" class="btn btn--primary nav__mobile-cta">
+          <span class="btn__dot" aria-hidden="true"></span>Book a Discovery Call
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <!-- ================= INTRO + COST ================= -->
+    <section class="aa-intro">
+      <div class="container">
+        <div class="aa-intro__head reveal">
+          <span class="eyebrow">AI Agents &amp; Automation</span>
+          <h1>
+            Your competitors are already using agents.<br />
+            <span class="accent">Are you still doing this by hand?</span>
+          </h1>
+          <p>
+            Here's what it's actually costing you.
+          </p>
+        </div>
+
+        <div class="cost-grid">
+          <article class="cost-card premium-card reveal" style="--d:0ms">
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">5 minutes</div>
+            <h3>Response time kills deals</h3>
+            <p>Research shows a reply within 5 minutes is <strong>21×</strong> more likely to qualify. Every hour your lead waits, your conversion rate drops.</p>
+          </article>
+
+          <article class="cost-card premium-card reveal" style="--d:80ms">
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">70%</div>
+            <h3>Support tickets are repetitive</h3>
+            <p>Seven out of ten questions in your inbox are the same ten questions. Every one is a chance for an agent to answer in 5 seconds — not 5 hours.</p>
+          </article>
+
+          <article class="cost-card premium-card reveal" style="--d:160ms">web-app-development.html
+            <div class="cost-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+            </div>
+            <div class="cost-card__stat">12+ hrs</div>
+            <h3>Lost to copy-paste weekly</h3>
+            <p>Per knowledge worker, per week. If you have 3 people doing manual data handoffs, that's 36 hours — nearly a full-time salary, gone.</p>
+          </article>
+        </div>
+
+        <p class="aa-intro__foot reveal">
+          This is happening in your business right now.<br />
+          <strong>The question is: how long will you let it?</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 4 JOBS ================= -->
+    <section class="section aa-section" id="jobs">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">What you can hand off</span>
+          <h2>Four jobs your agent can <span class="accent">own this week.</span></h2>
+          <p>Hand off any one of these. Get your team's week back. Click a card to see exactly what we build.</p>
+        </div>
+
+        <div class="jobs-grid">
+
+          <article class="job reveal" data-job style="--d:0ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M4 21v-1a8 8 0 0 1 16 0v1"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Qualify every inbound lead</strong>
+                <em>Score, book, and route — before your competition replies</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>A lead fills your form at 11 PM. By 11:00:30 PM they've been scored, qualified, and a call is on your calendar. You wake up to a booked meeting — not a stale lead.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>ICP scoring logic customized to your business</li>
+                    <li>Multi-channel intake — web, email, WhatsApp</li>
+                    <li>Auto-booking into Cal.com / Calendly</li>
+                    <li>Two-way CRM sync (HubSpot, Pipedrive, Salesforce)</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical outcome</span>
+                  <strong>Replies in 22 seconds</strong>
+                  <em>vs. 5+ hours manual</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" data-job style="--d:80ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Answer 60% of support tickets</strong>
+                <em>Instantly, in your brand voice, with source citations</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>An agent trained on your docs, past tickets, and help center. It resolves the repetitive 60% instantly with citations — and hands off complex cases to humans with full context.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Trained on docs, tickets, and help center</li>
+                    <li>Source citations on every answer</li>
+                    <li>Smart escalation with full conversation history</li>
+                    <li>Deploys as web widget, Slack bot, or email</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical outcome</span>
+                  <strong>60% ticket deflection</strong>
+                  <em>with 24/7 coverage</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" data-job style="--d:160ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  <circle cx="12" cy="12" r="3.2"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Automate internal ops</strong>
+                <em>Kill the copy-paste between your tools</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>n8n workflows that eliminate the manual data shuffling between CRM, spreadsheets, email, and Slack. Every handoff that needed a human is now an automated step that never forgets.</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Data sync across CRM, sheets, inbox, and Slack</li>
+                    <li>Scheduled reports and real-time alerts</li>
+                    <li>Error handling and retry logic baked in</li>
+                    <li>Fully documented for team handover</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical outcome</span>
+                  <strong>12+ hours saved</strong>
+                  <em>per week, per team member</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal" data-job style="--d:240ms">
+            <button class="job__trigger" aria-expanded="false">
+              <span class="job__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                </svg>
+              </span>
+              <span class="job__body">
+                <strong>Answer any internal question instantly</strong>
+                <em>From your docs, tickets, and Slack history</em>
+              </span>
+              <span class="job__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="job__panel">
+              <div class="job__panel-inner">
+
+                <div class="job__scenario">
+                  <span class="job__tag">The scenario</span>
+                  <p>A private RAG assistant that answers questions from your internal documents, past tickets, and Slack history — with the exact source cited every time. No more "where's that doc again?"</p>
+                </div>
+
+                <div class="job__build">
+                  <span class="job__tag">What we build</span>
+                  <ul class="job__deliverables">
+                    <li>Vector search over your entire knowledge base</li>
+                    <li>Every answer cites its source document</li>
+                    <li>Role-based access — sales sees sales, ops sees ops</li>
+                    <li>Deploys as Slack bot, web app, or internal API</li>
+                  </ul>
+                </div>
+
+                <div class="job__outcome">
+                  <span class="job__outcome-label">Typical outcome</span>
+                  <strong>Answers in 3 seconds</strong>
+                  <em>from internal docs</em>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEFORE / AFTER ================= -->
+    <section class="section aa-section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Same business, two futures</span>
+          <h2>What changes when the agent is <span class="accent">actually running.</span></h2>
+        </div>
+
+        <div class="ba-grid">
+          <article class="ba-card ba-card--before premium-card reveal" style="--d:0ms">
+            <span class="ba-card__label">Without an agent</span>
+            <h3>A Tuesday afternoon</h3>
+            <ul class="ba-card__list">
+              <li>A new lead lands in your shared inbox at 2:14 PM</li>
+              <li>Nobody notices until 5:30 PM</li>
+              <li>They've already contacted two other agencies</li>
+              <li>You send a reply — they've gone cold</li>
+              <li>Meanwhile, 8 support tickets stack up in Zendesk</li>
+              <li>Your ops person spends 2 hours re-entering data</li>
+            </ul>
+          </article>
+
+          <article class="ba-card ba-card--after premium-card reveal" style="--d:80ms">
+            <span class="ba-card__label">With an agent</span>
+            <h3>Same Tuesday afternoon</h3>
+            <ul class="ba-card__list">
+              <li>Same lead lands at 2:14 PM</li>
+              <li>Agent responds at 2:14:22 PM with a personalized reply</li>
+              <li>Lead books a call for Wednesday 9 AM</li>
+              <li>You get a Slack ping with full context</li>
+              <li>6 of 8 tickets auto-resolved, 2 escalated with summaries</li>
+              <li>Your ops person does 0 minutes of data entry</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="ba-footnote reveal">
+          Same team. Same tools. Same day. <strong>The only difference is who does the repetitive work.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section aa-section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Common questions</span>
+          <h2>Things buyers <span class="accent">usually ask.</span></h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>How long does a typical build take?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Most single-agent systems go live in 2–4 weeks. Multi-agent platforms with custom integrations take 4–6 weeks. You'll know the exact timeline before we start building.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>No-code, or actual code?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Both, depending on what makes sense. n8n for orchestration and integrations, custom TypeScript/Python for logic that needs it. We pick what ships fastest and lasts longest.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>What if the AI gets something wrong?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Every production system has guardrails: confidence thresholds, human approval for high-stakes actions, fallback responses, and full logging. Agents that improvise are not agents you want running your business.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>Will this work with my current stack?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Almost certainly. We integrate with HubSpot, Salesforce, Pipedrive, Slack, Gmail, Outlook, Notion, Airtable, Google Sheets, Cal.com, Calendly, WhatsApp, and anything with an API.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>What does it cost?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>Simple automations start in the low thousands. Multi-agent platforms run higher. Every project gets a fixed-price blueprint before we build, so no surprises. Book a call and we'll give you a realistic range for your specific use case.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" data-faq>
+            <button class="faq-item__trigger" aria-expanded="false">
+              <span>Is this replacing my team?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__panel-inner">
+                <p>No — it's a force multiplier. Your team stops doing repetitive work and focuses on the parts that actually need a human. Most clients redeploy saved hours into growth, not layoffs.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <span class="eyebrow">Get Started</span>
+          <h2 style="margin-top:18px;">Which job would you <span class="accent">hand to an agent first?</span></h2>
+          <p>Book a call. We'll map the workflow live, show you exactly what an agent would replace, and send a fixed-price blueprint within 72 hours.</p>
+          <div class="cta-band__ctas">
+            <a href="contact.html" class="btn btn--primary btn--lg">Book a Discovery Call</a>
+            <a href="services.html" class="btn btn--ghost btn--lg">Explore All Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" fill="#fff"/>
+              </svg>
+            </span>
+            Devzink
+          </a>
+          <p>AI automation and product engineering agency building autonomous workflows and scalable AI software.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="ai-automation.html">AI Automation</a></li>
+            <li><a href="web-app-development.html">Web &amp; App Development</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devzink.com">hello@devzink.com</a></li>
+            <li><a href="contact.html">Book a Call</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Devzink. All rights reserved.</span>
+        <span>Built with precision · Serving global clients</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="contact.html" aria-label="Contact Devzink">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
