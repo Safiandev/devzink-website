@@ -3283,66 +3283,121 @@ body.page-leaving {
 
 
 /* ============================================================
-   FORM STATUS MESSAGES (success / error)
+   FORM STATUS — inline success / error (high visibility)
    ============================================================ */
 .form-status {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 14px 18px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  font-size: 0.92rem;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
   line-height: 1.55;
-  animation: status-in .4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  animation: status-in .5s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes status-in {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: none; }
+  0%   { opacity: 0; transform: translateY(-10px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Soft shimmer sweep across on appear */
+.form-status::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -80%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: skewX(-20deg);
+  animation: status-shine 1.2s cubic-bezier(0.22, 1, 0.36, 1) .15s;
+  pointer-events: none;
+}
+@keyframes status-shine {
+  from { left: -80%; }
+  to   { left: 130%; }
 }
 
 .form-status svg {
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 1px;
+  width: 22px;
+  height: 22px;
 }
 
 .form-status > div {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  min-width: 0;
 }
 
 .form-status strong {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
 }
 
+.form-status span {
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* ----- SUCCESS — bright cyan/green gradient card ----- */
 .form-status--success {
-  background: rgba(34, 211, 238, 0.08);
-  border: 1px solid rgba(34, 211, 238, 0.3);
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.18) 0%, rgba(34, 211, 238, 0.06) 100%),
+    linear-gradient(180deg, rgba(15, 15, 23, 0.95), rgba(8, 8, 16, 0.98));
+  border: 1px solid rgba(34, 211, 238, 0.55);
   color: var(--accent-2);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.15),
+    0 0 40px -8px rgba(34, 211, 238, 0.4),
+    0 12px 30px -12px rgba(0, 0, 0, 0.6);
+}
+.form-status--success svg {
+  color: var(--accent-2);
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.7));
 }
 .form-status--success strong {
-  color: var(--text);
+  color: #FFFFFF;
 }
 .form-status--success span {
-  color: var(--text-muted);
+  color: rgba(196, 181, 253, 0.9);
 }
 
+/* ----- ERROR — bright red card ----- */
 .form-status--error {
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background:
+    linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(239, 68, 68, 0.06) 100%),
+    linear-gradient(180deg, rgba(15, 15, 23, 0.95), rgba(8, 8, 16, 0.98));
+  border: 1px solid rgba(239, 68, 68, 0.55);
   color: #FCA5A5;
+  box-shadow:
+    0 0 0 1px rgba(239, 68, 68, 0.15),
+    0 0 40px -8px rgba(239, 68, 68, 0.4),
+    0 12px 30px -12px rgba(0, 0, 0, 0.6);
+}
+.form-status--error svg {
+  color: #F87171;
+  filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.7));
 }
 .form-status--error strong {
-  color: var(--text);
+  color: #FFFFFF;
 }
 .form-status--error span {
-  color: var(--text-muted);
+  color: rgba(196, 181, 253, 0.9);
 }
 .form-status--error a {
   color: var(--accent-2);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+.form-status--error a:hover {
+  color: #FFFFFF;
 }
