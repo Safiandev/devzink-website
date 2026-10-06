@@ -2401,6 +2401,13 @@ body.page-leaving {
 }
 .contact-side-card__icon svg { width: 22px; height: 22px; }
 
+/* WhatsApp-specific icon styling */
+.contact-side-card__icon--whatsapp {
+  background: linear-gradient(135deg, rgba(37,211,102,0.22), rgba(37,211,102,0.06));
+  border-color: rgba(37,211,102,0.28);
+  color: #25D366;
+}
+
 .contact-side-card h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
