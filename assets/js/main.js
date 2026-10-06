@@ -204,6 +204,86 @@
     });
   })();
 
+    /* ---------- 11. AJAX contact form (no redirect, no McAfee warning) ---------- */
+  (function () {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    const submitBtn = form.querySelector('.contact-form__submit');
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Disable button + loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.cursor = 'wait';
+        submitBtn.innerHTML = 'Sending...';
+      }
+
+      // Remove any previous status message
+      const oldMsg = form.querySelector('.form-status');
+      if (oldMsg) oldMsg.remove();
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          // Show success message
+          const successMsg = document.createElement('div');
+          successMsg.className = 'form-status form-status--success';
+          successMsg.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+              <path d="M9 12l2 2 4-4"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+            <div>
+              <strong>Message sent.</strong>
+              <span>We'll reply within 24 hours — usually much faster.</span>
+            </div>
+          `;
+          form.insertBefore(successMsg, form.firstChild);
+          form.reset();
+
+          // Auto-remove success message after 8 seconds
+          setTimeout(() => successMsg.remove(), 8000);
+        } else {
+          throw new Error(data.message || 'Something went wrong');
+        }
+      } catch (err) {
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'form-status form-status--error';
+        errorMsg.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4M12 16h.01"/>
+          </svg>
+          <div>
+            <strong>Couldn't send.</strong>
+            <span>Please try WhatsApp instead — <a href="https://wa.link/vufomi" target="_blank" rel="noopener">message us here</a>.</span>
+          </div>
+        `;
+        form.insertBefore(errorMsg, form.firstChild);
+        setTimeout(() => errorMsg.remove(), 10000);
+      } finally {
+        // Restore button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '';
+          submitBtn.style.cursor = '';
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+      }
+    });
+  })();
+
   /* ---------- 9. Footer year ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

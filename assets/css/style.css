@@ -3280,3 +3280,69 @@ body.page-leaving {
   .bg-circuit { opacity: 0.35; }
   .bg-circuit .node { display: none; }
 }
+
+
+/* ============================================================
+   FORM STATUS MESSAGES (success / error)
+   ============================================================ */
+.form-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  animation: status-in .4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes status-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.form-status svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-status > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-status strong {
+  font-weight: 600;
+}
+
+.form-status--success {
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--accent-2);
+}
+.form-status--success strong {
+  color: var(--text);
+}
+.form-status--success span {
+  color: var(--text-muted);
+}
+
+.form-status--error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #FCA5A5;
+}
+.form-status--error strong {
+  color: var(--text);
+}
+.form-status--error span {
+  color: var(--text-muted);
+}
+.form-status--error a {
+  color: var(--accent-2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
