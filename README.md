@@ -21,7 +21,6 @@ The live website for **DevZink**, an AI automation & Agentic AI agency. A fully 
 - **HTML5 · CSS3 · Vanilla JavaScript** — no framework, no build tools
 - **GSAP 3.12.5** (CDN) — scroll-driven motion system
 - **Vanta.js (NET)** — WebGL hero background
-- **Lenis** — smooth scrolling
 
 ## Highlights
 
