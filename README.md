@@ -59,3 +59,7 @@ Then open `http://localhost:8000`.
 ## Deployment
 
 Deployed as a static site (any static host works — Vercel, Netlify, or shared hosting with the included `.htaccess`). To update the live site, push to `main` and redeploy, or upload the changed files.
+
+## License
+
+© 2026 DevZink. All rights reserved. This code is published for portfolio review only — reuse, redistribution, or commercial use without permission is not allowed.
