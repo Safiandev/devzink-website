@@ -1,647 +1,1283 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selected Work — AI Systems, Web Platforms &amp; Mobile Apps | Devzink</title>
-  <meta name="description" content="Real systems we've built — AI agents, product platforms, and mobile apps. Outcomes, architecture, and the metrics that matter." />
-  <meta name="keywords" content="Devzink work, AI agent case study, SaaS platform portfolio, AI product development portfolio, agency case studies" />
-  <meta name="author" content="Devzink" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://devzink.com/work.html" />
+<meta charset="utf-8" />
+<!-- consent:start -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",functionality_storage:"granted",security_storage:"granted",wait_for_update:500});</script>
+<!-- consent:end -->
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://devzink.com/work.html" />
-  <meta property="og:title" content="Selected Work — Devzink" />
-  <meta property="og:description" content="Real systems. Real outcomes. Here's what we've shipped." />
-  <meta property="og:site_name" content="Devzink" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Automation &amp; Web Development Case Studies | DevZink Work</title>
+<link rel="canonical" href="https://devzink.com/work" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png" />
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#05050A" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DevZink" />
+<meta property="og:title" content="AI Automation &amp; Web Development Case Studies | DevZink Work" />
+<meta property="og:description" content="Real AI agent, n8n automation, web and app projects by DevZink: lead qualification agents, RAG support bots, missed-call agents, SaaS platforms and mobile apps." />
+<meta property="og:url" content="https://devzink.com/work" />
+<meta property="og:image" content="https://devzink.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Automation &amp; Web Development Case Studies | DevZink Work" />
+<meta name="twitter:description" content="Real AI agent, n8n automation, web and app projects by DevZink: lead qualification agents, RAG support bots, missed-call agents, SaaS platforms and mobile apps." />
+<meta name="twitter:image" content="https://devzink.com/og-image.png" />
+<meta name="description" content="Real AI agent, n8n automation, web and app projects by DevZink: lead qualification agents, RAG support bots, missed-call agents, SaaS platforms and mobile apps." />
+<link rel="preload" href="clash-display-600.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="general-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<!-- seo:start -->
+<meta name="keywords" content="AI automation case studies, AI agent examples, n8n workflow examples, web development portfolio, app development portfolio" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="DevZink" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image:alt" content="DevZink AI automation agency" />
+<meta name="twitter:image:alt" content="DevZink AI automation agency" />
+<link rel="alternate" hreflang="en" href="https://devzink.com/work" />
+<link rel="alternate" hreflang="x-default" href="https://devzink.com/work" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://devzink.com/#org", "name": "DevZink", "alternateName": "Devzink", "url": "https://devzink.com/", "logo": "https://devzink.com/logo-512.png", "image": "https://devzink.com/og-image.png", "email": "info@devzink.com", "telephone": "+923304613837", "description": "DevZink is an AI automation agency building AI agents, n8n automations, web apps and mobile apps for businesses worldwide.", "areaServed": "Worldwide", "knowsAbout": ["AI automation", "AI agents", "Agentic AI", "n8n automation", "RAG chatbots", "Lead generation automation", "Web development", "SaaS development", "Mobile app development"]}, {"@type": "WebSite", "@id": "https://devzink.com/#website", "url": "https://devzink.com/", "name": "DevZink", "publisher": {"@id": "https://devzink.com/#org"}}, {"@type": "CollectionPage", "@id": "https://devzink.com/work#webpage", "url": "https://devzink.com/work", "name": "AI Automation & Web Development Case Studies | DevZink Work", "description": "Real AI agent, n8n automation, web and app projects by DevZink: lead qualification agents, RAG support bots, missed-call agents, SaaS platforms and mobile apps.", "isPartOf": {"@id": "https://devzink.com/#website"}, "about": {"@id": "https://devzink.com/#org"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devzink.com/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://devzink.com/work"}]}, {"@type": "ItemList", "name": "DevZink case studies", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Multi-Lead Qualification & Auto-Email Agent", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 2, "name": "RAG Customer Support Agent", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 3, "name": "Home Services Missed-Call Agent", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 4, "name": "YouTuber Lead Generation Agent", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 5, "name": "B2B Local Lead Gen & Cold Email Automation", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 6, "name": "Hot Lead Finder PRO: Live Maps + AI Review Analysis", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 7, "name": "AI-Native SaaS Platform", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 8, "name": "3D Product Launch Platform", "url": "https://devzink.com/work"}, {"@type": "ListItem", "position": 9, "name": "AI-Powered Mobile App", "url": "https://devzink.com/work"}]}]}</script>
+<!-- seo:end -->
+<style>
+/* ===== Fonts ===== */
+@font-face{font-family:"Clash Display";src:url(clash-display-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"General Sans";src:url(general-sans-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"General Sans";src:url(general-sans-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(jetbrains-mono.woff2) format("woff2");font-weight:400;font-display:swap}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+/* ===== Tokens ===== */
+:root{
+  --bg:#030305;--bg-2:#080810;--bg-3:#0C0C16;--border:#171B26;
+  --text:#FFF;--muted:#B8B8C4;--dim:#85858F;
+  --violet:#8B5CF6;--cyan:#22D3EE;
+  --grad:linear-gradient(135deg,#8B5CF6,#22D3EE);
+  --glass:linear-gradient(rgba(255,255,255,.045),rgba(255,255,255,.045)) transparent;--glass-b:rgba(255,255,255,.09);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --max:1280px;--gut:clamp(20px,4vw,40px);
+  --f-head:"Clash Display",system-ui,sans-serif;
+  --f-body:"General Sans",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  --r:26px;--tap:44px;
+}
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+/* animatable custom properties (fallbacks under .no-atprop) */
+@property --angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+@property --spot{syntax:"<color>";inherits:false;initial-value:rgba(139,92,246,0)}
+@property --g1{syntax:"<color>";inherits:false;initial-value:transparent}
+@property --g2{syntax:"<color>";inherits:false;initial-value:transparent}
+@property --g3{syntax:"<color>";inherits:false;initial-value:transparent}
+
+/* ===== Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:88px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--text);font:400 17px/1.7 var(--f-body);letter-spacing:.005em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (min-width:768px){body{font-size:18px}}
+p{max-width:62ch}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;box-shadow:0 0 0 6px rgba(34,211,238,.18)}
+a:not(.btn):focus-visible{border-radius:6px}
+h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-height:1.02}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.gtext{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:#A78BFA;-webkit-text-fill-color:transparent}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--text);color:var(--bg);padding:10px 16px;border-radius:99px}
+.skip:focus{left:8px}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:var(--tap);padding:0 24px;border-radius:99px;font:500 16px/1 var(--f-body);transition:transform .4s var(--ease),background-color .3s,border-color .3s;white-space:nowrap}
+.btn--grad{position:relative;isolation:isolate;background:#8B5CF6 var(--grad);background-color:#8B5CF6;color:#05050A;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.btn--grad::before{content:"";position:absolute;inset:-3px;z-index:-1;border-radius:inherit;padding:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE,#F5F3FF,#22D3EE,#8B5CF6) 0 50%/300% 100%;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .35s var(--ease);animation:ringFlow 2.4s linear infinite;animation-play-state:paused;pointer-events:none}
+.btn--grad:hover::before,.btn--grad:focus-visible::before{opacity:1;animation-play-state:running}
+.btn--grad:hover{box-shadow:0 10px 36px rgba(139,92,246,.38),0 0 24px rgba(34,211,238,.22)}
+@keyframes ringFlow{to{background-position:300% 50%}}
+.btn--glass{background:var(--glass);border:1px solid var(--glass-b);color:var(--text);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn--glass:hover{background:linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.08)) transparent;border-color:rgba(255,255,255,.18)}
+.btn:hover{transform:translateY(-2px)}
+.btn--lg{min-height:56px;padding:0 30px;font-size:17px}
+.arrow{display:inline-block;transition:transform .25s ease}
+.btn:hover .arrow,a:hover>.arrow,.btn:focus-visible .arrow{transform:translateX(5px)}
+.btn:hover .arrow--up{transform:translateY(-4px)}
+.btn:hover .arrow--out{transform:translate(3px,-3px)}
+
+/* ===== Progress + Nav ===== */
+.progress{position:fixed;inset:0 0 auto;height:1.5px;background:rgba(255,255,255,.22);transform:scaleX(0);transform-origin:0 50%;z-index:60}
+@media (max-width:760px){.progress{display:none}}
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:padding .5s var(--ease)}
+.nav__bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .5s var(--ease)}
+.nav::before{content:"";position:absolute;inset:0;background:rgba(8,8,16,.72);border-bottom:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);opacity:0;transition:opacity .4s var(--ease)}
+.nav.scrolled::before{opacity:1}
+.nav.scrolled .nav__bar{height:64px}
+.logo{position:relative;display:flex;align-items:center;gap:10px;font:600 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
+.logo svg{width:28px;height:28px}
+.nav__links{position:relative;display:flex;gap:4px}
+.nav__links a{display:flex;align-items:center;min-height:var(--tap);padding:0 16px;color:var(--muted);font-weight:500;font-size:16px;border-radius:99px;transition:color .3s}
+.nav__links a:hover{color:var(--text)}
+.nav__end{position:relative;display:flex;align-items:center;gap:8px}
+.menu-btn{display:none;position:relative;width:var(--tap);height:var(--tap);border-radius:50%;background:var(--glass);border:1px solid var(--glass-b);color:var(--text);cursor:pointer}
+.menu-btn i{position:absolute;left:50%;top:50%;width:18px;height:1.5px;margin:-.75px 0 0 -9px;border-radius:2px;background:currentColor;transition:transform .5s var(--ease)}
+.menu-btn i:first-child{transform:translateY(-3.5px)}
+.menu-btn i:last-child{transform:translateY(3.5px)}
+.nav.open .menu-btn i:first-child{transform:rotate(45deg)}
+.nav.open .menu-btn i:last-child{transform:rotate(-45deg)}
+/* current page */
+.nav__links a[aria-current="page"]{position:relative;color:var(--text)}
+.nav__links a[aria-current="page"]::after{content:"";position:absolute;left:16px;right:16px;bottom:8px;height:2px;border-radius:2px;background:var(--grad);opacity:.85}
+.mmenu__big[aria-current="page"]{color:#C4B5FD}
+
+/* services dropdown */
+.dd{position:relative}
+.dd__btn{display:flex;align-items:center;gap:7px;min-height:var(--tap);padding:0 16px;border:0;border-radius:99px;background:none;color:var(--muted);font:500 16px/1 var(--f-body);cursor:pointer;transition:color .3s}
+.dd__btn svg{width:10px;height:10px;transition:transform .45s var(--ease)}
+.dd__panel{position:absolute;top:100%;left:-12px;width:min(460px,90vw);padding-top:10px;opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transform-origin:15% 0;transition:opacity .3s var(--ease),transform .45s var(--ease),visibility 0s .45s}
+.dd__in{padding:8px;border-radius:22px;background:#0C0C16;border:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(18px);backdrop-filter:saturate(1.4) blur(18px);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.dd__list li{opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .45s var(--ease)}
+.dd .dd__list a{display:grid;gap:4px;min-height:var(--tap);padding:12px 14px;border-radius:14px;color:var(--text);font-size:16px;transition:background-color .3s}
+.dd .dd__list a:hover,.dd .dd__list a:focus-visible{background:rgba(255,255,255,.06)}
+.dd__list b{display:flex;align-items:center;gap:10px;font:500 16px/1.25 var(--f-body)}
+.dd__list b::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.dd__list b+span{padding-left:16px;color:var(--muted);font-size:13px;line-height:1.4}
+.dd .dd__list a.dd__all{display:flex;align-items:center;justify-content:space-between;margin-top:4px;padding:0 14px;border-top:1px solid var(--glass-b);border-radius:0 0 14px 14px;background-color:#0C0C16;color:var(--cyan);font-size:15px}
+.dd .dd__list a.dd__all:hover,.dd .dd__list a.dd__all:focus-visible{background-color:#16161F}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn{color:var(--text)}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn svg{transform:rotate(180deg)}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__panel{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__list li{opacity:1;transform:none;transition-delay:calc(.05s + var(--i) * .04s)}
+
+/* mobile full-screen menu */
+.mmenu{position:fixed;inset:0;z-index:49;display:flex;flex-direction:column;padding:96px var(--gut) 32px;overflow-y:auto;background:radial-gradient(600px circle at 0 0,rgba(139,92,246,.22),transparent 60%),radial-gradient(500px circle at 100% 100%,rgba(34,211,238,.14),transparent 60%),#030305;clip-path:circle(0 at calc(100% - 44px) 42px);visibility:hidden;transition:clip-path .7s cubic-bezier(.76,0,.24,1),visibility 0s .7s}
+.menu-open{overflow:hidden}
+.menu-open .mmenu{clip-path:circle(150% at calc(100% - 44px) 42px);visibility:visible;transition-delay:0s}
+.mmenu__list>li{padding:6px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(28px);transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.menu-open .mmenu__list>li{opacity:1;transform:none;transition-delay:calc(.18s + var(--i) * .07s)}
+.mmenu__big{display:flex;align-items:center;justify-content:space-between;min-height:60px;font:600 clamp(36px,10vw,52px)/1 var(--f-head);letter-spacing:-.03em}
+.mmenu__sub{margin:0 0 10px}
+.mmenu__sub a{display:flex;align-items:center;gap:10px;min-height:48px;color:var(--muted);font-size:16px}
+.mmenu__sub a::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.mmenu__cta{margin-top:28px}
+.mmenu__list>li.mmenu__cta{border:0}
+@media (min-width:861px){.mmenu{display:none}}
+
+/* preloader */
+.pre{display:none}
+.is-loading{overflow:hidden}
+.is-loading .pre{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:#030305;transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.pre.done{transform:translateY(-100%)}
+.pre__in{display:grid;justify-items:center;gap:22px;transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.pre.done .pre__in{opacity:0;transform:translateY(-30px)}
+.pre__mark{width:64px;height:64px;overflow:visible;filter:drop-shadow(0 0 18px rgba(139,92,246,.55))}
+.pre__mark path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s var(--ease) .1s forwards}
+.pre__mark circle{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);animation:popIn .5s var(--ease) .7s forwards}
+@keyframes popIn{to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pre__bar{width:180px;height:2px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden}
+.pre__bar i{display:block;height:100%;background:var(--grad);transform:scaleX(0);transform-origin:0 50%}
+.pre__pct{color:var(--dim);font-variant-numeric:tabular-nums;min-width:5ch;text-align:center}
+.is-loading .hero,.is-loading .hero *{animation-play-state:paused!important}
+.is-loading .hero [data-reveal]{opacity:0!important;transform:translateY(28px)!important}
+
+/* page transitions */
+.curtain{position:fixed;inset:0;z-index:250;pointer-events:none;background:linear-gradient(to top,#8B5CF6,#22D3EE);transform:translateY(100%);visibility:hidden}
+.curtain.cover{visibility:visible;transform:none;transition:transform .45s cubic-bezier(.76,0,.24,1)}
+.curtain-in .curtain{visibility:visible;transform:none}
+.curtain.away{visibility:visible;transform:translateY(-100%);transition:transform .6s cubic-bezier(.76,0,.24,1)}
+@media (prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  ::view-transition-old(root){animation:vtOut .4s cubic-bezier(.76,0,.24,1) both}
+  ::view-transition-new(root){animation:vtIn .55s var(--ease) .1s both}
+}
+@keyframes vtOut{to{opacity:0;transform:translateY(-32px)}}
+@keyframes vtIn{from{opacity:0;transform:translateY(32px)}}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;min-height:85vh;min-height:85svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(92px,12vh,120px) 0 clamp(28px,4vh,44px);isolation:isolate}
+.hero>.wrap{width:100%;max-width:1440px}
+.hero__bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.dots{position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.2px) 0 0/28px 28px;-webkit-mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%);mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%)}
+.glow{position:absolute;border-radius:50%;will-change:transform}
+.glow--v{width:900px;height:900px;left:-300px;top:-380px;background:radial-gradient(closest-side,rgba(139,92,246,.30),transparent);animation:driftA 22s var(--ease) infinite alternate}
+.glow--c{width:800px;height:800px;right:-280px;top:10%;background:radial-gradient(closest-side,rgba(34,211,238,.18),transparent);animation:driftB 26s var(--ease) infinite alternate}
+@keyframes driftA{to{transform:translate(140px,90px) scale(1.1)}}
+@keyframes driftB{to{transform:translate(-120px,70px) scale(.92)}}
+.hero__text{container-type:inline-size;min-width:0}
+.hero h1{font-size:clamp(38px,4.4vw,84px);font-size:clamp(34px,11.6cqi,88px);line-height:1.04;max-width:16ch;margin:22px 0}
+.line{display:block;overflow:hidden;padding:.04em 0 .1em;margin-bottom:-.1em;white-space:nowrap}
+.line>span{display:inline-block;transform:translateY(110%);animation:lineUp 1.1s var(--ease) forwards;animation-delay:calc(.15s + var(--i,0) * .12s)}
+@keyframes lineUp{to{transform:none}}
+.hl{display:inline-block;white-space:nowrap;padding-right:.04em;background:linear-gradient(90deg,#8B5CF6,#A78BFA 35%,#22D3EE 75%,#67E8F9) 0 50%/140% 100%;-webkit-background-clip:text;background-clip:text;color:#A78BFA;-webkit-text-fill-color:transparent;animation:hlShift 7s ease-in-out infinite alternate}
+@keyframes hlShift{to{background-position:100% 50%}}
+@media (max-width:420px){.line{white-space:normal}}
+.hero__sub{max-width:560px;color:var(--muted);font-size:clamp(17px,1.35vw,19px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero .cta{margin-top:28px}
+.fade-up{opacity:0;transform:translateY(16px);animation:fadeUp 1s var(--ease) forwards;animation-delay:var(--d,.6s)}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+.glass{background:var(--glass);border:1px solid var(--glass-b);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+/* inner-page hero */
+.hero.x-hero{min-height:60vh;min-height:60svh;padding-bottom:clamp(40px,6vh,64px)}
+.x-hero .hero__text{max-width:980px}
+.x-hero .hero__sub{max-width:600px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--border)}
+.stat{padding:28px 28px 8px;border-left:1px solid var(--border)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font:600 clamp(26px,2.6vw,36px)/1 var(--f-head);letter-spacing:-.03em;margin-bottom:10px}
+.stat>span{color:var(--dim);font-size:12px}
+
+/* ===== Sections ===== */
+.sec{padding:120px 0;position:relative}
+.sec__head{display:grid;gap:22px;max-width:900px;margin-bottom:clamp(48px,6vw,80px)}
+.eyebrow{color:var(--dim);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";flex:none;align-self:center;width:28px;height:1px;background:var(--grad)}
+/* no stray boxes in section heads: empty reveal masks or pseudo-elements never render */
+.rv-m:empty,.rv-in:empty,.sec__head>:empty{display:none}
+.rv-m::before,.rv-m::after,.rv-in::before,.rv-in::after,.sec__head h2::before,.sec__head h2::after{content:none}
+.sec h2{font-size:clamp(40px,5.6vw,84px)}
+.sec__sub{color:var(--muted);max-width:62ch}
+@media (max-width:760px){.sec{padding:80px 0}}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.js [data-reveal].in,.js [data-reveal].rv-group{opacity:1;transform:none}
+.js [data-reveal].rv-self{transform:translateY(12px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
+.js [data-reveal].rv-self.in{transform:none;filter:none}
+.js .rv{opacity:0;transform:translateY(12px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease);transition-delay:calc(var(--d,0s) + var(--rv,0) * 60ms)}
+.js .in .rv{opacity:1;transform:none;filter:none}
+.rv-m{display:block;overflow:hidden;padding:.04em 0 .16em;margin:-.04em 0 -.16em}
+.js .rv-in{display:block;transform:translateY(108%);transition:transform 1.05s var(--ease);transition-delay:calc(var(--d,0s) + var(--rv,0) * 60ms)}
+.js .in .rv-in{transform:none}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags li{padding:7px 12px;border-radius:99px;border:1px solid var(--glass-b);color:var(--muted);font:400 12px/1 var(--f-mono)}
+
+/* ===== Work: sticky stacking cards ===== */
+.stack{display:grid;gap:clamp(28px,4vw,48px);view-timeline-name:--stack}
+.case{position:sticky;top:calc(96px + var(--i,0) * 22px)}
+.case__out{padding:1px;border-radius:var(--r);background:linear-gradient(135deg,rgba(139,92,246,.75),rgba(255,255,255,.07) 40%,rgba(255,255,255,.07) 60%,rgba(34,211,238,.75));box-shadow:0 -24px 60px rgba(0,0,0,.55);transform-origin:50% 0;transition:translate .25s ease,box-shadow .25s ease}
+.case__in{display:grid;gap:28px;padding:clamp(24px,3.5vw,48px);border-radius:calc(var(--r) - 1px);background:var(--bg-3)}
+.case__top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 16px;font-size:12px}
+.case__cat{color:var(--cyan)}
+.case__num{color:var(--dim)}
+.case h3{font-size:clamp(28px,3.4vw,48px);line-height:1;margin-top:-12px}
+.case__cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start}
+.case__cols h4{font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.case__cols p{color:var(--muted)}
+.case__foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--border)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips li{display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:99px;background:linear-gradient(rgba(139,92,246,.1),rgba(139,92,246,.1)) transparent;border:1px solid rgba(139,92,246,.32);color:var(--muted);font-size:15px}
+.chips b{font:600 21px/1 var(--f-head);letter-spacing:-.02em;color:var(--text);font-variant-numeric:tabular-nums}
+.win{overflow:hidden;border-radius:16px;border:1px solid var(--glass-b);background:var(--bg-2);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.win__bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--glass-b)}
+.win__bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.16)}
+.win img{width:100%;height:auto}
+.shot figcaption{margin-top:12px;color:var(--dim);font:400 12px/1.6 var(--f-mono)}
+@keyframes sink{to{transform:scale(var(--s,.96))}}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .case__out{animation:sink linear both;animation-timeline:--stack;animation-range:contain calc(var(--i) * 25%) contain calc(var(--i) * 25% + 25%)}
+    .case:last-child .case__out{animation:none}
+  }
+}
+
+/* ===== Work page: filter chips + filtered cases ===== */
+.x-work{padding-top:clamp(24px,4vw,48px)}
+.x-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(32px,4vw,56px)}
+.x-filter button{min-height:var(--tap);padding:0 18px;border-radius:99px;border:1px solid var(--glass-b);background:var(--glass);color:var(--muted);font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:color .3s,border-color .3s,background-color .3s,transform .4s var(--ease)}
+.x-filter button:hover{color:var(--text);border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
+.x-filter button[aria-pressed="true"]{color:var(--text);border-color:rgba(139,92,246,.6);background:linear-gradient(rgba(139,92,246,.16),rgba(34,211,238,.08)) transparent}
+.x-status{min-height:1.6em;margin:calc(clamp(32px,4vw,56px) * -1 + 12px) 0 clamp(24px,3vw,40px);color:var(--dim);font:400 12px/1.6 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.x-shot{margin-top:4px}
+.x-more{display:flex}
+.x-more .btn--link{min-height:48px}
+.stack>.case[hidden]{display:none}
+.js .stack>.case.x-anim{transition:opacity .35s var(--ease),transform .45s var(--ease)}
+.js .stack>.case.x-out{opacity:0;transform:scale(.96)}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .stack>.case.x-last .case__out{animation:none}
+  }
+}
+
+/* ===== Trust ===== */
+.trustsec{padding:0 0 120px}
+@media (max-width:760px){.trustsec{padding-bottom:80px}}
+.trust{grid-template-columns:repeat(4,1fr);margin-top:0;border-bottom:1px solid var(--border)}
+.trust .stat{padding-bottom:28px;border-radius:20px}
+
+/* ===== Final CTA ===== */
+.final{position:relative;overflow:hidden;padding:clamp(96px,14vw,200px) 0;color:#030305;background-color:#8B5CF6;background-image:linear-gradient(120deg,#8B5CF6,#22D3EE 33%,#8B5CF6 66%,#22D3EE);background-size:300% 300%;animation:shift 18s ease-in-out infinite alternate}
+@keyframes shift{from{background-position:0% 50%}to{background-position:100% 50%}}
+.final .eyebrow{color:#030305}
+.final .eyebrow::before{background:#030305}
+.final h2{font-size:clamp(56px,11vw,184px);line-height:.88;max-width:11ch;margin-top:28px}
+.final .rv-m{padding:.1em .3em .45em;margin:-.1em -.3em -.45em}
+/* Figma-style selection box around the closing words (overlay only; never affects layout) */
+.final .rv-in{position:relative}
+.x-sel{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;--hs:14px}
+.x-sel svg.x-sel__box{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.x-sel__box rect{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s var(--ease) .95s}
+.x-sel__h{position:absolute;width:var(--hs);height:var(--hs);margin:calc(var(--hs)/-2) 0 0 calc(var(--hs)/-2);background:#FFFFFF;border:2px solid #030305;box-sizing:border-box;transform:scale(0);transition:transform .45s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(1.75s + var(--k)*80ms)}
+.x-sel__h:nth-of-type(1){left:0;top:0;--k:0}
+.x-sel__h:nth-of-type(2){left:100%;top:0;--k:1}
+.x-sel__h:nth-of-type(3){left:100%;top:100%;--k:2}
+.x-sel__h:nth-of-type(4){left:0;top:100%;--k:3}
+.in .x-sel__box rect{stroke-dashoffset:0}
+.in .x-sel__h{transform:scale(1)}
+@media (max-width:760px){.x-sel{--hs:9px}}
+@media (prefers-reduced-motion:reduce){
+  .x-sel__box rect,.x-sel__h{transition:none!important}
+  .x-sel__box rect{stroke-dashoffset:0}
+  .x-sel__h{transform:scale(1)}
+}
+.final h2 .sel{display:inline-block;margin:.22em 0 .32em;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;-webkit-text-stroke:0;text-shadow:none;filter:none}
+.final__sub{max-width:580px;margin-top:clamp(44px,4.5vw,64px);font-size:clamp(17px,1.4vw,20px);font-weight:500}
+.final .btn--grad{background:#FFFFFF;color:#030305;transition:transform .4s var(--ease),background-color .3s,box-shadow .4s var(--ease)}
+.final .btn--grad::before{content:none}
+.final .btn--grad:hover,.final .btn--grad:focus-visible{background:#F3F0FF;box-shadow:0 10px 30px -8px rgba(139,92,246,.45)}
+.btn--link,.btn--link.btn--lg{position:relative;background:none;border:0;padding:0 4px;height:auto;color:var(--text)}
+.btn--link::after{content:"";position:absolute;left:4px;right:4px;bottom:-4px;height:2px;border-radius:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);pointer-events:none}
+.btn--link:hover::after,.btn--link:focus-visible::after{transform:scaleX(1)}
+.btn--link:hover{background:linear-gradient(90deg,#C4B5FD,#67E8F9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.btn--link:hover .arrow:not(.arrow--up),.btn--link:focus-visible .arrow:not(.arrow--up){transform:translateX(6px) rotate(-0deg);animation:linkBounce .45s var(--ease)}
+@keyframes linkBounce{0%{transform:translateX(0)}55%{transform:translateX(9px)}100%{transform:translateX(6px)}}
+.final .btn--link{color:#030305}
+.final .btn--link::after{background:#030305}
+.final .btn--link:hover{-webkit-text-fill-color:#030305;background:none;letter-spacing:.01em}
+.final :focus-visible{outline-color:#030305}
+@media (max-width:520px){.final .cta .btn{width:100%;justify-content:center;white-space:normal;text-align:center;padding:14px 22px;line-height:1.25}.final .cta .btn--link{width:auto;align-self:center;padding:0 4px}}
+@media (max-width:480px){.final h2{font-size:clamp(40px,12vw,56px);line-height:.95}}
+
+/* ===== Card hover system ===== */
+.case__in,.pr,.trust .stat{position:relative;isolation:isolate}
+.case__in::after,.pstep::after,.pr::after,.trust .stat::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#8B5CF6,rgba(139,92,246,.25) 45%,rgba(34,211,238,.25) 55%,#22D3EE);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .25s ease;pointer-events:none}
+.case__in::after{inset:-1px;border-radius:var(--r)}
+.case__in::before,.pr::before,.trust .stat::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(139,92,246,.16),rgba(34,211,238,.05) 40%,transparent 65%);opacity:0;transition:opacity .25s ease;pointer-events:none}
+.js .princ>.pr,.js .trust>.stat{transition:opacity 1s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s),translate .25s ease,box-shadow .25s ease,border-color .25s ease}
+.trust .stat:first-child{padding-left:28px}
+.pr::after{inset:-1px}
+.pstep__meta b,.pr__n,.trust .stat b,.case__cat{transition:transform .25s ease,color .25s ease}
+@media (hover:hover){
+  .pr:hover,.trust .stat:hover,.pstep:hover,.case:hover .case__out{translate:0 -6px}
+  .pr:hover,.trust .stat:hover{box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 40px rgba(139,92,246,.14)}
+  .case:hover .case__out{box-shadow:0 -24px 60px rgba(0,0,0,.55),0 24px 60px rgba(0,0,0,.4),0 0 48px rgba(139,92,246,.16)}
+  .case:hover .case__in::after,.pstep:hover::after,.pr:hover::after,.trust .stat:hover::after,
+  .case:hover .case__in::before,.pr:hover::before,.trust .stat:hover::before{opacity:1}
+  .pstep:hover{--spot:rgba(139,92,246,.16);background-color:rgba(255,255,255,.025)}
+  .pstep:hover::before{translate:0 6px}
+  .pstep:hover .pstep__meta b{transform:translateX(4px)}
+  .pr:hover .pr__n{transform:translateX(6px);color:var(--cyan)}
+  .trust .stat:hover b{transform:translateY(-2px)}
+  .case:hover .case__cat{transform:translateX(4px)}
+}
+
+/* ===== Footer ===== */
+.foot{overflow:hidden;padding-top:120px;border-top:1px solid var(--border)}
+@media (max-width:760px){.foot{padding-top:80px}}
+.foot__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:32px}
+.foot__h{color:var(--dim);font-size:12px;margin-bottom:12px}
+.foot__grid a{display:inline-flex;align-items:center;min-height:var(--tap);min-width:var(--tap);color:var(--muted);transition:color .3s}
+.foot__grid a:hover{color:var(--text)}
+.foot__top{align-self:start;justify-self:end;gap:8px}
+.wm{position:relative;margin-top:clamp(56px,7vw,96px)}
+.wm svg{width:100%;height:auto}
+.wm__fill{position:absolute;inset:0;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s var(--ease) .4s}
+.wm.in .wm__fill{clip-path:inset(0 0 0 0)}
+.foot__legal{padding:24px 0 32px;border-top:1px solid var(--border);color:var(--dim);font-size:13px}
+
+@media (max-width:980px){
+  .trust{grid-template-columns:1fr 1fr}
+  .trust .stat:nth-child(3){border-left:0;padding-left:28px}
+  .trust .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .foot__top{justify-self:start}
+}
+@media (max-width:760px),(max-height:720px){
+  .case{position:relative;top:auto}
+  .case__cols{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .trust .stat:nth-child(n){border-left:0;padding:22px 16px}
+  .foot__grid{grid-template-columns:1fr}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:860px){
+  .nav__links{display:none}
+  .menu-btn{display:block}
+}
+@media (max-width:640px){
+  .nav .btn--grad{padding:0 16px;font-size:15px}
+  .stats{grid-template-columns:1fr}
+  .stat{border-left:0;padding:18px 0;border-bottom:1px solid var(--border)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .hl{animation:none}
+  .js .rv,.js .rv-in,.js [data-reveal].rv-self{opacity:1!important;transform:none!important;filter:none!important}
+  .final{animation:none}
+}
+
+/* hero scroll cue */
+.scroll-cue{display:inline-flex;align-items:center;gap:12px;margin-top:clamp(28px,4vh,44px);color:var(--muted);font:400 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:color .3s}
+.scroll-cue:hover,.scroll-cue:focus-visible{color:var(--text)}
+.scroll-cue__m{position:relative;width:22px;height:34px;border:1.5px solid rgba(255,255,255,.28);border-radius:12px;flex:none}
+.scroll-cue__m::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#22D3EE;animation:cueDot 1.8s ease-in-out infinite}
+@keyframes cueDot{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue__m::after{animation:none}}
+.hero .wrap{width:100%}
+.hero__text{width:100%}
+
+/* animated Devzink mark in hero */
+.hero .wrap.hx{display:flex;align-items:center;gap:clamp(32px,5vw,88px)}
+.hx .hero__text{flex:1 1 auto;min-width:0}
+.hx-mark{--S:clamp(300px,28vw,400px);flex:none;width:var(--S);position:relative;opacity:0;animation:hxIn 1.1s cubic-bezier(.22,1,.36,1) .35s forwards}
+@keyframes hxIn{from{opacity:0;transform:translateY(24px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* WORK: live agent pipeline */
+.fl{padding:22px;border-radius:24px;background:linear-gradient(180deg,rgba(18,18,32,.85),rgba(10,10,20,.85));border:1px solid rgba(255,255,255,.09);box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.fl::before{content:"";position:absolute;inset:-30% -20%;z-index:-1;background:radial-gradient(closest-side,rgba(139,92,246,.35),rgba(34,211,238,.12) 60%,transparent);filter:blur(40px);animation:flBreath 6s ease-in-out infinite}
+@keyframes flBreath{50%{opacity:.6;transform:scale(1.08)}}
+.fl__bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.fl__live{display:inline-flex;align-items:center;gap:8px;color:#4ADE80}
+.fl__live i{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:flLive 1.6s ease-out infinite}
+@keyframes flLive{to{box-shadow:0 0 0 10px rgba(74,222,128,0)}}
+.fl__node{--d:calc(var(--n)*1.5s);position:relative;display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);animation:flLit 8s ease-in-out var(--d) infinite}
+.fl__ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.05);color:#A78BFA;animation:flIc 8s ease-in-out var(--d) infinite}
+.fl__ic svg{width:20px;height:20px}
+.fl__t{display:grid;gap:4px;min-width:0}
+.fl__t b{font:600 15px/1.15 var(--f-head);color:var(--text);letter-spacing:-.01em}
+.fl__t small{font:400 11px/1.2 var(--f-mono);color:var(--dim);letter-spacing:.04em;text-transform:uppercase}
+.fl__ok{margin-left:auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(74,222,128,.15);color:#4ADE80;opacity:0;transform:scale(.5);animation:flOk0 8s ease-in-out infinite}
+.fl__node[style*="--n:1"] .fl__ok{animation-name:flOk1}.fl__node[style*="--n:2"] .fl__ok{animation-name:flOk2}.fl__node[style*="--n:3"] .fl__ok{animation-name:flOk3}
+@keyframes flOk0{0%,16.00%{opacity:0;transform:scale(.5)}19.00%,90%{opacity:1;transform:none}96%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk1{0%,34.75%{opacity:0;transform:scale(.5)}37.75%,90%{opacity:1;transform:none}96%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk2{0%,53.50%{opacity:0;transform:scale(.5)}56.50%,90%{opacity:1;transform:none}96%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk3{0%,72.25%{opacity:0;transform:scale(.5)}75.25%,90%{opacity:1;transform:none}96%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk0{0%,16%{opacity:0;transform:scale(.5)}20%,92%{opacity:1;transform:none}98%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk1{0%,41%{opacity:0;transform:scale(.5)}45%,92%{opacity:1;transform:none}98%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk2{0%,66%{opacity:0;transform:scale(.5)}70%,92%{opacity:1;transform:none}98%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flOk3{0%,91%{opacity:0;transform:scale(.5)}95%,92%{opacity:1;transform:none}98%,100%{opacity:0;transform:scale(.5)}}
+
+.fl__ok svg{width:12px;height:12px}
+.fl__link{position:relative;height:26px;margin-left:33px;width:2px;background:rgba(255,255,255,.08);overflow:visible}
+.fl__link::after{content:"";position:absolute;left:50%;top:0;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#22D3EE;box-shadow:0 0 12px 3px rgba(34,211,238,.7);opacity:0;animation:flPulse 8s linear calc(var(--n)*1.5s + 1.1s) infinite}
+@keyframes flLit{0%,100%{border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.03);box-shadow:none;transform:none}4%,17%{border-color:rgba(139,92,246,.7);background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.08));box-shadow:0 0 0 1px rgba(139,92,246,.25),0 12px 40px rgba(139,92,246,.35);transform:translateX(6px)}24%{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);box-shadow:none;transform:none}}
+@keyframes flIc{0%,100%{background:rgba(255,255,255,.05);color:#A78BFA}4%,17%{background:linear-gradient(135deg,#8B5CF6,#22D3EE);color:#05050A}24%{background:rgba(255,255,255,.05);color:#A78BFA}}
+@keyframes flOk{0%,14%{opacity:0;transform:scale(.5)}20%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:scale(.5)}}
+@keyframes flPulse{0%{top:0;opacity:0}2%{opacity:1}10%{top:calc(100% - 8px);opacity:1}12%,100%{top:calc(100% - 8px);opacity:0}}
+/* ABOUT: stack constellation */
+.ob{aspect-ratio:1}
+.ob__glow{position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.45),rgba(34,211,238,.15) 50%,transparent 72%);filter:blur(34px);animation:flBreath 6s ease-in-out infinite}
+.ob__ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed rgba(255,255,255,.14);transform:translate(-50%,-50%)}
+.ob__ring--1{width:58%;height:58%;animation:obSpin 26s linear infinite}
+.ob__ring--2{width:96%;height:96%;border-style:solid;border-color:rgba(139,92,246,.18);animation:obSpin 44s linear infinite reverse}
+.ob__ring--2::before{content:"";position:absolute;inset:-1px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 75%,rgba(34,211,238,.9) 92%,transparent 100%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px))}
+@keyframes obSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.ob__chip{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateX(var(--R))}
+.ob__ring--1 .ob__chip{--R:calc(var(--S)*.29)}
+.ob__ring--2 .ob__chip{--R:calc(var(--S)*.48)}
+.ob__chip span{position:absolute;left:0;top:0;transform:translate(-50%,-50%) rotate(calc(var(--a)*-1));display:block;white-space:nowrap}
+.ob__chip em{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:99px;font:500 12px/1 var(--f-mono);font-style:normal;color:var(--text);background:rgba(14,14,26,.92);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 24px rgba(0,0,0,.45);animation:obUp 26s linear infinite reverse}
+.ob__ring--2 .ob__chip em{animation:obUp2 44s linear infinite}
+.ob__chip em::before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#A78BFA,#22D3EE)}
+@keyframes obUp{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes obUp2{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.ob__core{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#1d1b34,#0b0b16 70%);border:1px solid rgba(139,92,246,.5);box-shadow:0 0 60px rgba(139,92,246,.45),inset 0 0 30px rgba(34,211,238,.12)}
+.ob__core::before,.ob__core::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(34,211,238,.6);animation:obPing 3s ease-out infinite}
+.ob__core::after{animation-delay:1.5s}
+@keyframes obPing{from{transform:scale(1);opacity:.8}to{transform:scale(1.9);opacity:0}}
+.ob__core svg{width:52%;height:52%}
+.ob__hex{fill:none;stroke:url(#obG);stroke-width:7;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:obDraw 1.6s cubic-bezier(.65,0,.35,1) .6s forwards}
+.ob__dot{fill:#fff;transform-origin:50px 50px;animation:obBeat 2.4s ease-in-out infinite}
+@keyframes obDraw{to{stroke-dashoffset:0}}
+@keyframes obBeat{50%{transform:scale(1.25)}}
+@media (max-width:1000px){
+  .hero .wrap.hx{flex-direction:column;align-items:flex-start;gap:36px}
+  .hx-mark{--S:min(360px,calc(100vw - 48px))}
+}
+@media (prefers-reduced-motion:reduce){
+  .hx-mark,.hx-mark *,.hx-mark *::before,.hx-mark *::after,.fl::before{animation:none!important}
+  .hx-mark{opacity:1}.ob__hex{stroke-dashoffset:0}
+}
+
+.wa-fab{position:fixed;left:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:99px;background:#25D366;color:#04140a;font:600 15px/1 inherit;text-decoration:none;box-shadow:0 10px 30px -8px rgba(37,211,102,.55);transform:translateY(90px);opacity:0;transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .4s,box-shadow .3s}
+.wa-fab.on{transform:none;opacity:1}
+.wa-fab:hover{box-shadow:0 14px 36px -8px rgba(37,211,102,.75);transform:translateY(-2px)}
+.wa-fab svg{width:24px;height:24px;flex:none}
+@media (max-width:640px){.wa-fab{left:14px;bottom:14px;height:50px;width:50px;padding:0;justify-content:center}.wa-fab span{display:none}}
+@media (prefers-reduced-motion:reduce){.wa-fab{transition:none}}
+
+/* case cards: actions + detail modal */
+.x-more{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.chips--cap b{font:600 16px/1.2 var(--f-head);letter-spacing:-.01em}
+.btn--ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:99px;border:1px solid rgba(255,255,255,.18);color:var(--text);background:rgba(255,255,255,.03);font-weight:500;transition:background .25s,border-color .25s,transform .3s}
+.btn--ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+.case__detail{display:none}
+.dm{position:fixed;inset:0;margin:auto;width:min(1040px,calc(100vw - 32px));max-height:calc(100dvh - 48px);padding:0;border:0;border-radius:var(--r);background:transparent;color:var(--text);overflow:visible}
+.dm::backdrop{background:rgba(3,3,8,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.dm[open]{animation:dmIn .45s cubic-bezier(.22,1,.36,1)}
+.dm[open]::backdrop{animation:dmFade .35s ease}
+@keyframes dmIn{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes dmFade{from{opacity:0}}
+.dm__frame{padding:1px;border-radius:var(--r);background:linear-gradient(135deg,rgba(139,92,246,.8),rgba(255,255,255,.08) 40%,rgba(255,255,255,.08) 60%,rgba(34,211,238,.8));box-shadow:0 40px 120px rgba(0,0,0,.7)}
+.dm__body{position:relative;max-height:calc(100dvh - 50px);overflow:auto;overscroll-behavior:contain;border-radius:calc(var(--r) - 1px);background:var(--bg-3);padding:clamp(24px,4vw,56px);display:grid;gap:clamp(24px,3vw,36px);scrollbar-width:thin;scrollbar-color:rgba(139,92,246,.5) transparent}
+.dm__x{position:sticky;top:0;justify-self:end;margin:-8px -8px -60px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:rgba(12,12,22,.9);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .3s}
+.dm__x:hover{background:rgba(139,92,246,.25);transform:rotate(90deg)}
+.dm__x svg{width:18px;height:18px}
+.dm-cat{color:var(--cyan);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-right:56px}
+.dm-title{font-size:clamp(30px,4.4vw,56px);line-height:1;margin-top:-14px;padding-right:40px}
+.dm-lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:760px}
+.dm-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px)}
+.dm h3{font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.dm-cols p{color:var(--muted)}
+.dm-block{padding-top:clamp(20px,2.5vw,28px);border-top:1px solid var(--border)}
+.dm-steps{list-style:none;counter-reset:st;display:grid;gap:12px}
+.dm-steps li{counter-increment:st;position:relative;padding:14px 16px 14px 60px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--glass-b);color:var(--muted)}
+.dm-steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:14px;font:600 14px/1.6 var(--f-mono);background:linear-gradient(90deg,#A78BFA,#22D3EE);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dm-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.dm-feats li{position:relative;padding-left:28px;color:var(--muted)}
+.dm-feats li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#22D3EE);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.dm-gal{display:grid;gap:16px}
+.dm-shot figcaption{margin-top:10px;color:var(--dim);font:400 12px/1.4 var(--f-mono);letter-spacing:.04em;text-transform:uppercase}
+.dm-ph{display:flex;align-items:center;gap:16px;padding:clamp(22px,3vw,36px);border-radius:16px;border:1px dashed rgba(139,92,246,.4);background:radial-gradient(500px circle at 0% 0%,rgba(139,92,246,.12),transparent 60%),rgba(255,255,255,.02);color:var(--muted)}
+.dm-ph svg{width:40px;height:40px;flex:none;color:#A78BFA}
+.dm-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding:clamp(22px,3vw,32px);border-radius:18px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.1));border:1px solid rgba(139,92,246,.35)}
+.dm-cta h3{font:600 clamp(22px,2.2vw,28px)/1.1 var(--f-head);letter-spacing:-.02em;text-transform:none;color:var(--text);margin-bottom:6px}
+.dm-cta p{color:var(--muted);max-width:480px}
+.dm-btns{display:flex;flex-wrap:wrap;gap:12px}
+body.dm-lock{overflow:hidden}
+@media (max-width:760px){.dm-cols,.dm-feats{grid-template-columns:1fr}.dm{width:calc(100vw - 16px);max-height:calc(100dvh - 16px)}.dm__body{max-height:calc(100dvh - 18px)}}
+@media (prefers-reduced-motion:reduce){.dm[open],.dm[open]::backdrop{animation:none}}
+button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:block;cursor:zoom-in}
+/* CTA headline: word flip-in + typed selection */
+.js .final .rv-in{transform:none!important;transition:none!important}
+.final .rv-m{overflow:visible}
+.final h2{perspective:900px}
+.final h2 .sel{margin:.14em 0 .34em}
+.final__sub{margin-top:clamp(20px,2.4vw,32px)}
+.final .cw{display:inline-block;white-space:nowrap}
+.js .final .cw__i{display:inline-block;opacity:0;filter:blur(16px);transform:translateY(45%) rotateX(-85deg) scale(.92);transform-origin:50% 100%;transition:opacity .9s var(--ease),filter .9s var(--ease),transform 1.1s cubic-bezier(.2,1.2,.3,1);transition-delay:calc(var(--w)*110ms + .1s)}
+.js .final .in .cw__i{opacity:1;filter:none;transform:none}
+.final .sel .cw__i{opacity:1!important;filter:none!important;transform:none!important}
+.js .final .cc{display:inline-block;opacity:0;transform:translateY(.25em) scale(.4);filter:blur(8px);transition:opacity .35s ease,transform .6s cubic-bezier(.34,1.7,.5,1),filter .4s ease;transition-delay:calc(var(--c)*45ms + var(--sd,.7s))}
+.js .final .in .cc{opacity:1;transform:none;filter:none}
+.final .sel{position:relative}
+.js .final .sel::after{content:"";position:absolute;right:-.06em;top:.12em;bottom:.02em;width:.06em;background:#fff;opacity:0}
+.js .final .in .sel::after{animation:ccCaret .9s steps(1) var(--sc,1.4s) 4 forwards}
+@keyframes ccCaret{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
+.final .x-sel__box rect{transition-delay:var(--bx,1.7s)!important}
+.final .x-sel__h{transition-delay:calc(var(--bx,1.7s) + .7s + var(--k)*90ms)!important}
+.final .eyebrow{transition:letter-spacing 1.2s var(--ease),opacity 1s}
+.js .final [data-reveal]:not(.in) .eyebrow{letter-spacing:.6em;opacity:0}
+@media (prefers-reduced-motion:reduce){.js .final .cw__i,.js .final .cc{opacity:1!important;filter:none!important;transform:none!important;transition:none!important}.js .final .in .sel::after{animation:none}}
+/* CTA attention: cursor glides in and clicks the primary button */
+.final .cta{position:relative}
+.x-cur{position:absolute;left:0;top:0;width:34px;height:34px;pointer-events:none;z-index:3;opacity:0;transform:translate(calc(var(--tx) + 240px),calc(var(--ty) + 160px)) rotate(12deg);filter:drop-shadow(0 6px 14px rgba(3,3,5,.35))}
+.x-cur svg{width:100%;height:100%}
+.x-cur.go{animation:curIn 1.25s cubic-bezier(.22,1,.36,1) forwards,curClick .32s ease 1.3s,curOut .6s ease 2.6s forwards}
+@keyframes curIn{0%{opacity:0;transform:translate(calc(var(--tx) + 240px),calc(var(--ty) + 160px)) rotate(12deg)}25%{opacity:1}100%{opacity:1;transform:translate(var(--tx),var(--ty)) rotate(0)}}
+@keyframes curClick{0%,100%{transform:translate(var(--tx),var(--ty)) scale(1)}45%{transform:translate(var(--tx),var(--ty)) scale(.8)}}
+@keyframes curOut{to{opacity:0;transform:translate(calc(var(--tx) + 18px),calc(var(--ty) + 18px))}}
+.x-rip{position:absolute;left:0;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;border:2px solid #fff;pointer-events:none;z-index:2;opacity:0;transform:translate(var(--tx),var(--ty))}
+.x-rip.go{animation:ripG .9s ease-out 1.38s}
+.x-rip.go+.x-rip.go{animation-delay:1.55s}
+@keyframes ripG{0%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(6)}}
+.final .cta .btn--grad.x-hit{animation:btnHit .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes btnHit{40%{transform:scale(.94)}}
+.final .cta .btn--grad.x-glow{animation:btnGlow 2.8s ease-in-out infinite}
+@keyframes btnGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.55),0 10px 30px -10px rgba(3,3,5,.4)}50%{box-shadow:0 0 0 12px rgba(255,255,255,0),0 16px 40px -10px rgba(3,3,5,.5)}}
+@media (prefers-reduced-motion:reduce){.x-cur,.x-rip{display:none}.final .cta .btn--grad.x-glow{animation:none}}
+</style>
+<script>
+document.documentElement.classList.add("js");
+if(!(window.CSS&&CSS.registerProperty))document.documentElement.classList.add("no-atprop");
+(function(){var r=document.documentElement;try{var s=sessionStorage;if(!s.getItem("dz-pl")){r.classList.add("is-loading");s.setItem("dz-pl","1");s.removeItem("dz-cur")}else if(s.getItem("dz-cur")){s.removeItem("dz-cur");r.classList.add("curtain-in")}}catch(e){}})();
+document.addEventListener("DOMContentLoaded",function(){
+  var d=document,nav=d.querySelector(".nav"),bar=d.querySelector(".progress"),tick=0;
+  function update(){tick=0;var y=scrollY,h=d.documentElement.scrollHeight-innerHeight;nav.classList.toggle("scrolled",y>40);bar.style.transform="scaleX("+(h>0?Math.min(y/h,1):0)+")"}
+  addEventListener("scroll",function(){if(!tick)tick=requestAnimationFrame(update)},{passive:true});update();
+  var still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  function countUp(root){if(still)return;root.querySelectorAll("[data-count]").forEach(function(el){var t=parseFloat(el.dataset.count),dec=(el.dataset.count.split(".")[1]||"").length,s=0;el.textContent=(0).toFixed(dec);function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1400,1),k=1-Math.pow(1-p,3);el.textContent=(t*k).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
+  /* text reveals: tag every text element inside each reveal group below the hero */
+  var TXT=".eyebrow,h2,h3,h4,p,li:not(.pstep),dt,dd,.cap,.btn,.textlink,.row__n,.panel__icon,.stat>b,.stat>span,figure";
+  d.querySelectorAll("main>section:not(.hero) [data-reveal],.foot [data-reveal]").forEach(function(g){
+    if(g.matches(".wm"))return;
+    var all=[].slice.call(g.querySelectorAll(TXT)),set=all.filter(function(el){for(var p=el.parentElement;p&&p!==g;p=p.parentElement){if(all.indexOf(p)>-1)return false}return true});
+    if(!set.length){g.classList.add("rv-self");return}
+    if(!g.matches(".panel,.case,.pr"))g.classList.add("rv-group");
+    set.forEach(function(el,i){el.style.setProperty("--rv",Math.min(i,16));
+      if(/^H[23]$/.test(el.tagName)){if(!el.querySelector(".rv-m"))el.innerHTML='<span class="rv-m"><span class="rv-in">'+el.innerHTML+"</span></span>"}
+      else{el.classList.add("rv");el.addEventListener("transitionend",function f(ev){if(ev.target===el&&ev.propertyName==="opacity"){el.classList.remove("rv");el.removeEventListener("transitionend",f)}})}
+    });
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");countUp(e.target);io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+  d.querySelectorAll("[data-reveal]").forEach(function(el){io.observe(el)});
+  /* cursor spotlight: one rAF-throttled pointermove listener per card group */
+  d.querySelectorAll("[data-fx]").forEach(function(g){var sel=g.dataset.fx,ev=null,raf=0;
+    g.addEventListener("pointermove",function(e){ev=e;if(raf)return;raf=requestAnimationFrame(function(){raf=0;var c=ev.target.closest&&ev.target.closest(sel);if(!c||!g.contains(c))return;var r=c.getBoundingClientRect();c.style.setProperty("--mx",ev.clientX-r.left+"px");c.style.setProperty("--my",ev.clientY-r.top+"px")})},{passive:true});
+  });
+  /* mobile menu */
+  var root=d.documentElement,mb=d.querySelector(".menu-btn"),mm=d.getElementById("mmenu");
+  function setMenu(o){nav.classList.toggle("open",o);root.classList.toggle("menu-open",o);mb.setAttribute("aria-expanded",o);mb.setAttribute("aria-label",o?"Close menu":"Open menu");if(o){setTimeout(function(){var f=mm.querySelector("a");if(f)f.focus({preventScroll:true})},350)}}
+  mb.addEventListener("click",function(){setMenu(!nav.classList.contains("open"))});
+  mm.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setMenu(false)})});
+  matchMedia("(min-width:861px)").addEventListener("change",function(e){if(e.matches)setMenu(false)});
+  /* services dropdown */
+  var dd=d.querySelector(".dd"),db=dd.querySelector(".dd__btn");
+  function isOpen(){return dd.matches(":hover,:focus-within,.open")&&!dd.classList.contains("hush")}
+  function sync(){db.setAttribute("aria-expanded",isOpen())}
+  db.addEventListener("click",function(){if(isOpen()){dd.classList.remove("open");dd.classList.add("hush")}else{dd.classList.remove("hush");dd.classList.add("open")}sync()});
+  dd.addEventListener("mouseenter",sync);
+  dd.addEventListener("focusin",sync);
+  dd.addEventListener("mouseleave",function(){dd.classList.remove("hush");if(!dd.contains(d.activeElement))dd.classList.remove("open");setTimeout(sync)});
+  dd.addEventListener("focusout",function(e){if(!dd.contains(e.relatedTarget)){dd.classList.remove("open","hush");setTimeout(sync)}});
+  addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(nav.classList.contains("open")){setMenu(false);mb.focus()}else if(isOpen()){dd.classList.remove("open");dd.classList.add("hush");db.focus();sync()}});
+  /* page transition fallback: curtain */
+  var cur=d.querySelector(".curtain");
+  if(root.classList.contains("curtain-in")){requestAnimationFrame(function(){requestAnimationFrame(function(){cur.classList.add("away");root.classList.remove("curtain-in");setTimeout(function(){cur.classList.remove("away")},700)})})}
+  addEventListener("pageshow",function(e){if(e.persisted){cur.classList.remove("cover","away");root.classList.remove("curtain-in")}});
+  if(!("onpagereveal" in window)){
+    d.addEventListener("click",function(e){
+      var a=e.target.closest&&e.target.closest("a[href]");
+      if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+      if((a.target&&a.target!=="_self")||a.hasAttribute("download"))return;
+      var h=a.getAttribute("href");if(!h||h.charAt(0)==="#")return;
+      var u;try{u=new URL(a.href,location.href)}catch(_){return}
+      if(!/^https?:$/.test(u.protocol)||u.origin!==location.origin)return;
+      if(u.pathname===location.pathname&&u.search===location.search)return;
+      e.preventDefault();
+      try{sessionStorage.setItem("dz-cur","1")}catch(_){}
+      cur.classList.remove("away");cur.classList.add("cover");
+      setTimeout(function(){location.href=u.href},still?0:450);
+    });
+  }
+});
+</script>
 </head>
-<body class="page-work">
-
-  <div class="bg-glow" aria-hidden="true"></div>
-  <div class="bg-aurora" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
-
-  <!-- Circuit traces (AI data flow) — global -->
-<div class="bg-circuit" aria-hidden="true">
-
-  <!-- Horizontal traces — left to right -->
-  <span class="trace-h" style="top: 128px;  animation-duration: 28s; animation-delay: 0s;"></span>
-  <span class="trace-h" style="top: 320px;  animation-duration: 32s; animation-delay: -8s;"></span>
-  <span class="trace-h" style="top: 576px;  animation-duration: 30s; animation-delay: -14s;"></span>
-  <span class="trace-h" style="top: 832px;  animation-duration: 34s; animation-delay: -4s;"></span>
-  <span class="trace-h" style="top: 1088px; animation-duration: 31s; animation-delay: -11s;"></span>
-  <span class="trace-h" style="top: 1344px; animation-duration: 33s; animation-delay: -18s;"></span>
-
-  <!-- Horizontal traces — right to left -->
-  <span class="trace-h rev" style="top: 192px;  animation-duration: 30s; animation-delay: -7s;"></span>
-  <span class="trace-h rev" style="top: 448px;  animation-duration: 29s; animation-delay: -15s;"></span>
-  <span class="trace-h rev" style="top: 704px;  animation-duration: 33s; animation-delay: -3s;"></span>
-  <span class="trace-h rev" style="top: 960px;  animation-duration: 36s; animation-delay: -20s;"></span>
-  <span class="trace-h rev" style="top: 1216px; animation-duration: 31s; animation-delay: -9s;"></span>
-  <span class="trace-h rev" style="top: 1472px; animation-duration: 32s; animation-delay: -14s;"></span>
-
-  <!-- Vertical traces — top to bottom -->
-  <span class="trace-v" style="left: 192px;  animation-duration: 34s; animation-delay: -10s;"></span>
-  <span class="trace-v" style="left: 576px;  animation-duration: 29s; animation-delay: -5s;"></span>
-  <span class="trace-v" style="left: 960px;  animation-duration: 32s; animation-delay: -18s;"></span>
-  <span class="trace-v" style="left: 1344px; animation-duration: 36s; animation-delay: -8s;"></span>
-
-  <!-- Vertical traces — bottom to top -->
-  <span class="trace-v rev" style="left: 384px;  animation-duration: 38s; animation-delay: -9s;"></span>
-  <span class="trace-v rev" style="left: 768px;  animation-duration: 34s; animation-delay: -2s;"></span>
-  <span class="trace-v rev" style="left: 1152px; animation-duration: 36s; animation-delay: -14s;"></span>
-
-  <!-- Node flashes -->
-  <span class="node" style="top: 192px;  left: 192px;  animation-duration: 11s; animation-delay: 0s;"></span>
-  <span class="node" style="top: 448px;  left: 384px;  animation-duration: 13s; animation-delay: -3s;"></span>
-  <span class="node" style="top: 704px;  left: 576px;  animation-duration: 12s; animation-delay: -6s;"></span>
-  <span class="node" style="top: 256px;  left: 768px;  animation-duration: 14s; animation-delay: -2s;"></span>
-  <span class="node" style="top: 512px;  left: 960px;  animation-duration: 12.5s; animation-delay: -8s;"></span>
-  <span class="node" style="top: 832px;  left: 320px;  animation-duration: 13.5s; animation-delay: -5s;"></span>
-  <span class="node" style="top: 128px;  left: 1152px; animation-duration: 11.5s; animation-delay: -9s;"></span>
-  <span class="node" style="top: 640px;  left: 128px;  animation-duration: 14.5s; animation-delay: -4s;"></span>
-  <span class="node" style="top: 1088px; left: 512px;  animation-duration: 12.2s; animation-delay: -11s;"></span>
-  <span class="node" style="top: 1216px; left: 896px;  animation-duration: 13.8s; animation-delay: -7s;"></span>
-  <span class="node" style="top: 1472px; left: 640px;  animation-duration: 11.8s; animation-delay: -2.5s;"></span>
-  <span class="node" style="top: 960px;  left: 1088px; animation-duration: 14.2s; animation-delay: -10s;"></span>
-
+<body>
+<div class="pre" aria-hidden="true">
+  <div class="pre__in">
+    <svg class="pre__mark" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="preG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><path pathLength="1" d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="url(#preG)" stroke-width="1.2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="url(#preG)"/></svg>
+    <div class="pre__bar"><i></i></div>
+    <p class="pre__pct mono"><span>0</span>%</p>
+  </div>
 </div>
+<script>
+(function(){
+  var r=document.documentElement;if(!r.classList.contains("is-loading"))return;
+  var pre=document.querySelector(".pre"),bar=pre.querySelector(".pre__bar i"),num=pre.querySelector(".pre__pct span"),loaded=document.readyState==="complete",done=false,shown=0;
+  addEventListener("load",function(){loaded=true});
+  function paint(){bar.style.transform="scaleX("+shown/100+")";num.textContent=Math.round(shown)}
+  function finish(){if(done)return;done=true;shown=100;paint();setTimeout(function(){pre.classList.add("done");setTimeout(function(){r.classList.remove("is-loading")},450);setTimeout(function(){pre.remove()},1000)},140)}
+  function tick(){if(done)return;var t=performance.now();
+    if(t>=1800){finish();return}
+    if(loaded&&t>=600){shown+=(100-shown)*.35;if(shown>99.4){finish();return}}
+    else shown+=(Math.min(90,t/1800*100+(loaded?20:0))-shown)*.12;
+    paint();requestAnimationFrame(tick)}
+  requestAnimationFrame(tick);setTimeout(finish,2000);
+})();
+</script>
+<div class="curtain" aria-hidden="true"></div>
+<a class="skip" href="#content">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="/" class="nav__logo" aria-label="Devzink home">
-        <span class="nav__logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-            <circle cx="12" cy="12" r="3" fill="#fff"/>
-          </svg>
-        </span>
-        Devzink
-      </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <div class="nav__dropdown">
-          <button class="nav__dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-            Services
-            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 4.5L6 7.5L9 4.5"/>
-            </svg>
-          </button>
-
-          <div class="nav__dropdown-menu" role="menu">
-            <a href="ai-automation" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="8" width="16" height="12" rx="3"/>
-                  <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <path d="M12 8V4"/>
-                  <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
-                  <path d="M2 14h2M20 14h2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>AI Agents &amp; Automation</strong>
-                <em>Run your operations without the manual work.</em>
-              </span>
-            </a>
-
-            <a href="web-app-development" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>AI Product Engineering</strong>
-                <em>SaaS platforms &amp; apps with AI at the core.</em>
-              </span>
-            </a>
-
-            <a href="services#web" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="14" rx="2"/>
-                  <path d="M8 20h8M12 18v2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>Web Engineering</strong>
-                <em>GSAP, Spline 3D, corporate platforms</em>
-              </span>
-            </a>
-
-            <a href="services#mobile" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
-                  <path d="M11 18h2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>Cross-Platform Mobile</strong>
-                <em>iOS &amp; Android with Flutter</em>
-              </span>
-            </a>
-
-            <a href="services#uiux" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
-                  <path d="m2 17 10 5 10-5"/>
-                  <path d="m2 12 10 5 10-5"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>UI/UX &amp; Design Systems</strong>
-                <em>Prototypes, design tokens, Figma</em>
-              </span>
-            </a>
-
-            <a href="services" class="nav__dropdown-all" role="menuitem">
-              View all services
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 8h10M9 4l4 4-4 4"/>
-              </svg>
-            </a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="logo" href="/" aria-label="Devzink home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg>
+      Devzink
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="dd">
+        <button class="dd__btn" type="button" aria-expanded="false" aria-controls="dd-services">Services <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd__panel" id="dd-services">
+          <div class="dd__in">
+            <ul class="dd__list">
+              <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Run your operations without the manual work.</span></a></li>
+              <li style="--i:1"><a href="/web-app-development"><b>AI Product Engineering</b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
+              <li style="--i:2"><a href="/services#web"><b>Web Engineering</b><span>GSAP, Spline 3D, corporate platforms</span></a></li>
+              <li style="--i:3"><a href="/services#mobile"><b>Cross-Platform Mobile</b><span>iOS &amp; Android with Flutter</span></a></li>
+              <li style="--i:4"><a href="/services#uiux"><b>UI/UX &amp; Design Systems</b><span>Prototypes, design tokens, Figma</span></a></li>
+              <li style="--i:5"><a class="dd__all" href="/services">View all services <span class="arrow" aria-hidden="true">→</span></a></li>
+            </ul>
           </div>
         </div>
+      </div>
+      <a href="/work" aria-current="page">Work</a><a href="/about">About</a>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--grad" href="/contact">Book a Call</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Mobile">
+  <ul class="mmenu__list">
+    <li style="--i:0"><a class="mmenu__big" href="/services">Services <span class="arrow" aria-hidden="true">→</span></a>
+      <ul class="mmenu__sub">
+        <li><a href="/ai-automation">AI Agents &amp; Automation</a></li>
+        <li><a href="/web-app-development">AI Product Engineering</a></li>
+        <li><a href="/services#web">Web Engineering</a></li>
+        <li><a href="/services#mobile">Cross-Platform Mobile</a></li>
+        <li><a href="/services#uiux">UI/UX &amp; Design Systems</a></li>
+      </ul>
+    </li>
+    <li style="--i:1"><a class="mmenu__big" href="/work" aria-current="page">Work <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li style="--i:2"><a class="mmenu__big" href="/about">About <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li class="mmenu__cta" style="--i:3"><a class="btn btn--grad btn--lg" href="/contact">Book a Call <span class="arrow" aria-hidden="true">→</span></a></li>
+  </ul>
+</nav>
 
-        <a href="work" class="is-active">Work</a>
-        <a href="about">About</a>
+<main id="content">
+  <!-- HERO -->
+  <section class="hero x-hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="dots"></div>
+      <div class="glow glow--v"></div>
+      <div class="glow glow--c"></div>
+    </div>
+    <div class="wrap hx">
+      <div class="hero__text">
+        <p class="eyebrow mono fade-up" style="--d:.05s">AI Automation &amp; Development Case Studies</p>
+        <h1>
+          <span class="line"><span style="--i:0">Systems we built.</span></span>
+          <span class="line"><span style="--i:1">Problems they</span></span>
+          <span class="line"><span style="--i:2"><span class="hl">actually solved.</span></span></span>
+        </h1>
+        <p class="hero__sub fade-up" style="--d:.6s">Each case breaks down what we built, how it works, and what it changed for the business. Client names shared under NDA.</p>
+        <a class="scroll-cue fade-up" style="--d:.8s" href="#work"><span class="scroll-cue__m" aria-hidden="true"></span>Scroll to explore</a>
+      </div>
+      <div class="hx-mark fl" aria-hidden="true">
+        <div class="fl__bar"><span>agent.workflow</span><span class="fl__live"><i></i>Live</span></div>
+        <div class="fl__node" style="--n:0"><span class="fl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span class="fl__t"><b>New lead captured</b><small>Webhook · Form</small></span><span class="fl__ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span></div>
+        <div class="fl__link" style="--n:0"></div>
+        <div class="fl__node" style="--n:1"><span class="fl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><span class="fl__t"><b>AI scores the lead</b><small>Agent · Gemini</small></span><span class="fl__ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span></div>
+        <div class="fl__link" style="--n:1"></div>
+        <div class="fl__node" style="--n:2"><span class="fl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M8.5 6H12a3 3 0 0 1 3 3v.5M8.5 18H12a3 3 0 0 0 3-3v-.5"/></svg></span><span class="fl__t"><b>Hot lead → sales</b><small>Router · Rules</small></span><span class="fl__ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span></div>
+        <div class="fl__link" style="--n:2"></div>
+        <div class="fl__node" style="--n:3"><span class="fl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span><span class="fl__t"><b>Reply sent + logged</b><small>Gmail · Sheets</small></span><span class="fl__ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="sec x-work" id="work" aria-label="Case studies">
+    <div class="wrap">
+      <div class="x-filter" role="group" aria-label="Filter case studies" data-reveal>
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="ai" aria-pressed="false">AI Agents</button>
+        <button type="button" data-filter="product" aria-pressed="false">Product</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+      </div>
+      <p class="x-status" id="x-filter-status" aria-live="polite">Showing 9 of 9 case studies</p>
+
+      <div class="stack" data-fx=".case__in">
+        <article class="case" id="case-lead-qualification" data-cat="ai" data-reveal style="--i:0;--s:0.84">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Agent · B2B Sales</p><p class="mono case__num">01 / 09</p></div>
+            <h3>Multi-Lead Qualification &amp; Auto-Email Agent</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Leads arrive from forms and webhooks all day. Sorting them by hand is slow, hot leads wait hours for a reply, and low-budget enquiries eat the team&#x27;s time.</p></div>
+              <div><h4>What we built</h4><p>An agent that scores every incoming lead with Gemini as hot, warm or cold, logs it to the right sheet, alerts the sales rep, and sends the lead a tailored email. Qualified form leads also get a ready-to-send meeting email drafted in Gmail.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Hot / warm / cold scoring</b></li><li><b>Instant tailored emails</b></li><li><b>Gmail meeting drafts</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>Google Gemini</li><li>Structured output</li><li>Google Sheets</li><li>Gmail</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Agent · B2B Sales</p>
+              <h2 class="dm-title" id="dm-title">Multi-Lead Qualification &amp; Auto-Email Agent</h2>
+              <p class="dm-lead">Two connected workflows that turn every new lead into a scored, logged and answered lead within minutes.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-lead-qualification.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-lead-qualification.webp" loading="lazy" decoding="async" alt="n8n workflow: webhook into a Gemini AI agent with structured output, a hot/warm/cold switch, Google Sheets logging and Gmail emails, plus a form flow that drafts meeting emails" /></a></div><figcaption>Lead scoring + email workflow</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Leads arrive from forms and webhooks all day. Sorting them by hand is slow, hot leads wait hours for a reply, and low-budget enquiries eat the team&#x27;s time.</p></div>
+                <div><h3>What we built</h3><p>An agent that scores every incoming lead with Gemini as hot, warm or cold, logs it to the right sheet, alerts the sales rep, and sends the lead a tailored email. Qualified form leads also get a ready-to-send meeting email drafted in Gmail.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>A lead arrives through a webhook or the website form.</li><li>A Gemini AI agent reads it and returns a structured score: hot, warm or cold.</li><li>A switch routes the lead: each tier is saved to its own Google Sheet.</li><li>Hot and warm leads trigger an email to the sales rep plus a tailored email to the lead.</li><li>Cold leads get a polite, helpful reply so nobody is ignored.</li><li>Form leads are checked for budget: qualified ones alert the owner and get a book-a-meeting email drafted in Gmail; low-budget leads get a separate reply.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Hot / warm / cold scoring</b></li><li><b>Instant tailored emails</b></li><li><b>Gmail meeting drafts</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Scoring rules tuned to your ideal customer</li><li>Sales team only sees leads worth their time</li><li>Drafts for review before sending, where you want control</li><li>Every lead logged for reporting</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>Google Gemini</li><li>Structured output</li><li>Google Sheets</li><li>Gmail</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-rag-support" data-cat="ai" data-reveal style="--i:1;--s:0.86">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Agent · Customer Support</p><p class="mono case__num">02 / 09</p></div>
+            <h3>RAG Customer Support Agent</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Customers ask the same questions all day. The team copies answers from docs, replies are slow outside business hours, and generic chatbots make things up.</p></div>
+              <div><h4>What we built</h4><p>A support agent trained on the business&#x27;s own website and documents. It answers in seconds with grounded, accurate replies, remembers the conversation, and hands off to a human when it isn&#x27;t sure.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Answers from your own docs</b></li><li><b>24/7 replies</b></li><li><b>Conversation memory</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>Gemini</li><li>Pinecone</li><li>Embeddings</li><li>Webhook chat</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Agent · Customer Support</p>
+              <h2 class="dm-title" id="dm-title">RAG Customer Support Agent</h2>
+              <p class="dm-lead">A retrieval-augmented (RAG) chatbot that only answers from your approved content, so replies are fast and accurate.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="image-988baf736cc8.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="image-988baf736cc8.webp" loading="lazy" decoding="async" alt="n8n workflow of the RAG support agent: website pages are crawled into a Pinecone vector store that a Gemini chat agent queries" /></a></div><figcaption>Production workflow</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Customers ask the same questions all day. The team copies answers from docs, replies are slow outside business hours, and generic chatbots make things up.</p></div>
+                <div><h3>What we built</h3><p>A support agent trained on the business&#x27;s own website and documents. It answers in seconds with grounded, accurate replies, remembers the conversation, and hands off to a human when it isn&#x27;t sure.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>The agent crawls your website pages and documents (home, about, services, contact, FAQs).</li><li>Content is cleaned, split into chunks and embedded into a Pinecone vector store.</li><li>When a customer asks a question, the agent retrieves the most relevant passages.</li><li>Gemini writes a short, accurate answer using only those passages, with conversation memory for follow-ups.</li><li>Unclear or sensitive questions are handed to a human.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Answers from your own docs</b></li><li><b>24/7 replies</b></li><li><b>Conversation memory</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Grounded answers, no made-up replies</li><li>Update knowledge by re-syncing your site</li><li>Embeds on website or chat channels</li><li>Handoff to your team when needed</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>Gemini</li><li>Pinecone</li><li>Embeddings</li><li>Webhook chat</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-missed-call" data-cat="ai" data-reveal style="--i:2;--s:0.88">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Agent · Home Services</p><p class="mono case__num">03 / 09</p></div>
+            <h3>Home Services Missed-Call Agent</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Home service owners are on job sites and miss calls. Callers move on to the next plumber or HVAC company, bookings happen by phone tag, and reminders and review requests are forgotten.</p></div>
+              <div><h4>What we built</h4><p>Four workflows working as one system: missed calls get a text-back and are booked over SMS with calendar clash checks, customers get 24h and 2h reminders, finished jobs trigger review requests, and the owner gets a daily digest plus instant error alerts.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Missed call → SMS booking</b></li><li><b>24h + 2h reminders</b></li><li><b>Auto review requests</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>Twilio SMS</li><li>Google Calendar</li><li>Google Sheets</li><li>Gmail</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Agent · Home Services</p>
+              <h2 class="dm-title" id="dm-title">Home Services Missed-Call Agent</h2>
+              <p class="dm-lead">Every missed call becomes a conversation, and most conversations become a booked job, without the owner touching the phone.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-a-booking.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-a-booking.webp" loading="lazy" decoding="async" alt="Workflow A: missed-call and SMS webhooks, opt-out and duplicate checks, text-back, intent switch, booking questions, Google Calendar clash check and confirmations" /></a></div><figcaption>A · Missed call + SMS booking</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-b-reminders.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-b-reminders.webp" loading="lazy" decoding="async" alt="Workflow B: scheduled reminders that read bookings, filter due jobs and send 24-hour and 2-hour SMS reminders" /></a></div><figcaption>B · Appointment reminders</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-c-reviews.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-c-reviews.webp" loading="lazy" decoding="async" alt="Workflow C: scheduled review requests with link check, review SMS and follow-up flag" /></a></div><figcaption>C · Review requests</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-d-digest-alerts.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-d-digest-alerts.webp" loading="lazy" decoding="async" alt="Workflow D: daily digest by email and SMS, plus an error trigger that emails failures" /></a></div><figcaption>D · Daily digest + error alerts</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Home service owners are on job sites and miss calls. Callers move on to the next plumber or HVAC company, bookings happen by phone tag, and reminders and review requests are forgotten.</p></div>
+                <div><h3>What we built</h3><p>Four workflows working as one system: missed calls get a text-back and are booked over SMS with calendar clash checks, customers get 24h and 2h reminders, finished jobs trigger review requests, and the owner gets a daily digest plus instant error alerts.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>A missed call or inbound SMS hits the webhook. Opt-outs and duplicates are filtered first.</li><li>The caller gets an instant text-back and is saved as a lead.</li><li>The agent understands each reply (book, help, STOP) and asks the next booking question by SMS.</li><li>When details are complete, Google Calendar is checked. On a clash, alternative times are offered; otherwise the event is created.</li><li>The customer gets a confirmation SMS; the owner gets an SMS and email alert.</li><li>A scheduled workflow sends reminders 24 hours and 2 hours before each job.</li><li>After the job, a review request goes out, with one follow-up if needed.</li><li>The owner receives a daily digest by email and SMS, and any workflow error is emailed instantly.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Missed call → SMS booking</b></li><li><b>24h + 2h reminders</b></li><li><b>Auto review requests</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Built for plumbers, HVAC, electricians and cleaners</li><li>STOP / opt-out handling built in</li><li>All leads, bookings and messages in one Google Sheet</li><li>Self-monitoring with error alerts</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>Twilio SMS</li><li>Google Calendar</li><li>Google Sheets</li><li>Gmail</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-youtube-leads" data-cat="ai" data-reveal style="--i:3;--s:0.90">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Agent · Creator Outreach</p><p class="mono case__num">04 / 09</p></div>
+            <h3>YouTuber Lead Generation Agent</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Finding the right YouTube creators for partnerships or services means hours of searching, opening channels one by one and checking their stats by hand.</p></div>
+              <div><h4>What we built</h4><p>An agent that takes a niche and filters, generates search queries, searches YouTube, pulls each channel&#x27;s details, scores them against your criteria and returns a clean, qualified creator list on demand.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Niche channel discovery</b></li><li><b>Auto scoring</b></li><li><b>Results in one request</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>YouTube Data API</li><li>Webhook API</li><li>JavaScript</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Agent · Creator Outreach</p>
+              <h2 class="dm-title" id="dm-title">YouTuber Lead Generation Agent</h2>
+              <p class="dm-lead">A creator research engine that turns a niche into a ranked list of qualified YouTube channels in one request.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-youtuber-leads.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-youtuber-leads.webp" loading="lazy" decoding="async" alt="n8n workflow: webhook input, query generation, YouTube search, channel details, filter and score, webhook response" /></a></div><figcaption>YouTube creator search workflow</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Finding the right YouTube creators for partnerships or services means hours of searching, opening channels one by one and checking their stats by hand.</p></div>
+                <div><h3>What we built</h3><p>An agent that takes a niche and filters, generates search queries, searches YouTube, pulls each channel&#x27;s details, scores them against your criteria and returns a clean, qualified creator list on demand.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>Your app or form sends a request with niche, keywords and filters.</li><li>The agent builds several search queries from that input.</li><li>YouTube is searched and channel IDs are extracted from the results.</li><li>Channel details are fetched: subscribers, views, video count and description.</li><li>Each channel is filtered and scored against your criteria.</li><li>Qualified channels are returned instantly; empty searches return a clear message.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Niche channel discovery</b></li><li><b>Auto scoring</b></li><li><b>Results in one request</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Filters by size, activity and niche</li><li>Plugs into any app, sheet or CRM via webhook</li><li>Duplicate-free results</li><li>Ready to extend with outreach emails</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>YouTube Data API</li><li>Webhook API</li><li>JavaScript</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-b2b-local" data-cat="ai" data-reveal style="--i:4;--s:0.92">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Automation · Lead Gen</p><p class="mono case__num">05 / 09</p></div>
+            <h3>B2B Local Lead Gen &amp; Cold Email Automation</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Local B2B outreach is slow: scraping business lists, finding valid emails and writing cold emails by hand means only a few prospects get contacted each day, with no consistent follow-up.</p></div>
+              <div><h4>What we built</h4><p>A full outbound system: it scrapes local businesses from Google Maps, verifies emails, writes a personalised offer email with AI, sends a multi-step sequence, checks for replies and stops or follows up automatically.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Google Maps sourcing</b></li><li><b>Verified emails</b></li><li><b>5-step sequences + reply check</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>Apify</li><li>OpenAI</li><li>Google Sheets</li><li>Gmail</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Automation · Lead Gen</p>
+              <h2 class="dm-title" id="dm-title">B2B Local Lead Gen &amp; Cold Email Automation</h2>
+              <p class="dm-lead">A steady pipeline of local B2B prospects, each with a personalised cold email and smart follow-ups, running on schedule.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-b2b-cold-email.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-b2b-cold-email.webp" loading="lazy" decoding="async" alt="n8n workflow: Apify Google Maps scraper, email verification, OpenAI offer emails, five-step Gmail sequence, reply checks and follow-ups" /></a></div><figcaption>Lead gen + cold email workflow</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Local B2B outreach is slow: scraping business lists, finding valid emails and writing cold emails by hand means only a few prospects get contacted each day, with no consistent follow-up.</p></div>
+                <div><h3>What we built</h3><p>A full outbound system: it scrapes local businesses from Google Maps, verifies emails, writes a personalised offer email with AI, sends a multi-step sequence, checks for replies and stops or follows up automatically.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>Search settings (niche and city) are read from a Google Sheet on schedule.</li><li>Apify scrapes Google Maps for matching businesses; leads without email and duplicates are removed.</li><li>Every email is verified, and only deliverable addresses are saved.</li><li>OpenAI writes a personalised offer email for each lead.</li><li>Emails go out in a sequence of up to five steps with randomised waits to protect deliverability.</li><li>Inboxes are checked for replies; repliers are marked and removed from follow-ups.</li><li>Status of every lead is kept up to date in Google Sheets.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Google Maps sourcing</b></li><li><b>Verified emails</b></li><li><b>5-step sequences + reply check</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Targets any niche and city</li><li>Verified emails keep bounce rates low</li><li>Stops automatically when a lead replies</li><li>Full pipeline view in one sheet</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>Apify</li><li>OpenAI</li><li>Google Sheets</li><li>Gmail</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-hot-lead-finder" data-cat="ai" data-reveal style="--i:5;--s:0.94">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Agent · Lead Gen</p><p class="mono case__num">06 / 09</p></div>
+            <h3>Hot Lead Finder PRO: Live Maps + AI Review Analysis</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>Scraped lead lists are full of businesses that will never buy. Sales teams waste hours on cold names and get the same leads again on every run.</p></div>
+              <div><h4>What we built</h4><p>An agent that searches Google Maps live, enriches each business from its website, analyses its reviews and site with AI to find real buying signals, and delivers only hot leads, never repeating one it already gave you.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips chips--cap" aria-label="Highlights"><li><b>Live Google Maps search</b></li><li><b>AI review analysis</b></li><li><b>Never-repeat leads</b></li></ul>
+              <ul class="tags" aria-label="Stack"><li>n8n</li><li>Google Places API</li><li>OpenAI</li><li>n8n Data Tables</li><li>Google Sheets</li><li>Gmail</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/ai-automation">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Agent · Lead Gen</p>
+              <h2 class="dm-title" id="dm-title">Hot Lead Finder PRO: Live Maps + AI Review Analysis</h2>
+              <p class="dm-lead">A lead finder that thinks like a sales researcher: it reads reviews and websites to find businesses with a real reason to buy.</p>
+              <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-hot-lead-finder.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-hot-lead-finder.webp" loading="lazy" decoding="async" alt="n8n workflow: lead search form, smart query builder, live Google Maps crawl, never-repeat filters, pre-scoring, website enrichment, AI review analysis and hot lead delivery" /></a></div><figcaption>Hot lead finder workflow</figcaption></figure></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>Scraped lead lists are full of businesses that will never buy. Sales teams waste hours on cold names and get the same leads again on every run.</p></div>
+                <div><h3>What we built</h3><p>An agent that searches Google Maps live, enriches each business from its website, analyses its reviews and site with AI to find real buying signals, and delivers only hot leads, never repeating one it already gave you.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>You fill a simple form: niche, city and how many leads you want.</li><li>AI builds smart search queries, skipping ones used in earlier runs.</li><li>Google Maps is searched live across the city; results are cleaned and de-duplicated.</li><li>Leads you already received are skipped, then the rest are pre-scored and ranked.</li><li>Each business website is fetched for extra signals.</li><li>AI analyses reviews and website together and rates every lead hot, warm or cold.</li><li>Hot leads are saved, exported to Google Sheets, turned into Gmail drafts if you want, and summarised in an email. Warm leads are saved for nurture.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Live Google Maps search</b></li><li><b>AI review analysis</b></li><li><b>Never-repeat leads</b></li></ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Fresh, live data on every run</li><li>Reasons behind every hot lead</li><li>No duplicate leads across runs</li><li>Outreach drafts ready in Gmail</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>n8n</li><li>Google Places API</li><li>OpenAI</li><li>n8n Data Tables</li><li>Google Sheets</li><li>Gmail</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-saas" data-cat="product" data-reveal style="--i:6;--s:0.96">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">AI Product Engineering · SaaS</p><p class="mono case__num">07 / 09</p></div>
+            <h3>AI-Native SaaS Platform</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>A founder had validated an idea for a research tool but needed a working product — auth, billing, LLM pipelines, vector search — shipped to production, not a demo.</p></div>
+              <div><h4>What we built</h4><p>A complete SaaS platform: Next.js frontend, Supabase backend, Stripe billing, and a streaming LLM pipeline with a Pinecone vector layer for semantic search across user documents.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips" aria-label="Results">
+                <li><b><span data-count="5">5</span> weeks</b>MVP to production</li>
+                <li><b><span data-count="99.9">99.9</span>%</b>uptime</li>
+                <li><b>0</b>rewrites post-launch</li>
+              </ul>
+              <ul class="tags" aria-label="Stack"><li>Next.js</li><li>Supabase</li><li>OpenAI</li><li>Pinecone</li><li>Stripe</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/web-app-development">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">AI Product Engineering · SaaS</p>
+              <h2 class="dm-title" id="dm-title">AI-Native SaaS Platform</h2>
+              <p class="dm-lead">A production SaaS built AI-first, from auth and billing to an LLM pipeline with semantic search.</p>
+              <div class="dm-gal"><div class="dm-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l5-4 4 3 3-2 6 4"/><circle cx="16" cy="9" r="1.6"/></svg><span>Screenshots and workflow walkthrough coming soon. Ask us for a live demo.</span></div></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>A founder had validated an idea for a research tool but needed a working product — auth, billing, LLM pipelines, vector search — shipped to production, not a demo.</p></div>
+                <div><h3>What we built</h3><p>A complete SaaS platform: Next.js frontend, Supabase backend, Stripe billing, and a streaming LLM pipeline with a Pinecone vector layer for semantic search across user documents.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>Discovery and architecture: data model, auth, billing and AI pipeline planned together.</li><li>Next.js frontend and Supabase backend with row-level security.</li><li>Stripe subscriptions and usage limits.</li><li>Streaming LLM responses with a Pinecone vector layer for semantic search across user documents.</li><li>Launch, monitoring and iteration with the founder.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips" aria-label="Results">
+                <li><b><span data-count="5">5</span> weeks</b>MVP to production</li>
+                <li><b><span data-count="99.9">99.9</span>%</b>uptime</li>
+                <li><b>0</b>rewrites post-launch</li>
+              </ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Production-grade auth and billing</li><li>Streaming AI responses</li><li>Semantic search over user documents</li><li>Built to scale without rewrites</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>Next.js</li><li>Supabase</li><li>OpenAI</li><li>Pinecone</li><li>Stripe</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-3d-web" data-cat="web" data-reveal style="--i:7;--s:0.98">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">Web Engineering · 3D Interactive</p><p class="mono case__num">08 / 09</p></div>
+            <h3>3D Product Launch Platform</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>A hardware brand needed a launch site that would stand out. Templates felt forgettable and couldn&#x27;t handle real-time 3D.</p></div>
+              <div><h4>What we built</h4><p>A scroll-driven 3D site built with Spline and GSAP: products rotate as you scroll, exploded views show the internals, and marketing updates content through a custom Sanity CMS.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips" aria-label="Results">
+                <li><b><span data-count="2.4">2.4</span>×</b>conversion lift</li>
+                <li><b><span data-count="96">96</span></b>Lighthouse score</li>
+                <li><b><span data-count="1.2">1.2</span>s</b>average load</li>
+              </ul>
+              <ul class="tags" aria-label="Stack"><li>Next.js</li><li>GSAP</li><li>Spline</li><li>Sanity</li><li>Vercel</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/services#web">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">Web Engineering · 3D Interactive</p>
+              <h2 class="dm-title" id="dm-title">3D Product Launch Platform</h2>
+              <p class="dm-lead">A launch site that makes the product the hero, with real-time 3D driven by scroll.</p>
+              <div class="dm-gal"><div class="dm-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l5-4 4 3 3-2 6 4"/><circle cx="16" cy="9" r="1.6"/></svg><span>Screenshots and workflow walkthrough coming soon. Ask us for a live demo.</span></div></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>A hardware brand needed a launch site that would stand out. Templates felt forgettable and couldn&#x27;t handle real-time 3D.</p></div>
+                <div><h3>What we built</h3><p>A scroll-driven 3D site built with Spline and GSAP: products rotate as you scroll, exploded views show the internals, and marketing updates content through a custom Sanity CMS.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>Art direction and storyboard for the scroll experience.</li><li>3D scenes built in Spline and optimised for the web.</li><li>GSAP scroll choreography: rotation, exploded views and reveals.</li><li>Sanity CMS so marketing can update content without developers.</li><li>Performance tuning for fast loads on mobile.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips" aria-label="Results">
+                <li><b><span data-count="2.4">2.4</span>×</b>conversion lift</li>
+                <li><b><span data-count="96">96</span></b>Lighthouse score</li>
+                <li><b><span data-count="1.2">1.2</span>s</b>average load</li>
+              </ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>Scroll-driven 3D storytelling</li><li>Editable through a headless CMS</li><li>Optimised for Core Web Vitals</li><li>Deployed on Vercel</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>Next.js</li><li>GSAP</li><li>Spline</li><li>Sanity</li><li>Vercel</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+        <article class="case" id="case-mobile-rag" data-cat="mobile" data-reveal style="--i:8">
+          <div class="case__out"><div class="case__in">
+            <div class="case__top"><p class="mono case__cat">Cross-Platform Mobile · RAG</p><p class="mono case__num">09 / 09</p></div>
+            <h3>AI-Powered Mobile App</h3>
+            <div class="case__cols">
+              <div><h4>The problem</h4><p>A fintech startup&#x27;s support inbox was drowning in repeat account questions.</p></div>
+              <div><h4>What we built</h4><p>A Flutter app with an embedded RAG assistant that answers account questions with citations from the user&#x27;s own transaction history, via a secured gateway.</p></div>
+            </div>
+            <div class="case__foot">
+              <ul class="chips" aria-label="Results">
+                <li><b>−<span data-count="42">42</span>%</b>support tickets</li>
+                <li><b><span data-count="4.8">4.8</span>★</b>store rating</li>
+                <li><b><span data-count="3">3</span>s</b>average answer</li>
+              </ul>
+              <ul class="tags" aria-label="Stack"><li>Flutter</li><li>Firebase</li><li>OpenAI</li><li>Pinecone</li></ul>
+            </div>
+            <div class="x-more"><button class="btn btn--grad case__open" type="button" aria-haspopup="dialog">View full case study <span class="arrow" aria-hidden="true">→</span></button><a class="btn btn--link" href="/services#mobile">Explore this service <span class="arrow" aria-hidden="true">→</span></a></div>
+            <template class="case__detail">
+              <p class="mono dm-cat">Cross-Platform Mobile · RAG</p>
+              <h2 class="dm-title" id="dm-title">AI-Powered Mobile App</h2>
+              <p class="dm-lead">A cross-platform app with an AI assistant that answers account questions from the user&#x27;s own data.</p>
+              <div class="dm-gal"><div class="dm-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l5-4 4 3 3-2 6 4"/><circle cx="16" cy="9" r="1.6"/></svg><span>Screenshots and workflow walkthrough coming soon. Ask us for a live demo.</span></div></div>
+              <div class="dm-cols">
+                <div><h3>The problem</h3><p>A fintech startup&#x27;s support inbox was drowning in repeat account questions.</p></div>
+                <div><h3>What we built</h3><p>A Flutter app with an embedded RAG assistant that answers account questions with citations from the user&#x27;s own transaction history, via a secured gateway.</p></div>
+              </div>
+              <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>Flutter app for iOS and Android from one codebase.</li><li>Firebase auth and secure data layer.</li><li>RAG assistant that retrieves from the user&#x27;s transaction history.</li><li>Answers include citations so users can verify them.</li><li>Secured API gateway between the app and the AI layer.</li></ol></div>
+              <div class="dm-block"><h3>Highlights</h3><ul class="chips" aria-label="Results">
+                <li><b>−<span data-count="42">42</span>%</b>support tickets</li>
+                <li><b><span data-count="4.8">4.8</span>★</b>store rating</li>
+                <li><b><span data-count="3">3</span>s</b>average answer</li>
+              </ul></div>
+              <div class="dm-block"><h3>What you get</h3><ul class="dm-feats"><li>One codebase, two platforms</li><li>Cited, grounded answers</li><li>Secure by design</li><li>Fewer repeat support tickets</li></ul></div>
+              <div class="dm-block"><h3>Tech stack</h3><ul class="tags" aria-label="Stack"><li>Flutter</li><li>Firebase</li><li>OpenAI</li><li>Pinecone</li></ul></div>
+              <div class="dm-cta"><div><h3>Want one like this?</h3><p>We can adapt this to your business. Free 30-minute call, fixed-price plan within 72 hours.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free call <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us</a></div></div>
+            </template>
+          </div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trustsec" aria-label="How we work with you">
+    <div class="wrap">
+      <div class="stats trust" data-fx=".stat">
+        <div class="stat" data-reveal><b><span data-count="100">100</span>%</b><span class="mono">Code &amp; IP ownership</span></div>
+        <div class="stat" data-reveal style="--d:.1s"><b>Weekly</b><span class="mono">Working demos</span></div>
+        <div class="stat" data-reveal style="--d:.2s"><b>Fixed-price</b><span class="mono">Blueprint before we build</span></div>
+        <div class="stat" data-reveal style="--d:.3s"><b>NDA</b><span class="mono">Before kickoff</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" id="contact">
+    <div class="wrap" data-reveal>
+      <p class="eyebrow mono">Next step</p>
+      <h2>Want a system like this built<br><span class="sel">for your business?</span></h2>
+      <p class="final__sub">Tell us where the bottlenecks are — we'll map the solution live and send a fixed-price blueprint within 72 hours.</p>
+      <div class="cta">
+        <a class="btn btn--grad btn--lg" href="/contact">Book a Discovery Call <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--link btn--lg" href="/services">Explore All Services <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid" data-reveal>
+      <nav aria-label="Services">
+        <p class="foot__h mono">Services</p>
+        <ul>
+          <li><a href="/ai-automation">AI Automation</a></li>
+          <li><a href="/web-app-development">Web &amp; App Development</a></li>
+          <li><a href="/services">All Services</a></li>
+        </ul>
       </nav>
-
-      <div class="nav__actions">
-        <a href="contact" class="btn btn--primary btn--sm"><span class="btn__dot" aria-hidden="true"></span>Book a Call</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-        </button>
+      <nav aria-label="Company">
+        <p class="foot__h mono">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work" aria-current="page">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot__h mono">Contact</p>
+        <ul>
+          <li><a href="mailto:info@devzink.com">info@devzink.com</a></li>
+          <li><a href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
       </div>
+      <a class="btn btn--link foot__top" href="#top">Back to top <span class="arrow arrow--up" aria-hidden="true">↑</span></a>
     </div>
-
-    <div class="nav__mobile">
-      <div class="nav__mobile-inner">
-        <a href="ai-automation">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="8" width="16" height="12" rx="3"/>
-              <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-              <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-              <path d="M12 8V4"/>
-              <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
-              <path d="M2 14h2M20 14h2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>AI Agents &amp; Automation</strong>
-            <em>Run your operations without the manual work.</em>
-          </span>
-        </a>
-
-        <a href="web-app-development">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>AI Product Engineering</strong>
-            <em>SaaS platforms &amp; apps with AI at the core.</em>
-          </span>
-        </a>
-
-        <a href="services#web">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="14" rx="2"/>
-              <path d="M8 20h8M12 18v2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>Web Engineering</strong>
-            <em>GSAP, Spline 3D, corporate platforms</em>
-          </span>
-        </a>
-
-        <a href="services#mobile">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="6" y="2" width="12" height="20" rx="2.5"/>
-              <path d="M11 18h2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>Cross-Platform Mobile</strong>
-            <em>iOS &amp; Android with Flutter</em>
-          </span>
-        </a>
-
-        <a href="services#uiux">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
-              <path d="m2 17 10 5 10-5"/>
-              <path d="m2 12 10 5 10-5"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>UI/UX &amp; Design Systems</strong>
-            <em>Prototypes, design tokens, Figma</em>
-          </span>
-        </a>
-
-        <a href="services" class="nav__mobile-all">
-          View all services
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </a>
-
-        <div class="nav__mobile-divider" aria-hidden="true"></div>
-
-        <a href="work" class="nav__mobile-simple">Work</a>
-        <a href="about" class="nav__mobile-simple">About</a>
-
-        <a href="contact" class="btn btn--primary nav__mobile-cta">
-          <span class="btn__dot" aria-hidden="true"></span>Book a Discovery Call
-        </a>
-      </div>
+    <div class="wm" data-reveal aria-hidden="true">
+      <svg viewBox="0 30 1000 185"><defs><linearGradient id="wmS" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="none" stroke="url(#wmS)" stroke-width="1.5" vector-effect="non-scaling-stroke">Devzink</text></svg>
+      <svg class="wm__fill" viewBox="0 30 1000 185"><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="url(#wmS)">Devzink</text></svg>
     </div>
-  </header>
-
-  <main class="page-main">
-
-    <!-- ================= INTRO ================= -->
-    <section class="aa-intro">
-      <div class="container">
-        <div class="aa-intro__head reveal">
-          <span class="eyebrow">Selected Work</span>
-          <h1>
-            Systems we built.<br />
-            <span class="accent">Problems they actually solved.</span>
-          </h1>
-          <p>
-            No vanity metrics. No inflated numbers. Every case below shows what we built,
-            how it works, and the real outcomes it delivered. Client names available under NDA on request.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CASE STUDIES ================= -->
-    <section class="section aa-section">
-      <div class="container">
-
-        <div class="cases-stack">
-
-          <!-- CASE 01 -->
-          <article class="case-full premium-card reveal">
-            <div class="case-full__header">
-              <div class="case-full__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="8" width="16" height="12" rx="3"/>
-                  <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <path d="M12 8V4"/>
-                  <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
-                  <path d="M2 14h2M20 14h2"/>
-                </svg>
-              </div>
-              <div class="case-full__meta">
-                <span class="case-full__tag">AI Agent · B2B Services</span>
-                <h2>Automated Lead Qualification Agent</h2>
-              </div>
-            </div>
-
-            <div class="case-full__body">
-              <div class="case-full__col">
-                <span class="case-full__label">The problem</span>
-                <p>Inbound leads sat in a shared inbox for hours. By the time someone replied, 60% had already gone cold. Sales spent more time sorting tire-kickers than talking to buyers.</p>
-              </div>
-              <div class="case-full__col">
-                <span class="case-full__label">What we built</span>
-                <p>An autonomous lead-qualification agent that responds in seconds, scores each lead against a custom ICP, books qualified calls directly into the sales calendar, and pushes everything to the CRM.</p>
-              </div>
-            </div>
-
-            <div class="case-full__metrics">
-              <div class="case-full__metric">
-                <strong>8 hrs</strong>
-                <span>Saved per week on triage</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>3×</strong>
-                <span>Faster response to leads</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>0</strong>
-                <span>Manual qualification steps</span>
-              </div>
-            </div>
-
-            <div class="case-full__footer">
-              <div class="case-full__stack">
-                <span>n8n</span>
-                <span>OpenAI</span>
-                <span>HubSpot</span>
-                <span>Cal.com</span>
-              </div>
-              <a href="ai-automation" class="case-full__link">
-                Explore this service
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
-                  <path d="M3 8h10M9 4l4 4-4 4"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- CASE 02 -->
-          <article class="case-full premium-card reveal">
-            <div class="case-full__header">
-              <div class="case-full__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-                </svg>
-              </div>
-              <div class="case-full__meta">
-                <span class="case-full__tag">AI Product Engineering · SaaS</span>
-                <h2>AI-Native SaaS Platform</h2>
-              </div>
-            </div>
-
-            <div class="case-full__body">
-              <div class="case-full__col">
-                <span class="case-full__label">The problem</span>
-                <p>A founder had validated an idea for a research tool but needed a working product — with auth, billing, LLM pipelines, and a vector search layer — shipped to production, not a demo.</p>
-              </div>
-              <div class="case-full__col">
-                <span class="case-full__label">What we built</span>
-                <p>A complete SaaS platform: Next.js frontend, Supabase backend, Stripe billing, and an LLM pipeline with streaming responses plus a Pinecone vector layer for semantic search across user documents.</p>
-              </div>
-            </div>
-
-            <div class="case-full__metrics">
-              <div class="case-full__metric">
-                <strong>5 weeks</strong>
-                <span>MVP to production</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>99.9%</strong>
-                <span>Uptime since launch</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>0</strong>
-                <span>Rewrites needed post-launch</span>
-              </div>
-            </div>
-
-            <div class="case-full__footer">
-              <div class="case-full__stack">
-                <span>Next.js</span>
-                <span>Supabase</span>
-                <span>OpenAI</span>
-                <span>Pinecone</span>
-                <span>Stripe</span>
-              </div>
-              <a href="web-app-development" class="case-full__link">
-                Explore this service
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
-                  <path d="M3 8h10M9 4l4 4-4 4"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- CASE 03 -->
-          <article class="case-full premium-card reveal">
-            <div class="case-full__header">
-              <div class="case-full__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/>
-                  <path d="M3 7l9 5 9-5M12 12v10"/>
-                </svg>
-              </div>
-              <div class="case-full__meta">
-                <span class="case-full__tag">Web Engineering · 3D Interactive</span>
-                <h2>3D Product Launch Platform</h2>
-              </div>
-            </div>
-
-            <div class="case-full__body">
-              <div class="case-full__col">
-                <span class="case-full__label">The problem</span>
-                <p>A hardware brand needed a launch site that would stand out in a crowded category. Standard WordPress templates felt forgettable, and none of the existing tools could handle real-time 3D.</p>
-              </div>
-              <div class="case-full__col">
-                <span class="case-full__label">What we built</span>
-                <p>A scroll-driven 3D interactive site built with Spline and GSAP. Products rotate as you scroll, explode views show the internals, and the marketing team can update copy and images through a custom Sanity CMS.</p>
-              </div>
-            </div>
-
-            <div class="case-full__metrics">
-              <div class="case-full__metric">
-                <strong>2.4×</strong>
-                <span>Conversion lift vs old site</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>96</strong>
-                <span>Lighthouse performance score</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>1.2s</strong>
-                <span>Average load time</span>
-              </div>
-            </div>
-
-            <div class="case-full__footer">
-              <div class="case-full__stack">
-                <span>Next.js</span>
-                <span>GSAP</span>
-                <span>Spline 3D</span>
-                <span>Sanity</span>
-                <span>Vercel</span>
-              </div>
-              <a href="services#web" class="case-full__link">
-                Explore this service
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
-                  <path d="M3 8h10M9 4l4 4-4 4"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- CASE 04 -->
-          <article class="case-full premium-card reveal">
-            <div class="case-full__header">
-              <div class="case-full__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
-                  <path d="M11 18h2"/>
-                  <path d="M9 8h1M12 8h3M9 11h6"/>
-                </svg>
-              </div>
-              <div class="case-full__meta">
-                <span class="case-full__tag">Cross-Platform Mobile · RAG</span>
-                <h2>AI-Powered Mobile Application</h2>
-              </div>
-            </div>
-
-            <div class="case-full__body">
-              <div class="case-full__col">
-                <span class="case-full__label">The problem</span>
-                <p>A fintech startup's support inbox was drowning. Users kept asking the same account questions that could be answered instantly if the app just talked to their own data — securely.</p>
-              </div>
-              <div class="case-full__col">
-                <span class="case-full__label">What we built</span>
-                <p>A Flutter mobile app with an embedded RAG assistant that answers account questions with citations from the user's own transaction history — all processed through a secured gateway, never touching the client device.</p>
-              </div>
-            </div>
-
-            <div class="case-full__metrics">
-              <div class="case-full__metric">
-                <strong>−42%</strong>
-                <span>Support ticket volume</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>4.8★</strong>
-                <span>Average store rating</span>
-              </div>
-              <div class="case-full__metric">
-                <strong>3 sec</strong>
-                <span>Average answer time</span>
-              </div>
-            </div>
-
-            <div class="case-full__footer">
-              <div class="case-full__stack">
-                <span>Flutter</span>
-                <span>Firebase</span>
-                <span>OpenAI</span>
-                <span>Pinecone</span>
-              </div>
-              <a href="services#mobile" class="case-full__link">
-                Explore this service
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
-                  <path d="M3 8h10M9 4l4 4-4 4"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TRUST STRIP ================= -->
-    <section class="section aa-section">
-      <div class="container">
-        <div class="work-trust premium-card reveal">
-          <div class="work-trust__row">
-            <div class="work-trust__item">
-              <strong>100%</strong>
-              <span>Code and IP ownership transferred</span>
-            </div>
-            <div class="work-trust__item">
-              <strong>Weekly</strong>
-              <span>Working demos, not status reports</span>
-            </div>
-            <div class="work-trust__item">
-              <strong>Fixed</strong>
-              <span>Price blueprint before we build</span>
-            </div>
-            <div class="work-trust__item">
-              <strong>NDA</strong>
-              <span>Signed before kickoff — always</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-    <section class="cta-band">
-      <div class="container">
-        <div class="cta-band__inner reveal">
-          <span class="eyebrow">Get Started</span>
-          <h2 style="margin-top:18px;">Want a system like this <span class="accent">built for your business?</span></h2>
-          <p>Book a call. Tell us where the bottlenecks are — we'll map the solution live and send a fixed-price blueprint within 72 hours.</p>
-          <div class="cta-band__ctas">
-            <a href="contact" class="btn btn--primary btn--lg">Book a Discovery Call</a>
-            <a href="services" class="btn btn--ghost btn--lg">Explore All Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="/" class="nav__logo">
-            <span class="nav__logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-                <circle cx="12" cy="12" r="3" fill="#fff"/>
-              </svg>
-            </span>
-            Devzink
-          </a>
-          <p>AI automation and product engineering agency building autonomous workflows and scalable AI software.</p>
-        </div>
-
-        <div class="footer__col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="ai-automation">AI Automation</a></li>
-            <li><a href="web-app-development">Web &amp; App Development</a></li>
-            <li><a href="services">All Services</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about">About</a></li>
-            <li><a href="work">Work</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@devzink.com">info@devzink.com</a></li>
-            <li><a href="https://wa.link/vufomi" target="_blank" rel="noopener">WhatsApp</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <span>© <span id="year"></span> Devzink. All rights reserved.</span>
-        <span>Built with precision · Serving global clients</span>
-      </div>
-    </div>
-  </footer>
-
-  <a class="wa-float" href="https://wa.link/vufomi" target="_blank" rel="noopener" aria-label="Contact Devzink on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-  </a>
-
-  <script src="assets/js/main.js?v=3" defer></script>
+  </div>
+  <div class="foot__legal"><p class="wrap" data-reveal>© 2026 Devzink. All rights reserved. · <a href="#" data-cookie-settings>Cookie settings</a></p></div>
+</footer>
+<script>
+/* CTA headline split: words flip in, selected words type in letter by letter */
+(function(){
+  var h=document.querySelector(".final h2");if(!h||h.dataset.split)return;h.dataset.split=1;
+  var w=0,c=0;
+  function walk(n,inSel){
+    Array.prototype.slice.call(n.childNodes).forEach(function(k){
+      if(k.nodeType===3){
+        var parts=k.textContent.split(/(\s+)/),f=document.createDocumentFragment();
+        parts.forEach(function(p){
+          if(!p)return;
+          if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(" "));return}
+          var o=document.createElement("span");o.className="cw";var i=document.createElement("span");i.className="cw__i";i.style.setProperty("--w",w++);
+          if(inSel){p.split("").forEach(function(ch){var s=document.createElement("span");s.className="cc";s.style.setProperty("--c",c++);s.textContent=ch;i.appendChild(s)})}else i.textContent=p;
+          o.appendChild(i);f.appendChild(o);
+        });
+        k.parentNode.replaceChild(f,k);
+      }else if(k.nodeType===1&&k.tagName!=="BR"){walk(k,inSel||k.classList.contains("sel"))}
+    });
+  }
+  walk(h,false);
+  var sd=(w*110+250)/1000;h.style.setProperty("--sd",sd+"s");
+  var end=sd+c*.045+.4;h.style.setProperty("--sc",end+"s");h.style.setProperty("--bx",(end+.2)+"s");
+})();
+</script>
+<script>
+/* CTA attention cursor: runs once when the CTA scrolls into view */
+(function(){
+  var cta=document.querySelector(".final .cta"),b=cta&&cta.querySelector(".btn--grad"),h=document.querySelector(".final h2");if(!b)return;
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var cur=document.createElement("span");cur.className="x-cur";cur.setAttribute("aria-hidden","true");
+  cur.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 2.5 19.5 10l-6.6 1.9 3.9 7.3-2.7 1.4-3.9-7.3L5.4 18z" fill="#fff" stroke="#030305" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+  var r1=document.createElement("span"),r2=document.createElement("span");r1.className=r2.className="x-rip";r1.setAttribute("aria-hidden","true");r2.setAttribute("aria-hidden","true");
+  cta.appendChild(r1);cta.appendChild(r2);cta.appendChild(cur);
+  function pos(){var c=cta.getBoundingClientRect(),q=b.getBoundingClientRect();var x=q.left-c.left+q.width*.72,y=q.top-c.top+q.height*.55;
+    cta.style.setProperty("--tx",x+"px");cta.style.setProperty("--ty",y+"px")}
+  var done=false;
+  function run(){if(done)return;done=true;pos();
+    var d=h?parseFloat(getComputedStyle(h).getPropertyValue("--bx"))||1.7:1.7;
+    setTimeout(function(){pos();cur.classList.add("go");r1.classList.add("go");r2.classList.add("go");
+      setTimeout(function(){b.classList.add("x-hit")},1380);
+      setTimeout(function(){b.classList.remove("x-hit");b.classList.add("x-glow")},2000);
+    },(d+1.1)*1000)}
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run();io.disconnect()}})},{threshold:.5});io.observe(cta)}else run();
+  addEventListener("resize",pos);
+})();
+</script>
+<script>
+/* selection box over the closing words: an absolutely positioned overlay sized to the words' glyphs */
+document.addEventListener("DOMContentLoaded",function(){
+  var h=document.querySelector(".final h2");if(!h)return;
+  var s=h.querySelector(".sel");if(!s)return;
+  var host=s.closest(".rv-in")||h;if(host===h)h.style.position="relative";
+  var ns="http://www.w3.org/2000/svg",o=document.createElement("span");
+  o.className="x-sel";o.setAttribute("aria-hidden","true");
+  o.innerHTML='<svg class="x-sel__box" xmlns="'+ns+'"><rect x="0" y="0" width="100%" height="100%" pathLength="1"/></svg>'+
+    '<span class="x-sel__h"></span><span class="x-sel__h"></span><span class="x-sel__h"></span><span class="x-sel__h"></span>';
+  host.appendChild(o);
+  function place(){
+    var em=parseFloat(getComputedStyle(h).fontSize),b=host.getBoundingClientRect(),rg=document.createRange();rg.selectNodeContents(s);var ws=s.querySelectorAll(".cw");var rs=ws.length?Array.prototype.map.call(ws,function(e){return e.getBoundingClientRect()}):Array.prototype.filter.call(rg.getClientRects(),function(r){return r.width>1&&r.height>1});
+    if(!rs.length)return;
+    var L=1/0,T=1/0,R=-1/0,B=-1/0;
+    for(var i=0;i<rs.length;i++){var r=rs[i],m=(r.top+r.bottom)/2,hh=Math.min(r.height,em)/2;
+      L=Math.min(L,r.left);R=Math.max(R,r.right);T=Math.min(T,m-hh);B=Math.max(B,m+hh)}
+    var px=.1*em,py=.04*em,pb=.24*em;
+    o.style.left=(L-b.left-px)+"px";o.style.top=(T-b.top-py)+"px";
+    o.style.width=(R-L+2*px)+"px";o.style.height=(B-T+py+pb)+"px";
+  }
+  place();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);
+  if(window.ResizeObserver)new ResizeObserver(place).observe(h);else addEventListener("resize",place);
+});
+/* case filter: accessible toggle buttons, fade/scale out then in, re-stacking the visible cards */
+document.addEventListener("DOMContentLoaded",function(){
+  var bar=document.querySelector(".x-filter");if(!bar)return;
+  var btns=[].slice.call(bar.querySelectorAll("button")),cases=[].slice.call(document.querySelectorAll(".stack>.case")),
+      status=document.getElementById("x-filter-status"),still=matchMedia("(prefers-reduced-motion:reduce)").matches,t1=0,t2=0;
+  function restack(){
+    var vis=cases.filter(function(c){return !c.hidden}),n=vis.length;
+    cases.forEach(function(c){c.classList.remove("x-last")});
+    vis.forEach(function(c,i){c.style.setProperty("--i",i);c.style.setProperty("--s",(1-.02*(n-1-i)).toFixed(2))});
+    if(n)vis[n-1].classList.add("x-last");
+    return n;
+  }
+  function apply(f,label){
+    btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.filter===f))});
+    clearTimeout(t1);clearTimeout(t2);
+    function match(c){return f==="all"||c.dataset.cat===f}
+    var out=cases.filter(function(c){return !c.hidden&&!match(c)});
+    cases.forEach(function(c){c.classList.add("x-anim")});
+    out.forEach(function(c){c.classList.add("x-out")});
+    t1=setTimeout(function(){
+      out.forEach(function(c){c.hidden=true;c.classList.remove("x-out")});
+      var inn=cases.filter(match);
+      inn.forEach(function(c){if(c.hidden){c.hidden=false;c.classList.add("x-out")}});
+      var n=restack();
+      void document.body.offsetWidth;
+      inn.forEach(function(c){c.classList.remove("x-out")});
+      status.textContent="Showing "+n+" of "+cases.length+" case studies"+(f==="all"?"":" in "+label);
+      t2=setTimeout(function(){cases.forEach(function(c){c.classList.remove("x-anim")})},still?0:500);
+    },out.length&&!still?320:0);
+  }
+  btns.forEach(function(b){b.addEventListener("click",function(){if(b.getAttribute("aria-pressed")==="true")return;apply(b.dataset.filter,b.textContent)})});
+  restack();
+});
+</script>
+<dialog class="dm" id="case-modal" aria-labelledby="dm-title">
+  <div class="dm__frame"><div class="dm__body">
+    <button class="dm__x" type="button" aria-label="Close case study"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="dm__content" style="display:contents"></div>
+  </div></div>
+</dialog>
+<script>
+/* case study modal: content comes from each card's <template class="case__detail"> */
+(function(){
+  var dm=document.getElementById("case-modal");if(!dm||typeof dm.showModal!=="function")return;
+  var box=dm.querySelector(".dm__content"),body=dm.querySelector(".dm__body"),last=null,sy=0;
+  function open(card,push){
+    var t=card.querySelector("template.case__detail");if(!t)return;
+    box.innerHTML="";box.appendChild(t.content.cloneNode(true));
+    sy=scrollY;dm.showModal();document.body.classList.add("dm-lock");body.scrollTop=0;
+    if(push!==false&&card.id)history.replaceState(null,"","#"+card.id);
+  }
+  function close(){if(dm.open)dm.close()}
+  dm.addEventListener("close",function(){document.body.classList.remove("dm-lock");window.scrollTo({top:sy,behavior:"instant"});if(location.hash.indexOf("#case-")===0)history.replaceState(null,"",location.pathname+location.search);if(last)last.focus({preventScroll:true})});
+  dm.querySelector(".dm__x").addEventListener("click",close);
+  dm.addEventListener("click",function(e){if(e.target===dm)close()});
+  document.querySelectorAll(".case").forEach(function(c){
+    var b=c.querySelector(".case__open");if(b)b.addEventListener("click",function(){last=b;open(c)});
+    var h=c.querySelector("h3");if(h){h.style.cursor="pointer";h.addEventListener("click",function(){last=b;open(c)})}
+  });
+  if(location.hash.indexOf("#case-")===0){var c=document.getElementById(location.hash.slice(1));if(c)open(c,false)}
+})();
+</script>
+<a class="wa-fab" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with DevZink on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.5.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"/></svg><span>Chat on WhatsApp</span></a>
+<script>(function(){var b=document.querySelector(".wa-fab");if(!b)return;function t(){b.classList.toggle("on",scrollY>window.innerHeight*.5)}addEventListener("scroll",t,{passive:true});t()})();</script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>

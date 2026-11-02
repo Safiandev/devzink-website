@@ -1,735 +1,1057 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Agents & Automation — Cut the Manual Work | Devzink</title>
-  <meta name="description" content="Autonomous AI agents that qualify leads, resolve support, and run ops 24/7. Cut hours of manual work every week. Shipped to production in weeks." />
-  <meta name="keywords" content="AI agents, n8n workflows, RAG assistants, autonomous agents, LangGraph, lead qualification, support automation" />
-  <meta name="author" content="Devzink" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://devzink.com/ai-automation.html" />
+<meta charset="utf-8" />
+<!-- consent:start -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",functionality_storage:"granted",security_storage:"granted",wait_for_update:500});</script>
+<!-- consent:end -->
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://devzink.com/ai-automation.html" />
-  <meta property="og:title" content="AI Agents & Automation — Devzink" />
-  <meta property="og:description" content="Autonomous AI agents that run your operations 24/7." />
-  <meta property="og:site_name" content="Devzink" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Agents &amp; AI Automation Services | n8n Experts | DevZink</title>
+<link rel="canonical" href="https://devzink.com/ai-automation" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png" />
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#05050A" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DevZink" />
+<meta property="og:title" content="AI Agents &amp; AI Automation Services | n8n Experts | DevZink" />
+<meta property="og:description" content="Custom AI agents and AI automation for lead qualification, customer support, missed calls and ops. n8n, RAG and LLM workflows shipped to production in 2 to 4 weeks." />
+<meta property="og:url" content="https://devzink.com/ai-automation" />
+<meta property="og:image" content="https://devzink.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Agents &amp; AI Automation Services | n8n Experts | DevZink" />
+<meta name="twitter:description" content="Custom AI agents and AI automation for lead qualification, customer support, missed calls and ops. n8n, RAG and LLM workflows shipped to production in 2 to 4 weeks." />
+<meta name="twitter:image" content="https://devzink.com/og-image.png" />
+<meta name="description" content="Custom AI agents and AI automation for lead qualification, customer support, missed calls and ops. n8n, RAG and LLM workflows shipped to production in 2 to 4 weeks." />
+<link rel="preload" href="clash-display-600.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="general-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<!-- seo:start -->
+<meta name="keywords" content="AI automation, AI agents, AI agent development, AI automation agency, n8n automation agency, RAG chatbot development, AI lead qualification, AI customer support agent" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="DevZink" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image:alt" content="DevZink AI automation agency" />
+<meta name="twitter:image:alt" content="DevZink AI automation agency" />
+<link rel="alternate" hreflang="en" href="https://devzink.com/ai-automation" />
+<link rel="alternate" hreflang="x-default" href="https://devzink.com/ai-automation" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://devzink.com/#org", "name": "DevZink", "alternateName": "Devzink", "url": "https://devzink.com/", "logo": "https://devzink.com/logo-512.png", "image": "https://devzink.com/og-image.png", "email": "info@devzink.com", "telephone": "+923304613837", "description": "DevZink is an AI automation agency building AI agents, n8n automations, web apps and mobile apps for businesses worldwide.", "areaServed": "Worldwide", "knowsAbout": ["AI automation", "AI agents", "Agentic AI", "n8n automation", "RAG chatbots", "Lead generation automation", "Web development", "SaaS development", "Mobile app development"]}, {"@type": "WebSite", "@id": "https://devzink.com/#website", "url": "https://devzink.com/", "name": "DevZink", "publisher": {"@id": "https://devzink.com/#org"}}, {"@type": "WebPage", "@id": "https://devzink.com/ai-automation#webpage", "url": "https://devzink.com/ai-automation", "name": "AI Agents & AI Automation Services | n8n Experts | DevZink", "description": "Custom AI agents and AI automation for lead qualification, customer support, missed calls and ops. n8n, RAG and LLM workflows shipped to production in 2 to 4 weeks.", "isPartOf": {"@id": "https://devzink.com/#website"}, "about": {"@id": "https://devzink.com/#org"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devzink.com/"}, {"@type": "ListItem", "position": 2, "name": "AI Automation", "item": "https://devzink.com/ai-automation"}]}, {"@type": "Service", "name": "AI Agent Development", "serviceType": "AI Agent Development", "url": "https://devzink.com/ai-automation", "provider": {"@id": "https://devzink.com/#org"}, "areaServed": "Worldwide"}, {"@type": "Service", "name": "Business Process Automation with n8n", "serviceType": "Business Process Automation with n8n", "url": "https://devzink.com/ai-automation", "provider": {"@id": "https://devzink.com/#org"}, "areaServed": "Worldwide"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a typical build take?", "acceptedAnswer": {"@type": "Answer", "text": "Most single-agent systems go live in 2–4 weeks. Multi-agent platforms with custom integrations take 4–6 weeks. You'll know the exact timeline before we start."}}, {"@type": "Question", "name": "No-code, or actual code?", "acceptedAnswer": {"@type": "Answer", "text": "Both, depending on what makes sense. n8n for orchestration and integrations, custom TypeScript/Python where logic needs it."}}, {"@type": "Question", "name": "What if the AI gets something wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Every production system has guardrails: confidence thresholds, human approval for high-stakes actions, fallback responses, and full logging."}}, {"@type": "Question", "name": "Will this work with my current stack?", "acceptedAnswer": {"@type": "Answer", "text": "Almost certainly. We integrate with HubSpot, Salesforce, Pipedrive, Slack, Gmail, Outlook, Notion, Airtable, Google Sheets, Cal.com, Calendly, WhatsApp, and anything with an API."}}, {"@type": "Question", "name": "What does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on scope. Every project gets a fixed-price blueprint before we build, so no surprises."}}, {"@type": "Question", "name": "Is this replacing my team?", "acceptedAnswer": {"@type": "Answer", "text": "No — it's a force multiplier. Your team stops doing repetitive work and focuses on what needs a human."}}]}]}</script>
+<!-- seo:end -->
+<style>
+/* ===== Fonts ===== */
+@font-face{font-family:"Clash Display";src:url(clash-display-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"General Sans";src:url(general-sans-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"General Sans";src:url(general-sans-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(jetbrains-mono.woff2) format("woff2");font-weight:400;font-display:swap}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+/* ===== Tokens ===== */
+:root{
+  --bg:#030305;--bg-2:#080810;--bg-3:#0C0C16;--border:#171B26;
+  --text:#FFF;--muted:#B8B8C4;--dim:#85858F;
+  --violet:#8B5CF6;--cyan:#22D3EE;
+  --grad:linear-gradient(135deg,#8B5CF6,#22D3EE);
+  --glass:linear-gradient(rgba(255,255,255,.045),rgba(255,255,255,.045)) transparent;--glass-b:rgba(255,255,255,.09);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --max:1280px;--gut:clamp(20px,4vw,40px);
+  --f-head:"Clash Display",system-ui,sans-serif;
+  --f-body:"General Sans",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  --r:26px;--tap:44px;
+}
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+/* animatable custom properties (fallbacks under .no-atprop) */
+@property --angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+@property --spot{syntax:"<color>";inherits:false;initial-value:rgba(139,92,246,0)}
+@property --g1{syntax:"<color>";inherits:false;initial-value:transparent}
+@property --g2{syntax:"<color>";inherits:false;initial-value:transparent}
+@property --g3{syntax:"<color>";inherits:false;initial-value:transparent}
+
+/* ===== Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:88px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--text);font:400 17px/1.7 var(--f-body);letter-spacing:.005em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (min-width:768px){body{font-size:18px}}
+p{max-width:62ch}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;box-shadow:0 0 0 6px rgba(34,211,238,.18)}
+a:not(.btn):focus-visible{border-radius:6px}
+h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-height:1.02}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.gtext{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:#A78BFA;-webkit-text-fill-color:transparent}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--text);color:var(--bg);padding:10px 16px;border-radius:99px}
+.skip:focus{left:8px}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:var(--tap);padding:0 24px;border-radius:99px;font:500 16px/1 var(--f-body);transition:transform .4s var(--ease),background-color .3s,border-color .3s;white-space:nowrap}
+.btn--grad{position:relative;isolation:isolate;background:#8B5CF6 var(--grad);background-color:#8B5CF6;color:#05050A;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.btn--grad::before{content:"";position:absolute;inset:-3px;z-index:-1;border-radius:inherit;padding:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE,#F5F3FF,#22D3EE,#8B5CF6) 0 50%/300% 100%;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .35s var(--ease);animation:ringFlow 2.4s linear infinite;animation-play-state:paused;pointer-events:none}
+.btn--grad:hover::before,.btn--grad:focus-visible::before{opacity:1;animation-play-state:running}
+.btn--grad:hover{box-shadow:0 10px 36px rgba(139,92,246,.38),0 0 24px rgba(34,211,238,.22)}
+@keyframes ringFlow{to{background-position:300% 50%}}
+.btn--glass{background:var(--glass);border:1px solid var(--glass-b);color:var(--text);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn--glass:hover{background:linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.08)) transparent;border-color:rgba(255,255,255,.18)}
+.btn:hover{transform:translateY(-2px)}
+.btn--lg{min-height:56px;padding:0 30px;font-size:17px}
+.arrow{display:inline-block;transition:transform .25s ease}
+.btn:hover .arrow,a:hover>.arrow,.btn:focus-visible .arrow{transform:translateX(5px)}
+.btn:hover .arrow--up{transform:translateY(-4px)}
+.btn:hover .arrow--out{transform:translate(3px,-3px)}
+
+/* ===== Progress + Nav ===== */
+.progress{position:fixed;inset:0 0 auto;height:1.5px;background:rgba(255,255,255,.22);transform:scaleX(0);transform-origin:0 50%;z-index:60}
+@media (max-width:760px){.progress{display:none}}
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:padding .5s var(--ease)}
+.nav__bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .5s var(--ease)}
+.nav::before{content:"";position:absolute;inset:0;background:rgba(8,8,16,.72);border-bottom:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);opacity:0;transition:opacity .4s var(--ease)}
+.nav.scrolled::before{opacity:1}
+.nav.scrolled .nav__bar{height:64px}
+.logo{position:relative;display:flex;align-items:center;gap:10px;font:600 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
+.logo svg{width:28px;height:28px}
+.nav__links{position:relative;display:flex;gap:4px}
+.nav__links a{display:flex;align-items:center;min-height:var(--tap);padding:0 16px;color:var(--muted);font-weight:500;font-size:16px;border-radius:99px;transition:color .3s}
+.nav__links a:hover{color:var(--text)}
+.nav__end{position:relative;display:flex;align-items:center;gap:8px}
+.menu-btn{display:none;position:relative;width:var(--tap);height:var(--tap);border-radius:50%;background:var(--glass);border:1px solid var(--glass-b);color:var(--text);cursor:pointer}
+.menu-btn i{position:absolute;left:50%;top:50%;width:18px;height:1.5px;margin:-.75px 0 0 -9px;border-radius:2px;background:currentColor;transition:transform .5s var(--ease)}
+.menu-btn i:first-child{transform:translateY(-3.5px)}
+.menu-btn i:last-child{transform:translateY(3.5px)}
+.nav.open .menu-btn i:first-child{transform:rotate(45deg)}
+.nav.open .menu-btn i:last-child{transform:rotate(-45deg)}
+
+/* services dropdown */
+.dd{position:relative}
+.dd__btn{display:flex;align-items:center;gap:7px;min-height:var(--tap);padding:0 16px;border:0;border-radius:99px;background:none;color:var(--muted);font:500 16px/1 var(--f-body);cursor:pointer;transition:color .3s}
+.dd__btn svg{width:10px;height:10px;transition:transform .45s var(--ease)}
+.dd__panel{position:absolute;top:100%;left:-12px;width:min(460px,90vw);padding-top:10px;opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transform-origin:15% 0;transition:opacity .3s var(--ease),transform .45s var(--ease),visibility 0s .45s}
+.dd__in{padding:8px;border-radius:22px;background:#0C0C16;border:1px solid var(--glass-b);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.dd__list li{opacity:0;transform:translateY(6px);transition:opacity .3s var(--ease),transform .45s var(--ease)}
+.dd .dd__list a{display:grid;gap:4px;min-height:var(--tap);padding:12px 14px;border-radius:14px;color:var(--text);font-size:16px;transition:background-color .3s}
+.dd__list,.dd__list li,.dd .dd__list a{background-color:#0C0C16}
+.dd .dd__list a:hover,.dd .dd__list a:focus-visible,.dd .dd__list a[aria-current="page"]{background-color:#17171F}
+.dd__list b{display:flex;align-items:center;gap:10px;font:500 16px/1.25 var(--f-body)}
+.dd__list b::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.dd__list b+span{padding-left:16px;color:var(--muted);font-size:13px;line-height:1.4}
+.dd .dd__list a.dd__all{display:flex;align-items:center;justify-content:space-between;margin-top:4px;padding:0 14px;border-top:1px solid var(--glass-b);border-radius:0 0 14px 14px;color:var(--cyan);font-size:15px}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn{color:var(--text)}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn svg{transform:rotate(180deg)}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__panel{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.dd:is(:hover,:focus-within,.open):not(.hush) .dd__list li{opacity:1;transform:none;transition-delay:calc(.05s + var(--i) * .04s)}
+/* current page: subtle gradient underline */
+.dd__btn.is-current{position:relative;color:var(--text)}
+.dd__btn.is-current::after{content:"";position:absolute;left:16px;right:16px;bottom:6px;height:2px;border-radius:2px;background:var(--grad);opacity:.85}
+.mmenu__sub a[aria-current="page"]{color:var(--text)}
+
+/* mobile full-screen menu */
+.mmenu{position:fixed;inset:0;z-index:49;display:flex;flex-direction:column;padding:96px var(--gut) 32px;overflow-y:auto;background:radial-gradient(600px circle at 0 0,rgba(139,92,246,.22),transparent 60%),radial-gradient(500px circle at 100% 100%,rgba(34,211,238,.14),transparent 60%),#030305;clip-path:circle(0 at calc(100% - 44px) 42px);visibility:hidden;transition:clip-path .7s cubic-bezier(.76,0,.24,1),visibility 0s .7s}
+.menu-open{overflow:hidden}
+.menu-open .mmenu{clip-path:circle(150% at calc(100% - 44px) 42px);visibility:visible;transition-delay:0s}
+.mmenu__list>li{padding:6px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(28px);transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.menu-open .mmenu__list>li{opacity:1;transform:none;transition-delay:calc(.18s + var(--i) * .07s)}
+.mmenu__big{display:flex;align-items:center;justify-content:space-between;min-height:60px;font:600 clamp(36px,10vw,52px)/1 var(--f-head);letter-spacing:-.03em}
+.mmenu__sub{margin:0 0 10px}
+.mmenu__sub a{display:flex;align-items:center;gap:10px;min-height:48px;color:var(--muted);font-size:16px}
+.mmenu__sub a::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.mmenu__cta{margin-top:28px}
+.mmenu__list>li.mmenu__cta{border:0}
+@media (min-width:861px){.mmenu{display:none}}
+
+/* preloader */
+.pre{display:none}
+.is-loading{overflow:hidden}
+.is-loading .pre{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:#030305;transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.pre.done{transform:translateY(-100%)}
+.pre__in{display:grid;justify-items:center;gap:22px;transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.pre.done .pre__in{opacity:0;transform:translateY(-30px)}
+.pre__mark{width:64px;height:64px;overflow:visible;filter:drop-shadow(0 0 18px rgba(139,92,246,.55))}
+.pre__mark path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s var(--ease) .1s forwards}
+.pre__mark circle{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);animation:popIn .5s var(--ease) .7s forwards}
+@keyframes popIn{to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pre__bar{width:180px;height:2px;border-radius:2px;background:rgba(255,255,255,.08);overflow:hidden}
+.pre__bar i{display:block;height:100%;background:var(--grad);transform:scaleX(0);transform-origin:0 50%}
+.pre__pct{color:var(--dim);font-variant-numeric:tabular-nums;min-width:5ch;text-align:center}
+.is-loading .hero,.is-loading .hero *{animation-play-state:paused!important}
+.is-loading .hero [data-reveal]{opacity:0!important;transform:translateY(28px)!important}
+
+/* page transitions */
+.curtain{position:fixed;inset:0;z-index:250;pointer-events:none;background:linear-gradient(to top,#8B5CF6,#22D3EE);transform:translateY(100%);visibility:hidden}
+.curtain.cover{visibility:visible;transform:none;transition:transform .45s cubic-bezier(.76,0,.24,1)}
+.curtain-in .curtain{visibility:visible;transform:none}
+.curtain.away{visibility:visible;transform:translateY(-100%);transition:transform .6s cubic-bezier(.76,0,.24,1)}
+@media (prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  ::view-transition-old(root){animation:vtOut .4s cubic-bezier(.76,0,.24,1) both}
+  ::view-transition-new(root){animation:vtIn .55s var(--ease) .1s both}
+}
+@keyframes vtOut{to{opacity:0;transform:translateY(-32px)}}
+@keyframes vtIn{from{opacity:0;transform:translateY(32px)}}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;min-height:85vh;min-height:85svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(92px,12vh,120px) 0 clamp(28px,4vh,44px);isolation:isolate}
+.hero>.wrap{width:100%;max-width:1440px}
+.hero__bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.dots{position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.2px) 0 0/28px 28px;-webkit-mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%);mask:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%)}
+.glow{position:absolute;border-radius:50%;will-change:transform}
+.glow--v{width:900px;height:900px;left:-300px;top:-380px;background:radial-gradient(closest-side,rgba(139,92,246,.30),transparent);animation:driftA 22s var(--ease) infinite alternate}
+.glow--c{width:800px;height:800px;right:-280px;top:10%;background:radial-gradient(closest-side,rgba(34,211,238,.18),transparent);animation:driftB 26s var(--ease) infinite alternate}
+@keyframes driftA{to{transform:translate(140px,90px) scale(1.1)}}
+@keyframes driftB{to{transform:translate(-120px,70px) scale(.92)}}
+
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,4.5vw,80px);align-items:center}
+.hero__text{container-type:inline-size;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:36px;padding:0 16px;border-radius:99px;background:var(--glass);border:1px solid var(--glass-b);color:var(--muted);font-size:12px}
+.pulse{position:relative;width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none}
+.pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--cyan);animation:pulse 2s var(--ease) infinite}
+@keyframes pulse{to{transform:scale(3.2);opacity:0}}
+.hero h1{font-size:clamp(38px,4.4vw,84px);font-size:clamp(34px,11.6cqi,88px);line-height:1.04;max-width:16ch;margin:22px 0}
+.line{display:block;overflow:hidden;padding:.04em 0 .1em;margin-bottom:-.1em;white-space:nowrap}
+.line>span{display:inline-block;transform:translateY(110%);animation:lineUp 1.1s var(--ease) forwards;animation-delay:calc(.15s + var(--i,0) * .12s)}
+@keyframes lineUp{to{transform:none}}
+.hl{display:inline-block;white-space:nowrap;padding-right:.04em;background:linear-gradient(90deg,#8B5CF6,#A78BFA 35%,#22D3EE 75%,#67E8F9) 0 50%/140% 100%;-webkit-background-clip:text;background-clip:text;color:#A78BFA;-webkit-text-fill-color:transparent;animation:hlShift 7s ease-in-out infinite alternate}
+@keyframes hlShift{to{background-position:100% 50%}}
+@media (max-width:420px){.line{white-space:normal}}
+.hero__sub{max-width:560px;color:var(--muted);font-size:clamp(17px,1.35vw,19px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero .cta{margin-top:28px}
+.fade-up{opacity:0;transform:translateY(16px);animation:fadeUp 1s var(--ease) forwards;animation-delay:var(--d,.6s)}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+
+/* hero visual: agent console */
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.glass{background:var(--glass);border:1px solid var(--glass-b);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.console{position:absolute;left:-16%;bottom:-19%;z-index:2;width:min(262px,66%);padding:14px 16px 12px;border-radius:18px;background:rgba(12,12,22,.82);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.console__top{display:flex;gap:6px;margin-bottom:12px}
+.console__top i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.16)}
+.console__top b{margin-left:auto;font:400 12px/1 var(--f-mono);color:var(--dim);letter-spacing:.06em}
+.console p{font:400 12.5px/1.85 var(--f-mono);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:none;opacity:0;animation:logIn .6s var(--ease) forwards;animation-delay:calc(1.4s + var(--i) * .45s)}
+@keyframes logIn{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+.console p em{font-style:normal;color:var(--cyan)}
+.console p strong{font-weight:400;color:var(--violet)}
+.badge{position:absolute;right:-6%;top:6%;z-index:2;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;font:400 12px/1 var(--f-mono);color:var(--text);animation-delay:-3s}
+.badge .pulse{background:#4ADE80}.badge .pulse::after{background:#4ADE80}
+
+/* stats */
+.stat b{display:block;font:600 clamp(26px,2.6vw,36px)/1 var(--f-head);letter-spacing:-.03em;margin-bottom:10px}
+.stat>span{color:var(--dim);font-size:12px}
+/* ===== Sections ===== */
+.sec{padding:120px 0;position:relative}
+.sec__head{display:grid;gap:22px;max-width:900px;margin-bottom:clamp(48px,6vw,80px)}
+.eyebrow{color:var(--dim);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";flex:none;align-self:center;width:28px;height:1px;background:var(--grad)}
+/* no stray boxes in section heads: empty reveal masks or pseudo-elements never render */
+.rv-m:empty,.rv-in:empty,.sec__head>:empty{display:none}
+.rv-m::before,.rv-m::after,.rv-in::before,.rv-in::after,.sec__head h2::before,.sec__head h2::after{content:none}
+.sec h2{font-size:clamp(40px,5.6vw,84px)}
+.sec__sub{color:var(--muted);max-width:62ch}
+@media (max-width:760px){.sec{padding:80px 0}}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.js [data-reveal].in,.js [data-reveal].rv-group{opacity:1;transform:none}
+.js [data-reveal].rv-self{transform:translateY(12px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
+.js [data-reveal].rv-self.in{transform:none;filter:none}
+.js .rv{opacity:0;transform:translateY(12px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease);transition-delay:calc(var(--d,0s) + var(--rv,0) * 60ms)}
+.js .in .rv{opacity:1;transform:none;filter:none}
+.rv-m{display:block;overflow:hidden;padding:.04em 0 .16em;margin:-.04em 0 -.16em}
+.js .rv-in{display:block;transform:translateY(108%);transition:transform 1.05s var(--ease);transition-delay:calc(var(--d,0s) + var(--rv,0) * 60ms)}
+.js .in .rv-in{transform:none}
+
+/* panels: hover = lift, rotating ring, soft spotlight */
+.panel{position:relative;overflow:hidden;isolation:isolate;cursor:pointer;display:flex;flex-direction:column;gap:24px;padding:clamp(28px,3.5vw,48px);border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-b)}
+.panel::before{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--angle),rgba(139,92,246,.28),#8B5CF6 18%,#22D3EE 34%,rgba(34,211,238,.28) 52%,rgba(139,92,246,.28) 70%,#A78BFA 86%,rgba(139,92,246,.28));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .4s var(--ease);pointer-events:none;animation:ringSpin 6s linear infinite paused}
+.no-atprop .panel::before{background:linear-gradient(90deg,#8B5CF6,#22D3EE,rgba(139,92,246,.3),#8B5CF6,#22D3EE) 0 0/300% 100%;animation-name:ringPan}
+@keyframes ringSpin{to{--angle:360deg}}
+@keyframes ringPan{to{background-position:300% 0}}
+.panel::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(640px circle at var(--mx,50%) var(--my,0%),rgba(139,92,246,.09),rgba(34,211,238,.035) 45%,transparent 75%);opacity:0;transition:opacity .4s var(--ease);pointer-events:none}
+.panel h3{font-size:clamp(30px,3vw,44px)}
+.panel__title{display:block;background:linear-gradient(90deg,var(--text) 0 50%,#A78BFA 78%,#22D3EE) 0 0/200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transition:background-position .4s var(--ease)}
+.js .panel.fx{transition:transform .4s var(--ease),opacity .4s var(--ease)}
+@media (hover:hover){
+  .js .panel.fx:hover{transform:translateY(-4px)}
+  .panel:hover::before{opacity:1;animation-play-state:running}
+  .panel:hover::after{opacity:1}
+  .panel:hover .panel__title{background-position:100% 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .panel::before{animation:none!important}
+  .js .panel.fx:hover{transform:none}
+}
+.ticks li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--glass-b)}
+.ticks li::before{content:"";flex:none;width:6px;height:6px;margin-top:.7em;border-radius:50%;background:var(--grad)}
+
+/* principle cards */
+.pr{display:grid;gap:14px;align-content:start;padding:clamp(28px,3vw,44px);border-radius:var(--r)}
+.pr h3{font-size:clamp(26px,2.4vw,36px);line-height:1.02;margin-bottom:8px}
+.pr p{color:var(--muted)}
+
+/* ===== Final CTA ===== */
+.final{position:relative;overflow:hidden;padding:clamp(96px,14vw,200px) 0;color:#030305;background-color:#8B5CF6;background-image:linear-gradient(120deg,#8B5CF6,#22D3EE 33%,#8B5CF6 66%,#22D3EE);background-size:300% 300%;animation:shift 18s ease-in-out infinite alternate}
+@keyframes shift{from{background-position:0% 50%}to{background-position:100% 50%}}
+.final .eyebrow{color:#030305}
+.final .eyebrow::before{background:#030305}
+.final h2{font-size:clamp(56px,11vw,184px);line-height:.88;max-width:11ch;margin-top:28px}
+.final .rv-m{padding:.1em .3em .45em;margin:-.1em -.3em -.45em}
+/* Figma-style selection box (overlay only; never affects layout) */
+.final .rv-in{position:relative}
+.x-sel{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;--hs:14px}
+.x-sel svg.x-sel__box{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.x-sel__box rect{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s var(--ease) .95s}
+.x-sel__h{position:absolute;width:var(--hs);height:var(--hs);margin:calc(var(--hs)/-2) 0 0 calc(var(--hs)/-2);background:#FFFFFF;border:2px solid #030305;box-sizing:border-box;transform:scale(0);transition:transform .45s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(1.75s + var(--k)*80ms)}
+.x-sel__h:nth-of-type(1){left:0;top:0;--k:0}
+.x-sel__h:nth-of-type(2){left:100%;top:0;--k:1}
+.x-sel__h:nth-of-type(3){left:100%;top:100%;--k:2}
+.x-sel__h:nth-of-type(4){left:0;top:100%;--k:3}
+.in .x-sel__box rect{stroke-dashoffset:0}
+.in .x-sel__h{transform:scale(1)}
+@media (max-width:760px){.x-sel{--hs:9px}}
+@media (prefers-reduced-motion:reduce){
+  .x-sel__box rect,.x-sel__h{transition:none!important}
+  .x-sel__box rect{stroke-dashoffset:0}
+  .x-sel__h{transform:scale(1)}
+}
+.final h2 .sel{display:inline-block;margin:.22em 0 .32em;color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;-webkit-text-stroke:0;text-shadow:none;filter:none}
+.final__sub{max-width:580px;margin-top:clamp(44px,4.5vw,64px);font-size:clamp(17px,1.4vw,20px);font-weight:500}
+.final .btn--grad{background:#FFFFFF;color:#030305;transition:transform .4s var(--ease),background-color .3s,box-shadow .4s var(--ease)}
+.final .btn--grad::before{content:none}
+.final .btn--grad:hover,.final .btn--grad:focus-visible{background:#F3F0FF;box-shadow:0 10px 30px -8px rgba(139,92,246,.45)}
+.btn--link,.btn--link.btn--lg{position:relative;background:none;border:0;padding:0 4px;height:auto;color:var(--text)}
+.btn--link::after{content:"";position:absolute;left:4px;right:4px;bottom:-4px;height:2px;border-radius:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);pointer-events:none}
+.btn--link:hover::after,.btn--link:focus-visible::after{transform:scaleX(1)}
+.btn--link:hover{background:linear-gradient(90deg,#C4B5FD,#67E8F9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.btn--link:hover .arrow:not(.arrow--up),.btn--link:focus-visible .arrow:not(.arrow--up){transform:translateX(6px) rotate(-0deg);animation:linkBounce .45s var(--ease)}
+@keyframes linkBounce{0%{transform:translateX(0)}55%{transform:translateX(9px)}100%{transform:translateX(6px)}}
+.final .btn--link{color:#030305}
+.final .btn--link::after{background:#030305}
+.final .btn--link:hover{-webkit-text-fill-color:#030305;background:none;letter-spacing:.01em}
+.final :focus-visible{outline-color:#030305}
+@media (max-width:520px){.final .cta .btn{width:100%;justify-content:center;white-space:normal;text-align:center;padding:14px 22px;line-height:1.25}.final .cta .btn--link{width:auto;align-self:center;padding:0 4px}}
+@media (max-width:480px){.final h2{font-size:clamp(40px,12vw,56px);line-height:.95}}
+
+/* ===== Card hover system ===== */
+.pr{position:relative;isolation:isolate}
+.pr::after{content:"";position:absolute;inset:-1px;z-index:1;border-radius:inherit;padding:1px;background:linear-gradient(135deg,#8B5CF6,rgba(139,92,246,.25) 45%,rgba(34,211,238,.25) 55%,#22D3EE);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .25s ease;pointer-events:none}
+.pr::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(139,92,246,.16),rgba(34,211,238,.05) 40%,transparent 65%);opacity:0;transition:opacity .25s ease;pointer-events:none}
+.js .x-cost>.pr{transition:opacity 1s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s),translate .25s ease,box-shadow .25s ease,border-color .25s ease}
+@media (hover:hover){
+  .pr:hover{translate:0 -6px;box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 40px rgba(139,92,246,.14)}
+  .pr:hover::after,.pr:hover::before{opacity:1}
+}
+
+/* ===== Footer ===== */
+.foot{overflow:hidden;padding-top:120px;border-top:1px solid var(--border)}
+@media (max-width:760px){.foot{padding-top:80px}}
+.foot__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:32px}
+.foot__h{color:var(--dim);font-size:12px;margin-bottom:12px}
+.foot__grid a{display:inline-flex;align-items:center;min-height:var(--tap);min-width:var(--tap);color:var(--muted);transition:color .3s}
+.foot__grid a:hover,.foot__grid a[aria-current="page"]{color:var(--text)}
+.foot__top{align-self:start;justify-self:end;gap:8px}
+.wm{position:relative;margin-top:clamp(56px,7vw,96px)}
+.wm svg{width:100%;height:auto}
+.wm__fill{position:absolute;inset:0;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s var(--ease) .4s}
+.wm.in .wm__fill{clip-path:inset(0 0 0 0)}
+.foot__legal{padding:24px 0 32px;border-top:1px solid var(--border);color:var(--dim);font-size:13px}
+
+/* ===== This page ===== */
+/* inner hero */
+.x-inner{min-height:60vh;min-height:60svh;padding:clamp(120px,16vh,160px) 0 clamp(56px,8vh,96px)}
+.x-inner h1{font-size:clamp(34px,7.4cqi,76px);max-width:none}
+.x-vis{position:relative;justify-self:center;width:100%;max-width:440px;padding-top:30px}
+.x-vis::before{content:"";position:absolute;inset:-20% -12%;z-index:0;border-radius:50%;background:radial-gradient(closest-side,rgba(139,92,246,.22),rgba(34,211,238,.06) 60%,transparent);pointer-events:none}
+.x-vis .console{position:relative;left:auto;bottom:auto;width:100%;padding:20px 22px 18px;border-radius:22px;background:rgba(12,12,22,.86)}
+.x-vis .console p{font-size:clamp(12.5px,1.05vw,14px)}
+.x-vis .badge{right:-2%;top:0}
+
+/* cost */
+.x-cost{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.x-cost .stat b{font-size:clamp(52px,5.2vw,84px);line-height:.95;margin-bottom:10px}
+.x-cost h3{font-size:clamp(22px,1.9vw,28px);margin-bottom:0}
+.x-cost p{font-size:16px}
+.x-say{max-width:24ch;margin-top:clamp(56px,7vw,96px);padding-left:clamp(20px,3vw,36px);border-left:2px solid #8B5CF6;font:600 clamp(28px,3.4vw,52px)/1.08 var(--f-head);letter-spacing:-.025em}
+.x-say span{display:block}
+
+/* accordion (jobs + FAQ) */
+.x-acc__btn{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 20px;width:100%;min-height:var(--tap);padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;line-height:inherit;text-align:left;cursor:pointer}
+.x-acc__btn:focus-visible{outline:none;box-shadow:none}
+.x-acc:has(.x-acc__btn:focus-visible){outline:2px solid var(--cyan);outline-offset:4px;box-shadow:0 0 0 8px rgba(34,211,238,.18)}
+.x-plus{grid-column:2;grid-row:1/span 2;position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);color:var(--text);transition:transform .5s var(--ease),border-color .3s,color .3s,background-color .3s}
+.x-plus::before,.x-plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;margin:-.75px 0 0 -7px;border-radius:2px;background:currentColor}
+.x-plus::after{transform:rotate(90deg)}
+.x-acc__btn:hover .x-plus{border-color:rgba(255,255,255,.24)}
+.x-acc.open .x-plus{transform:rotate(45deg);background-color:#8B5CF6;background-image:var(--grad);border-color:transparent;color:#05050A}
+.x-acc__body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.x-acc__body>div{min-height:0;overflow:hidden;visibility:hidden;transition:visibility 0s .6s}
+.x-acc.open .x-acc__body{grid-template-rows:1fr}
+.x-acc.open .x-acc__body>div{visibility:visible;transition-delay:0s}
+
+/* jobs */
+.x-jobs{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.x-jobs .panel{gap:0;cursor:auto}
+.x-jobs .panel h3{font-size:clamp(24px,2.3vw,34px)}
+.x-job__n{color:var(--dim);font-size:12px;margin-bottom:18px}
+.x-job__line{grid-column:1;font:400 16px/1.5 var(--f-body);letter-spacing:.005em;color:var(--muted)}
+.x-job__in{display:grid;gap:26px;padding-top:30px}
+.x-job__in h4{font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.x-job__in p{color:var(--muted)}
+.x-job__in .ticks li{color:var(--muted);font-size:16px}
+.x-out{display:grid;gap:8px;padding:18px 20px;border-radius:16px;background:linear-gradient(rgba(139,92,246,.1),rgba(139,92,246,.1)) transparent;border:1px solid rgba(139,92,246,.32)}
+.x-out h4{margin-bottom:0}
+.x-out p{font:600 clamp(20px,1.7vw,24px)/1.2 var(--f-head);letter-spacing:-.02em;color:var(--text)}
+
+/* two futures */
+.x-days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.x-day{position:relative;display:grid;gap:22px;align-content:start;padding:clamp(28px,3.5vw,48px);border-radius:var(--r)}
+.js .x-days>.x-day{transition:opacity 1s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s),translate .25s ease,box-shadow .25s ease}
+.x-day--off{background:#07070C;border:1px solid var(--border)}
+.x-day--on{background:linear-gradient(#0C0C16,#0C0C16) padding-box,linear-gradient(135deg,#8B5CF6,rgba(255,255,255,.1) 45%,#22D3EE) border-box;border:1px solid transparent;box-shadow:0 0 70px -16px rgba(139,92,246,.4)}
+.x-day__k{color:var(--dim);font-size:12px}
+.x-day--on .x-day__k{color:var(--cyan)}
+.x-day h3{font-size:clamp(26px,2.4vw,36px)}
+.x-day ol{list-style:none}
+.x-day li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--glass-b);color:var(--muted)}
+.x-day li::before{content:"";flex:none;width:7px;height:7px;margin-top:.72em;border-radius:50%;border:1px solid #85858F}
+.x-day--on li{color:var(--text)}
+.x-day--on li::before{border:0;background:var(--grad)}
+@media (hover:hover){
+  .x-day:hover{translate:0 -6px}
+  .x-day--on:hover{box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 70px -10px rgba(139,92,246,.5)}
+}
+.x-line{max-width:30ch;margin-top:clamp(48px,6vw,80px);font:600 clamp(24px,2.6vw,38px)/1.12 var(--f-head);letter-spacing:-.02em}
+.x-line span{color:var(--muted)}
+
+/* faq */
+.x-faq{max-width:980px;border-top:1px solid var(--border)}
+.x-faq .x-acc{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--border)}
+.x-faq .x-acc::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(139,92,246,.12),rgba(139,92,246,.03) 60%,transparent);transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--ease)}
+.x-faq .x-acc:hover::before{transform:scaleX(1)}
+.x-faq .x-acc:has(.x-acc__btn:focus-visible){outline-offset:-2px;box-shadow:none}
+.x-faq h3{font-size:clamp(22px,2vw,30px)}
+.x-faq .x-acc__btn{padding:clamp(20px,2.4vw,30px) 0}
+.x-faq .x-plus{grid-row:1}
+.x-q{display:block;transition:transform .6s var(--ease)}
+.x-faq .x-acc:hover .x-q{transform:translateX(8px)}
+.x-faq .x-acc__body p{color:var(--muted);padding:0 64px clamp(24px,2.6vw,32px) 0}
+
+/* ===== Responsive ===== */
+@media (max-width:980px){
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .foot__top{justify-self:start}
+  .hero__grid{grid-template-columns:1fr}
+  .x-vis{margin:16px auto 0}
+}
+@media (max-width:860px){
+  .nav__links{display:none}
+  .menu-btn{display:block}
+  .x-cost,.x-jobs,.x-days{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav .btn--grad{padding:0 16px;font-size:15px}
+  .foot__grid{grid-template-columns:1fr}
+  .x-faq .x-acc__body p{padding-right:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .hl{animation:none}
+  .console p{opacity:1;animation:none}
+  .js .rv,.js .rv-in,.js [data-reveal].rv-self{opacity:1!important;transform:none!important;filter:none!important}
+  .final{animation:none}
+}
+
+/* hero scroll cue */
+.scroll-cue{display:inline-flex;align-items:center;gap:12px;margin-top:clamp(28px,4vh,44px);color:var(--muted);font:400 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:color .3s}
+.scroll-cue:hover,.scroll-cue:focus-visible{color:var(--text)}
+.scroll-cue__m{position:relative;width:22px;height:34px;border:1.5px solid rgba(255,255,255,.28);border-radius:12px;flex:none}
+.scroll-cue__m::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#22D3EE;animation:cueDot 1.8s ease-in-out infinite}
+@keyframes cueDot{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue__m::after{animation:none}}
+.hero .wrap{width:100%}
+.hero__text{width:100%}
+
+/* ---- hero v2: bigger type + live console ---- */
+.x-inner .hero__grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.x-inner h1{font-size:clamp(36px,8.6cqi,82px);line-height:1.02}
+.x-inner .line{white-space:normal}
+.hero h1 .hl{background-size:220% 100%;animation:hlSweep 6s ease-in-out infinite alternate}
+@keyframes hlSweep{from{background-position:0% 50%}to{background-position:100% 50%}}
+.x-vis .console{min-height:268px;display:flex;flex-direction:column}
+.ac-task{display:flex;align-items:center;gap:10px;margin:-2px 0 14px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--text);letter-spacing:.04em}
+.ac-dot{width:7px;height:7px;border-radius:50%;background:#22D3EE;box-shadow:0 0 0 0 rgba(34,211,238,.6);animation:acPing 1.4s ease-out infinite}
+.ac-task.done .ac-dot{background:#4ADE80;animation:none}
+@keyframes acPing{to{box-shadow:0 0 0 8px rgba(34,211,238,0)}}
+.ac-time{margin-left:auto;color:var(--dim)}
+.ac-log{flex:1}
+.x-vis .console .ac-log p{opacity:1;animation:none;min-height:1.85em}
+.ac-log p.typing::after{content:"";display:inline-block;width:7px;height:1em;margin-left:3px;vertical-align:-2px;background:#22D3EE;animation:acBlink .8s steps(1) infinite}
+@keyframes acBlink{50%{opacity:0}}
+.ac-bar{height:3px;margin-top:14px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+.ac-bar i{display:block;height:100%;width:0;background:var(--grad);transition:width .5s var(--ease)}
+.x-vis .console{transition:box-shadow .6s}
+.x-vis .console.flash{box-shadow:0 0 0 1px rgba(74,222,128,.45),0 24px 60px rgba(0,0,0,.5)}
+@media (max-width:900px){.x-inner h1{font-size:clamp(38px,11cqi,72px)}}
+/* ---- FAQ: inner padding so text never touches the hover panel ---- */
+.x-faq .x-acc__btn{padding:clamp(20px,2.4vw,30px) clamp(16px,2vw,24px)}
+.x-faq .x-acc__body p{padding:0 clamp(64px,7vw,88px) clamp(24px,2.6vw,32px) clamp(16px,2vw,24px)}
+.x-faq .x-acc.open::before{transform:scaleX(1)}
+.x-faq .x-acc:hover .x-q{transform:translateX(6px)}
+@media (max-width:700px){.x-faq .x-acc__body p{padding-right:clamp(16px,2vw,24px)}}
+
+.wa-fab{position:fixed;left:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:99px;background:#25D366;color:#04140a;font:600 15px/1 inherit;text-decoration:none;box-shadow:0 10px 30px -8px rgba(37,211,102,.55);transform:translateY(90px);opacity:0;transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .4s,box-shadow .3s}
+.wa-fab.on{transform:none;opacity:1}
+.wa-fab:hover{box-shadow:0 14px 36px -8px rgba(37,211,102,.75);transform:translateY(-2px)}
+.wa-fab svg{width:24px;height:24px;flex:none}
+@media (max-width:640px){.wa-fab{left:14px;bottom:14px;height:50px;width:50px;padding:0;justify-content:center}.wa-fab span{display:none}}
+@media (prefers-reduced-motion:reduce){.wa-fab{transition:none}}
+button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:block;cursor:zoom-in}
+/* CTA headline: word flip-in + typed selection */
+.js .final .rv-in{transform:none!important;transition:none!important}
+.final .rv-m{overflow:visible}
+.final h2{perspective:900px}
+.final h2 .sel{margin:.14em 0 .34em}
+.final__sub{margin-top:clamp(20px,2.4vw,32px)}
+.final .cw{display:inline-block;white-space:nowrap}
+.js .final .cw__i{display:inline-block;opacity:0;filter:blur(16px);transform:translateY(45%) rotateX(-85deg) scale(.92);transform-origin:50% 100%;transition:opacity .9s var(--ease),filter .9s var(--ease),transform 1.1s cubic-bezier(.2,1.2,.3,1);transition-delay:calc(var(--w)*110ms + .1s)}
+.js .final .in .cw__i{opacity:1;filter:none;transform:none}
+.final .sel .cw__i{opacity:1!important;filter:none!important;transform:none!important}
+.js .final .cc{display:inline-block;opacity:0;transform:translateY(.25em) scale(.4);filter:blur(8px);transition:opacity .35s ease,transform .6s cubic-bezier(.34,1.7,.5,1),filter .4s ease;transition-delay:calc(var(--c)*45ms + var(--sd,.7s))}
+.js .final .in .cc{opacity:1;transform:none;filter:none}
+.final .sel{position:relative}
+.js .final .sel::after{content:"";position:absolute;right:-.06em;top:.12em;bottom:.02em;width:.06em;background:#fff;opacity:0}
+.js .final .in .sel::after{animation:ccCaret .9s steps(1) var(--sc,1.4s) 4 forwards}
+@keyframes ccCaret{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
+.final .x-sel__box rect{transition-delay:var(--bx,1.7s)!important}
+.final .x-sel__h{transition-delay:calc(var(--bx,1.7s) + .7s + var(--k)*90ms)!important}
+.final .eyebrow{transition:letter-spacing 1.2s var(--ease),opacity 1s}
+.js .final [data-reveal]:not(.in) .eyebrow{letter-spacing:.6em;opacity:0}
+@media (prefers-reduced-motion:reduce){.js .final .cw__i,.js .final .cc{opacity:1!important;filter:none!important;transform:none!important;transition:none!important}.js .final .in .sel::after{animation:none}}
+/* CTA attention: cursor glides in and clicks the primary button */
+.final .cta{position:relative}
+.x-cur{position:absolute;left:0;top:0;width:34px;height:34px;pointer-events:none;z-index:3;opacity:0;transform:translate(calc(var(--tx) + 240px),calc(var(--ty) + 160px)) rotate(12deg);filter:drop-shadow(0 6px 14px rgba(3,3,5,.35))}
+.x-cur svg{width:100%;height:100%}
+.x-cur.go{animation:curIn 1.25s cubic-bezier(.22,1,.36,1) forwards,curClick .32s ease 1.3s,curOut .6s ease 2.6s forwards}
+@keyframes curIn{0%{opacity:0;transform:translate(calc(var(--tx) + 240px),calc(var(--ty) + 160px)) rotate(12deg)}25%{opacity:1}100%{opacity:1;transform:translate(var(--tx),var(--ty)) rotate(0)}}
+@keyframes curClick{0%,100%{transform:translate(var(--tx),var(--ty)) scale(1)}45%{transform:translate(var(--tx),var(--ty)) scale(.8)}}
+@keyframes curOut{to{opacity:0;transform:translate(calc(var(--tx) + 18px),calc(var(--ty) + 18px))}}
+.x-rip{position:absolute;left:0;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;border:2px solid #fff;pointer-events:none;z-index:2;opacity:0;transform:translate(var(--tx),var(--ty))}
+.x-rip.go{animation:ripG .9s ease-out 1.38s}
+.x-rip.go+.x-rip.go{animation-delay:1.55s}
+@keyframes ripG{0%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(6)}}
+.final .cta .btn--grad.x-hit{animation:btnHit .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes btnHit{40%{transform:scale(.94)}}
+.final .cta .btn--grad.x-glow{animation:btnGlow 2.8s ease-in-out infinite}
+@keyframes btnGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.55),0 10px 30px -10px rgba(3,3,5,.4)}50%{box-shadow:0 0 0 12px rgba(255,255,255,0),0 16px 40px -10px rgba(3,3,5,.5)}}
+@media (prefers-reduced-motion:reduce){.x-cur,.x-rip{display:none}.final .cta .btn--grad.x-glow{animation:none}}
+</style>
+<script>
+document.documentElement.classList.add("js");
+if(!(window.CSS&&CSS.registerProperty))document.documentElement.classList.add("no-atprop");
+(function(){var r=document.documentElement;try{var s=sessionStorage;if(!s.getItem("dz-pl")){r.classList.add("is-loading");s.setItem("dz-pl","1");s.removeItem("dz-cur")}else if(s.getItem("dz-cur")){s.removeItem("dz-cur");r.classList.add("curtain-in")}}catch(e){}})();
+document.addEventListener("DOMContentLoaded",function(){
+  var d=document,nav=d.querySelector(".nav"),bar=d.querySelector(".progress"),tick=0;
+  function update(){tick=0;var y=scrollY,h=d.documentElement.scrollHeight-innerHeight;nav.classList.toggle("scrolled",y>40);bar.style.transform="scaleX("+(h>0?Math.min(y/h,1):0)+")"}
+  addEventListener("scroll",function(){if(!tick)tick=requestAnimationFrame(update)},{passive:true});update();
+  var still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  function countUp(root){if(still)return;root.querySelectorAll("[data-count]").forEach(function(el){var t=parseFloat(el.dataset.count),dec=(el.dataset.count.split(".")[1]||"").length,s=0;el.textContent=(0).toFixed(dec);function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1400,1),k=1-Math.pow(1-p,3);el.textContent=(t*k).toFixed(dec);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
+  /* text reveals: tag every text element inside each reveal group below the hero */
+  var TXT=".eyebrow,h2,h3,h4,p,li:not(.pstep),dt,dd,.cap,.btn,.textlink,.row__n,.panel__icon,.stat>b,.stat>span,figure";
+  d.querySelectorAll("main>section:not(.hero) [data-reveal],.foot [data-reveal]").forEach(function(g){
+    if(g.matches(".wm"))return;
+    var all=[].slice.call(g.querySelectorAll(TXT)),set=all.filter(function(el){for(var p=el.parentElement;p&&p!==g;p=p.parentElement){if(all.indexOf(p)>-1)return false}return true});
+    if(!set.length){g.classList.add("rv-self");return}
+    if(!g.matches(".panel,.case,.pr"))g.classList.add("rv-group");
+    set.forEach(function(el,i){el.style.setProperty("--rv",Math.min(i,16));
+      if(/^H[23]$/.test(el.tagName)){if(!el.querySelector(".rv-m"))el.innerHTML='<span class="rv-m"><span class="rv-in">'+el.innerHTML+"</span></span>"}
+      else{el.classList.add("rv");el.addEventListener("transitionend",function f(ev){if(ev.target===el&&ev.propertyName==="opacity"){el.classList.remove("rv");el.removeEventListener("transitionend",f)}})}
+    });
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");countUp(e.target);io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+  d.querySelectorAll("[data-reveal]").forEach(function(el){io.observe(el)});
+  /* once a service panel has finished revealing, hand its transform to the hover system */
+  d.addEventListener("transitionend",function(e){var t=e.target;if(e.propertyName==="transform"&&t.matches&&t.matches(".panel.in"))t.classList.add("fx")});
+  /* cursor spotlight: one rAF-throttled pointermove listener per card group */
+  d.querySelectorAll("[data-fx]").forEach(function(g){var sel=g.dataset.fx,ev=null,raf=0;
+    g.addEventListener("pointermove",function(e){ev=e;if(raf)return;raf=requestAnimationFrame(function(){raf=0;var c=ev.target.closest&&ev.target.closest(sel);if(!c||!g.contains(c))return;var r=c.getBoundingClientRect();c.style.setProperty("--mx",ev.clientX-r.left+"px");c.style.setProperty("--my",ev.clientY-r.top+"px")})},{passive:true});
+  });
+  /* mobile menu */
+  var root=d.documentElement,mb=d.querySelector(".menu-btn"),mm=d.getElementById("mmenu");
+  function setMenu(o){nav.classList.toggle("open",o);root.classList.toggle("menu-open",o);mb.setAttribute("aria-expanded",o);mb.setAttribute("aria-label",o?"Close menu":"Open menu");if(o){setTimeout(function(){var f=mm.querySelector("a");if(f)f.focus({preventScroll:true})},350)}}
+  mb.addEventListener("click",function(){setMenu(!nav.classList.contains("open"))});
+  mm.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setMenu(false)})});
+  matchMedia("(min-width:861px)").addEventListener("change",function(e){if(e.matches)setMenu(false)});
+  /* services dropdown */
+  var dd=d.querySelector(".dd"),db=dd.querySelector(".dd__btn");
+  function isOpen(){return dd.matches(":hover,:focus-within,.open")&&!dd.classList.contains("hush")}
+  function sync(){db.setAttribute("aria-expanded",isOpen())}
+  db.addEventListener("click",function(){if(isOpen()){dd.classList.remove("open");dd.classList.add("hush")}else{dd.classList.remove("hush");dd.classList.add("open")}sync()});
+  dd.addEventListener("mouseenter",sync);
+  dd.addEventListener("focusin",sync);
+  dd.addEventListener("mouseleave",function(){dd.classList.remove("hush");if(!dd.contains(d.activeElement))dd.classList.remove("open");setTimeout(sync)});
+  dd.addEventListener("focusout",function(e){if(!dd.contains(e.relatedTarget)){dd.classList.remove("open","hush");setTimeout(sync)}});
+  addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(nav.classList.contains("open")){setMenu(false);mb.focus()}else if(isOpen()){dd.classList.remove("open");dd.classList.add("hush");db.focus();sync()}});
+  /* page transition fallback: curtain */
+  var cur=d.querySelector(".curtain");
+  if(root.classList.contains("curtain-in")){requestAnimationFrame(function(){requestAnimationFrame(function(){cur.classList.add("away");root.classList.remove("curtain-in");setTimeout(function(){cur.classList.remove("away")},700)})})}
+  addEventListener("pageshow",function(e){if(e.persisted){cur.classList.remove("cover","away");root.classList.remove("curtain-in")}});
+  if(!("onpagereveal" in window)){
+    d.addEventListener("click",function(e){
+      var a=e.target.closest&&e.target.closest("a[href]");
+      if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+      if((a.target&&a.target!=="_self")||a.hasAttribute("download"))return;
+      var h=a.getAttribute("href");if(!h||h.charAt(0)==="#")return;
+      var u;try{u=new URL(a.href,location.href)}catch(_){return}
+      if(!/^https?:$/.test(u.protocol)||u.origin!==location.origin)return;
+      if(u.pathname===location.pathname&&u.search===location.search)return;
+      e.preventDefault();
+      try{sessionStorage.setItem("dz-cur","1")}catch(_){}
+      cur.classList.remove("away");cur.classList.add("cover");
+      setTimeout(function(){location.href=u.href},still?0:450);
+    });
+  }
+});
+</script>
 </head>
-<body class="page-ai-automation">
-
-  <div class="bg-glow" aria-hidden="true"></div>
-  <div class="bg-aurora" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
-
-  <!-- Circuit traces (AI data flow) — global -->
-<div class="bg-circuit" aria-hidden="true">
-
-  <!-- Horizontal traces — left to right -->
-  <span class="trace-h" style="top: 128px;  animation-duration: 28s; animation-delay: 0s;"></span>
-  <span class="trace-h" style="top: 320px;  animation-duration: 32s; animation-delay: -8s;"></span>
-  <span class="trace-h" style="top: 576px;  animation-duration: 30s; animation-delay: -14s;"></span>
-  <span class="trace-h" style="top: 832px;  animation-duration: 34s; animation-delay: -4s;"></span>
-  <span class="trace-h" style="top: 1088px; animation-duration: 31s; animation-delay: -11s;"></span>
-  <span class="trace-h" style="top: 1344px; animation-duration: 33s; animation-delay: -18s;"></span>
-
-  <!-- Horizontal traces — right to left -->
-  <span class="trace-h rev" style="top: 192px;  animation-duration: 30s; animation-delay: -7s;"></span>
-  <span class="trace-h rev" style="top: 448px;  animation-duration: 29s; animation-delay: -15s;"></span>
-  <span class="trace-h rev" style="top: 704px;  animation-duration: 33s; animation-delay: -3s;"></span>
-  <span class="trace-h rev" style="top: 960px;  animation-duration: 36s; animation-delay: -20s;"></span>
-  <span class="trace-h rev" style="top: 1216px; animation-duration: 31s; animation-delay: -9s;"></span>
-  <span class="trace-h rev" style="top: 1472px; animation-duration: 32s; animation-delay: -14s;"></span>
-
-  <!-- Vertical traces — top to bottom -->
-  <span class="trace-v" style="left: 192px;  animation-duration: 34s; animation-delay: -10s;"></span>
-  <span class="trace-v" style="left: 576px;  animation-duration: 29s; animation-delay: -5s;"></span>
-  <span class="trace-v" style="left: 960px;  animation-duration: 32s; animation-delay: -18s;"></span>
-  <span class="trace-v" style="left: 1344px; animation-duration: 36s; animation-delay: -8s;"></span>
-
-  <!-- Vertical traces — bottom to top -->
-  <span class="trace-v rev" style="left: 384px;  animation-duration: 38s; animation-delay: -9s;"></span>
-  <span class="trace-v rev" style="left: 768px;  animation-duration: 34s; animation-delay: -2s;"></span>
-  <span class="trace-v rev" style="left: 1152px; animation-duration: 36s; animation-delay: -14s;"></span>
-
-  <!-- Node flashes -->
-  <span class="node" style="top: 192px;  left: 192px;  animation-duration: 11s; animation-delay: 0s;"></span>
-  <span class="node" style="top: 448px;  left: 384px;  animation-duration: 13s; animation-delay: -3s;"></span>
-  <span class="node" style="top: 704px;  left: 576px;  animation-duration: 12s; animation-delay: -6s;"></span>
-  <span class="node" style="top: 256px;  left: 768px;  animation-duration: 14s; animation-delay: -2s;"></span>
-  <span class="node" style="top: 512px;  left: 960px;  animation-duration: 12.5s; animation-delay: -8s;"></span>
-  <span class="node" style="top: 832px;  left: 320px;  animation-duration: 13.5s; animation-delay: -5s;"></span>
-  <span class="node" style="top: 128px;  left: 1152px; animation-duration: 11.5s; animation-delay: -9s;"></span>
-  <span class="node" style="top: 640px;  left: 128px;  animation-duration: 14.5s; animation-delay: -4s;"></span>
-  <span class="node" style="top: 1088px; left: 512px;  animation-duration: 12.2s; animation-delay: -11s;"></span>
-  <span class="node" style="top: 1216px; left: 896px;  animation-duration: 13.8s; animation-delay: -7s;"></span>
-  <span class="node" style="top: 1472px; left: 640px;  animation-duration: 11.8s; animation-delay: -2.5s;"></span>
-  <span class="node" style="top: 960px;  left: 1088px; animation-duration: 14.2s; animation-delay: -10s;"></span>
-
+<body>
+<div class="pre" aria-hidden="true">
+  <div class="pre__in">
+    <svg class="pre__mark" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="preG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><path pathLength="1" d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="url(#preG)" stroke-width="1.2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="url(#preG)"/></svg>
+    <div class="pre__bar"><i></i></div>
+    <p class="pre__pct mono"><span>0</span>%</p>
+  </div>
 </div>
+<script>
+(function(){
+  var r=document.documentElement;if(!r.classList.contains("is-loading"))return;
+  var pre=document.querySelector(".pre"),bar=pre.querySelector(".pre__bar i"),num=pre.querySelector(".pre__pct span"),loaded=document.readyState==="complete",done=false,shown=0;
+  addEventListener("load",function(){loaded=true});
+  function paint(){bar.style.transform="scaleX("+shown/100+")";num.textContent=Math.round(shown)}
+  function finish(){if(done)return;done=true;shown=100;paint();setTimeout(function(){pre.classList.add("done");setTimeout(function(){r.classList.remove("is-loading")},450);setTimeout(function(){pre.remove()},1000)},140)}
+  function tick(){if(done)return;var t=performance.now();
+    if(t>=1800){finish();return}
+    if(loaded&&t>=600){shown+=(100-shown)*.35;if(shown>99.4){finish();return}}
+    else shown+=(Math.min(90,t/1800*100+(loaded?20:0))-shown)*.12;
+    paint();requestAnimationFrame(tick)}
+  requestAnimationFrame(tick);setTimeout(finish,2000);
+})();
+</script>
+<div class="curtain" aria-hidden="true"></div>
+<a class="skip" href="#content">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="/" class="nav__logo" aria-label="Devzink home">
-        <span class="nav__logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-            <circle cx="12" cy="12" r="3" fill="#fff"/>
-          </svg>
-        </span>
-        Devzink
-      </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <div class="nav__dropdown">
-          <button class="nav__dropdown-trigger is-active" aria-expanded="false" aria-haspopup="true">
-            Services
-            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 4.5L6 7.5L9 4.5"/>
-            </svg>
-          </button>
-
-          <div class="nav__dropdown-menu" role="menu">
-            <a href="ai-automation" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="8" width="16" height="12" rx="3"/>
-                  <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-                  <path d="M12 8V4"/>
-                  <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
-                  <path d="M2 14h2M20 14h2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>AI Agents &amp; Automation</strong>
-                <em>Run your operations without the manual work.</em>
-              </span>
-            </a>
-
-            <a href="web-app-development" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>AI Product Engineering</strong>
-                <em>SaaS platforms &amp; apps with AI at the core.</em>
-              </span>
-            </a>
-
-            <a href="services#web" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="14" rx="2"/>
-                  <path d="M8 20h8M12 18v2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>Web Engineering</strong>
-                <em>GSAP, Spline 3D, corporate platforms</em>
-              </span>
-            </a>
-
-            <a href="services#mobile" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="6" y="2" width="12" height="20" rx="2.5"/>
-                  <path d="M11 18h2"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>Cross-Platform Mobile</strong>
-                <em>iOS &amp; Android with Flutter</em>
-              </span>
-            </a>
-
-            <a href="services#uiux" role="menuitem">
-              <span class="nav__dropdown-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
-                  <path d="m2 17 10 5 10-5"/>
-                  <path d="m2 12 10 5 10-5"/>
-                </svg>
-              </span>
-              <span class="nav__dropdown-body">
-                <strong>UI/UX &amp; Design Systems</strong>
-                <em>Prototypes, design tokens, Figma</em>
-              </span>
-            </a>
-
-            <a href="services" class="nav__dropdown-all" role="menuitem">
-              View all services
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 8h10M9 4l4 4-4 4"/>
-              </svg>
-            </a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="logo" href="/" aria-label="Devzink home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg>
+      Devzink
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="dd">
+        <button class="dd__btn is-current" type="button" aria-expanded="false" aria-controls="dd-services">Services <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dd__panel" id="dd-services">
+          <div class="dd__in">
+            <ul class="dd__list">
+              <li style="--i:0"><a href="/ai-automation" aria-current="page"><b>AI Agents &amp; Automation</b><span>Run your operations without the manual work.</span></a></li>
+              <li style="--i:1"><a href="/web-app-development"><b>AI Product Engineering</b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
+              <li style="--i:2"><a href="/services#web"><b>Web Engineering</b><span>GSAP, Spline 3D, corporate platforms</span></a></li>
+              <li style="--i:3"><a href="/services#mobile"><b>Cross-Platform Mobile</b><span>iOS &amp; Android with Flutter</span></a></li>
+              <li style="--i:4"><a href="/services#uiux"><b>UI/UX &amp; Design Systems</b><span>Prototypes, design tokens, Figma</span></a></li>
+              <li style="--i:5"><a class="dd__all" href="/services">View all services <span class="arrow" aria-hidden="true">→</span></a></li>
+            </ul>
           </div>
         </div>
-
-        <a href="work">Work</a>
-        <a href="about">About</a>
-      </nav>
-
-      <div class="nav__actions">
-        <a href="contact" class="btn btn--primary btn--sm"><span class="btn__dot" aria-hidden="true"></span>Book a Call</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-        </button>
       </div>
+      <a href="/work">Work</a><a href="/about">About</a>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--grad" href="/contact">Book a Call</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
     </div>
+  </div>
+</header>
+<nav class="mmenu" id="mmenu" aria-label="Mobile">
+  <ul class="mmenu__list">
+    <li style="--i:0"><a class="mmenu__big" href="/services">Services <span class="arrow" aria-hidden="true">→</span></a>
+      <ul class="mmenu__sub">
+        <li><a href="/ai-automation" aria-current="page">AI Agents &amp; Automation</a></li>
+        <li><a href="/web-app-development">AI Product Engineering</a></li>
+        <li><a href="/services#web">Web Engineering</a></li>
+        <li><a href="/services#mobile">Cross-Platform Mobile</a></li>
+        <li><a href="/services#uiux">UI/UX &amp; Design Systems</a></li>
+      </ul>
+    </li>
+    <li style="--i:1"><a class="mmenu__big" href="/work">Work <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li style="--i:2"><a class="mmenu__big" href="/about">About <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li class="mmenu__cta" style="--i:3"><a class="btn btn--grad btn--lg" href="/contact">Book a Call <span class="arrow" aria-hidden="true">→</span></a></li>
+  </ul>
+</nav>
 
-    <div class="nav__mobile">
-      <div class="nav__mobile-inner">
-        <a href="ai-automation">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="8" width="16" height="12" rx="3"/>
-              <circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-              <circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/>
-              <path d="M12 8V4"/>
-              <circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/>
-              <path d="M2 14h2M20 14h2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>AI Agents &amp; Automation</strong>
-            <em>Run your operations without the manual work.</em>
-          </span>
-        </a>
-
-        <a href="web-app-development">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>AI Product Engineering</strong>
-            <em>SaaS platforms &amp; apps with AI at the core.</em>
-          </span>
-        </a>
-
-        <a href="services#web">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="14" rx="2"/>
-              <path d="M8 20h8M12 18v2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>Web Engineering</strong>
-            <em>GSAP, Spline 3D, corporate platforms</em>
-          </span>
-        </a>
-
-        <a href="services#mobile">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="6" y="2" width="12" height="20" rx="2.5"/>
-              <path d="M11 18h2"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>Cross-Platform Mobile</strong>
-            <em>iOS &amp; Android with Flutter</em>
-          </span>
-        </a>
-
-        <a href="services#uiux">
-          <span class="nav__dropdown-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2 2 7l10 5 10-5-10-5Z"/>
-              <path d="m2 17 10 5 10-5"/>
-              <path d="m2 12 10 5 10-5"/>
-            </svg>
-          </span>
-          <span class="nav__dropdown-body">
-            <strong>UI/UX &amp; Design Systems</strong>
-            <em>Prototypes, design tokens, Figma</em>
-          </span>
-        </a>
-
-        <a href="services" class="nav__mobile-all">
-          View all services
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </a>
-
-        <div class="nav__mobile-divider" aria-hidden="true"></div>
-
-        <a href="work" class="nav__mobile-simple">Work</a>
-        <a href="about" class="nav__mobile-simple">About</a>
-
-        <a href="contact" class="btn btn--primary nav__mobile-cta">
-          <span class="btn__dot" aria-hidden="true"></span>Book a Discovery Call
-        </a>
-      </div>
+<main id="content">
+  <!-- HERO -->
+  <section class="hero x-inner" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="dots"></div>
+      <div class="glow glow--v"></div>
+      <div class="glow glow--c"></div>
     </div>
-  </header>
-
-  <main class="page-main">
-
-    <!-- ================= INTRO + COST ================= -->
-    <section class="aa-intro">
-      <div class="container">
-        <div class="aa-intro__head reveal">
-          <span class="eyebrow">AI Agents &amp; Automation</span>
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="pill mono fade-up" style="--d:.05s"><span class="pulse"></span>AI Agents &amp; AI Automation Services</p>
           <h1>
-            Your competitors are already using agents.<br />
-            <span class="accent">Are you still doing this by hand?</span>
+            <span class="line"><span style="--i:0">Your competitors are</span></span>
+            <span class="line"><span style="--i:1">already using agents.</span></span>
+            <span class="line"><span style="--i:2">Are you still</span></span>
+            <span class="line"><span style="--i:3"><span class="hl">doing this by hand?</span></span></span>
           </h1>
-          <p>
-            Here's what it's actually costing you.
-          </p>
+          <a class="scroll-cue fade-up" style="--d:.8s" href="#cost"><span class="scroll-cue__m" aria-hidden="true"></span>Scroll to explore</a>
         </div>
 
-        <div class="cost-grid">
-          <article class="cost-card premium-card reveal" style="--d:0ms">
-            <div class="cost-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 7v5l3 2"/>
-              </svg>
+        <div class="x-vis fade-up" style="--d:.4s">
+          <div class="console glass float" id="agentConsole" role="img" aria-label="Live agent console: an AI agent qualifies a lead, books a call and syncs the CRM, then answers a support ticket and processes an invoice">
+            <div class="console__top"><i></i><i></i><i></i><b class="ac-name">agent.run #0142</b></div>
+            <div class="ac-task mono"><span class="ac-dot"></span><span class="ac-label">lead-qualifier</span><span class="ac-time">0.0s</span></div>
+            <div class="ac-log" aria-hidden="true">
+              <p>› lead.received — <em>form · 11:00 PM</em></p>
+              <p>› ai.score 87/100 <strong>HOT</strong></p>
+              <p>› calendar.booked <em>Wed 9:00</em></p>
+              <p>› crm.synced <em>✓</em></p>
             </div>
-            <div class="cost-card__stat">5 minutes</div>
-            <h3>Response time kills deals</h3>
-            <p>Research shows a reply within 5 minutes is <strong>21×</strong> more likely to qualify. Every hour your lead waits, your conversion rate drops.</p>
-          </article>
-
-          <article class="cost-card premium-card reveal" style="--d:80ms">
-            <div class="cost-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-              </svg>
-            </div>
-            <div class="cost-card__stat">70%</div>
-            <h3>Support tickets are repetitive</h3>
-            <p>Seven out of ten questions in your inbox are the same ten questions. Every one is a chance for an agent to answer in 5 seconds — not 5 hours.</p>
-          </article>
-
-          <article class="cost-card premium-card reveal" style="--d:160ms">web-app-development.html
-            <div class="cost-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                <circle cx="12" cy="12" r="3.2"/>
-              </svg>
-            </div>
-            <div class="cost-card__stat">12+ hrs</div>
-            <h3>Lost to copy-paste weekly</h3>
-            <p>Per knowledge worker, per week. If you have 3 people doing manual data handoffs, that's 36 hours — nearly a full-time salary, gone.</p>
-          </article>
-        </div>
-
-        <p class="aa-intro__foot reveal">
-          This is happening in your business right now.<br />
-          <strong>The question is: how long will you let it?</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= 4 JOBS ================= -->
-    <section class="section aa-section" id="jobs">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">What you can hand off</span>
-          <h2>Four jobs your agent can <span class="accent">own this week.</span></h2>
-          <p>Hand off any one of these. Get your team's week back. Click a card to see exactly what we build.</p>
-        </div>
-
-        <div class="jobs-grid">
-
-          <article class="job reveal" data-job style="--d:0ms">
-            <button class="job__trigger" aria-expanded="false">
-              <span class="job__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="8" r="4"/>
-                  <path d="M4 21v-1a8 8 0 0 1 16 0v1"/>
-                </svg>
-              </span>
-              <span class="job__body">
-                <strong>Qualify every inbound lead</strong>
-                <em>Score, book, and route — before your competition replies</em>
-              </span>
-              <span class="job__chev" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-              </span>
-            </button>
-            <div class="job__panel">
-              <div class="job__panel-inner">
-
-                <div class="job__scenario">
-                  <span class="job__tag">The scenario</span>
-                  <p>A lead fills your form at 11 PM. By 11:00:30 PM they've been scored, qualified, and a call is on your calendar. You wake up to a booked meeting — not a stale lead.</p>
-                </div>
-
-                <div class="job__build">
-                  <span class="job__tag">What we build</span>
-                  <ul class="job__deliverables">
-                    <li>ICP scoring logic customized to your business</li>
-                    <li>Multi-channel intake — web, email, WhatsApp</li>
-                    <li>Auto-booking into Cal.com / Calendly</li>
-                    <li>Two-way CRM sync (HubSpot, Pipedrive, Salesforce)</li>
-                  </ul>
-                </div>
-
-                <div class="job__outcome">
-                  <span class="job__outcome-label">Typical outcome</span>
-                  <strong>Replies in 22 seconds</strong>
-                  <em>vs. 5+ hours manual</em>
-                </div>
-
-              </div>
-            </div>
-          </article>
-
-          <article class="job reveal" data-job style="--d:80ms">
-            <button class="job__trigger" aria-expanded="false">
-              <span class="job__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-              </span>
-              <span class="job__body">
-                <strong>Answer 60% of support tickets</strong>
-                <em>Instantly, in your brand voice, with source citations</em>
-              </span>
-              <span class="job__chev" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-              </span>
-            </button>
-            <div class="job__panel">
-              <div class="job__panel-inner">
-
-                <div class="job__scenario">
-                  <span class="job__tag">The scenario</span>
-                  <p>An agent trained on your docs, past tickets, and help center. It resolves the repetitive 60% instantly with citations — and hands off complex cases to humans with full context.</p>
-                </div>
-
-                <div class="job__build">
-                  <span class="job__tag">What we build</span>
-                  <ul class="job__deliverables">
-                    <li>Trained on docs, tickets, and help center</li>
-                    <li>Source citations on every answer</li>
-                    <li>Smart escalation with full conversation history</li>
-                    <li>Deploys as web widget, Slack bot, or email</li>
-                  </ul>
-                </div>
-
-                <div class="job__outcome">
-                  <span class="job__outcome-label">Typical outcome</span>
-                  <strong>60% ticket deflection</strong>
-                  <em>with 24/7 coverage</em>
-                </div>
-
-              </div>
-            </div>
-          </article>
-
-          <article class="job reveal" data-job style="--d:160ms">
-            <button class="job__trigger" aria-expanded="false">
-              <span class="job__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                  <circle cx="12" cy="12" r="3.2"/>
-                </svg>
-              </span>
-              <span class="job__body">
-                <strong>Automate internal ops</strong>
-                <em>Kill the copy-paste between your tools</em>
-              </span>
-              <span class="job__chev" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-              </span>
-            </button>
-            <div class="job__panel">
-              <div class="job__panel-inner">
-
-                <div class="job__scenario">
-                  <span class="job__tag">The scenario</span>
-                  <p>n8n workflows that eliminate the manual data shuffling between CRM, spreadsheets, email, and Slack. Every handoff that needed a human is now an automated step that never forgets.</p>
-                </div>
-
-                <div class="job__build">
-                  <span class="job__tag">What we build</span>
-                  <ul class="job__deliverables">
-                    <li>Data sync across CRM, sheets, inbox, and Slack</li>
-                    <li>Scheduled reports and real-time alerts</li>
-                    <li>Error handling and retry logic baked in</li>
-                    <li>Fully documented for team handover</li>
-                  </ul>
-                </div>
-
-                <div class="job__outcome">
-                  <span class="job__outcome-label">Typical outcome</span>
-                  <strong>12+ hours saved</strong>
-                  <em>per week, per team member</em>
-                </div>
-
-              </div>
-            </div>
-          </article>
-
-          <article class="job reveal" data-job style="--d:240ms">
-            <button class="job__trigger" aria-expanded="false">
-              <span class="job__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                </svg>
-              </span>
-              <span class="job__body">
-                <strong>Answer any internal question instantly</strong>
-                <em>From your docs, tickets, and Slack history</em>
-              </span>
-              <span class="job__chev" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-              </span>
-            </button>
-            <div class="job__panel">
-              <div class="job__panel-inner">
-
-                <div class="job__scenario">
-                  <span class="job__tag">The scenario</span>
-                  <p>A private RAG assistant that answers questions from your internal documents, past tickets, and Slack history — with the exact source cited every time. No more "where's that doc again?"</p>
-                </div>
-
-                <div class="job__build">
-                  <span class="job__tag">What we build</span>
-                  <ul class="job__deliverables">
-                    <li>Vector search over your entire knowledge base</li>
-                    <li>Every answer cites its source document</li>
-                    <li>Role-based access — sales sees sales, ops sees ops</li>
-                    <li>Deploys as Slack bot, web app, or internal API</li>
-                  </ul>
-                </div>
-
-                <div class="job__outcome">
-                  <span class="job__outcome-label">Typical outcome</span>
-                  <strong>Answers in 3 seconds</strong>
-                  <em>from internal docs</em>
-                </div>
-
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= BEFORE / AFTER ================= -->
-    <section class="section aa-section">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">Same business, two futures</span>
-          <h2>What changes when the agent is <span class="accent">actually running.</span></h2>
-        </div>
-
-        <div class="ba-grid">
-          <article class="ba-card ba-card--before premium-card reveal" style="--d:0ms">
-            <span class="ba-card__label">Without an agent</span>
-            <h3>A Tuesday afternoon</h3>
-            <ul class="ba-card__list">
-              <li>A new lead lands in your shared inbox at 2:14 PM</li>
-              <li>Nobody notices until 5:30 PM</li>
-              <li>They've already contacted two other agencies</li>
-              <li>You send a reply — they've gone cold</li>
-              <li>Meanwhile, 8 support tickets stack up in Zendesk</li>
-              <li>Your ops person spends 2 hours re-entering data</li>
-            </ul>
-          </article>
-
-          <article class="ba-card ba-card--after premium-card reveal" style="--d:80ms">
-            <span class="ba-card__label">With an agent</span>
-            <h3>Same Tuesday afternoon</h3>
-            <ul class="ba-card__list">
-              <li>Same lead lands at 2:14 PM</li>
-              <li>Agent responds at 2:14:22 PM with a personalized reply</li>
-              <li>Lead books a call for Wednesday 9 AM</li>
-              <li>You get a Slack ping with full context</li>
-              <li>6 of 8 tickets auto-resolved, 2 escalated with summaries</li>
-              <li>Your ops person does 0 minutes of data entry</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="ba-footnote reveal">
-          Same team. Same tools. Same day. <strong>The only difference is who does the repetitive work.</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= FAQ ================= -->
-    <section class="section aa-section">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">Common questions</span>
-          <h2>Things buyers <span class="accent">usually ask.</span></h2>
-        </div>
-
-        <div class="faq-list reveal">
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>How long does a typical build take?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>Most single-agent systems go live in 2–4 weeks. Multi-agent platforms with custom integrations take 4–6 weeks. You'll know the exact timeline before we start building.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>No-code, or actual code?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>Both, depending on what makes sense. n8n for orchestration and integrations, custom TypeScript/Python for logic that needs it. We pick what ships fastest and lasts longest.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>What if the AI gets something wrong?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>Every production system has guardrails: confidence thresholds, human approval for high-stakes actions, fallback responses, and full logging. Agents that improvise are not agents you want running your business.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>Will this work with my current stack?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>Almost certainly. We integrate with HubSpot, Salesforce, Pipedrive, Slack, Gmail, Outlook, Notion, Airtable, Google Sheets, Cal.com, Calendly, WhatsApp, and anything with an API.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>What does it cost?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>Simple automations start in the low thousands. Multi-agent platforms run higher. Every project gets a fixed-price blueprint before we build, so no surprises. Book a call and we'll give you a realistic range for your specific use case.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="faq-item" data-faq>
-            <button class="faq-item__trigger" aria-expanded="false">
-              <span>Is this replacing my team?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="faq-item__panel">
-              <div class="faq-item__panel-inner">
-                <p>No — it's a force multiplier. Your team stops doing repetitive work and focuses on the parts that actually need a human. Most clients redeploy saved hours into growth, not layoffs.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-    <section class="cta-band">
-      <div class="container">
-        <div class="cta-band__inner reveal">
-          <span class="eyebrow">Get Started</span>
-          <h2 style="margin-top:18px;">Which job would you <span class="accent">hand to an agent first?</span></h2>
-          <p>Book a call. We'll map the workflow live, show you exactly what an agent would replace, and send a fixed-price blueprint within 72 hours.</p>
-          <div class="cta-band__ctas">
-            <a href="contact" class="btn btn--primary btn--lg">Book a Discovery Call</a>
-            <a href="services" class="btn btn--ghost btn--lg">Explore All Services</a>
+            <div class="ac-bar" aria-hidden="true"><i></i></div>
           </div>
+          <p class="badge glass float"><span class="pulse"></span>24/7 agents online</p>
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="/" class="nav__logo">
-            <span class="nav__logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-                <circle cx="12" cy="12" r="3" fill="#fff"/>
-              </svg>
-            </span>
-            Devzink
-          </a>
-          <p>AI automation and product engineering agency building autonomous workflows and scalable AI software.</p>
-        </div>
-
-        <div class="footer__col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="ai-automation">AI Automation</a></li>
-            <li><a href="web-app-development">Web &amp; App Development</a></li>
-            <li><a href="services">All Services</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about">About</a></li>
-            <li><a href="work">Work</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@devzink.com">info@devzink.com</a></li>
-            <li><a href="contact">Book a Call</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <span>© <span id="year"></span> Devzink. All rights reserved.</span>
-        <span>Built with precision · Serving global clients</span>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <a class="wa-float" href="contact" aria-label="Contact Devzink">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-  </a>
+  <!-- 1. THE COST -->
+  <section class="sec" id="cost">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">01 / The cost</p>
+        <h2>The price of doing it <span class="gtext">by hand.</span></h2>
+      </div>
+      <div class="x-cost" data-fx=".pr">
+        <article class="stat pr glass" data-reveal>
+          <b><span data-count="5">5</span> minutes</b>
+          <h3>Response time kills deals</h3>
+          <p>Research shows a reply within 5 minutes is far more likely to qualify. Every hour your lead waits, your conversion rate drops.</p>
+        </article>
+        <article class="stat pr glass" data-reveal style="--d:.1s">
+          <b><span data-count="70">70</span>%</b>
+          <h3>Support tickets are repetitive</h3>
+          <p>Seven out of ten questions in your inbox are the same ten questions. Every one is a chance for an agent to answer in 5 seconds — not 5 hours.</p>
+        </article>
+        <article class="stat pr glass" data-reveal style="--d:.2s">
+          <b><span data-count="12">12</span>+ hrs</b>
+          <h3>Lost to copy-paste weekly</h3>
+          <p>Per knowledge worker, per week. Three people doing manual handoffs is 36 hours — nearly a full-time salary, gone.</p>
+        </article>
+      </div>
+      <div data-reveal>
+        <p class="x-say"><span>This is happening in your business right now.</span> <span class="gtext">The question is: how long will you let it?</span></p>
+      </div>
+    </div>
+  </section>
 
-  <script src="assets/js/main.js?v=3" defer></script>
+  <!-- 2. WHAT YOU CAN HAND OFF -->
+  <section class="sec" id="handoff">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">02 / What you can hand off</p>
+        <h2>Four jobs your agent can own <span class="gtext">this week.</span></h2>
+        <p class="sec__sub">Hand off any one of these. Get your team's week back.</p>
+      </div>
+      <div class="x-jobs" data-fx=".panel">
+        <article class="panel x-acc" data-reveal>
+          <p class="x-job__n mono">01 / Leads</p>
+          <h3><button class="x-acc__btn" type="button" id="job-1" aria-expanded="false" aria-controls="job-1-body"><span class="panel__title">Qualify every inbound lead</span><span class="x-job__line">Score, book, and route — before your competition replies</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="job-1-body" role="region" aria-labelledby="job-1"><div><div class="x-job__in">
+            <div><h4>The scenario</h4><p>A lead fills your form at 11 PM. Thirty seconds later they've been scored, qualified, and a call is on your calendar. You wake up to a booked meeting — not a stale lead.</p></div>
+            <div><h4>What we build</h4><ul class="ticks"><li>ICP scoring logic customized to your business</li><li>Multi-channel intake — web, email, WhatsApp</li><li>Auto-booking into Cal.com / Calendly</li><li>Two-way CRM sync (HubSpot, Pipedrive, Salesforce)</li></ul></div>
+            <div class="x-out"><h4>Typical outcome</h4><p>Replies in seconds — vs. 5+ hours manual</p></div>
+          </div></div></div>
+        </article>
+        <article class="panel x-acc" data-reveal style="--d:.1s">
+          <p class="x-job__n mono">02 / Support</p>
+          <h3><button class="x-acc__btn" type="button" id="job-2" aria-expanded="false" aria-controls="job-2-body"><span class="panel__title">Answer 60% of support tickets</span><span class="x-job__line">Instantly, in your brand voice, with source citations</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="job-2-body" role="region" aria-labelledby="job-2"><div><div class="x-job__in">
+            <div><h4>The scenario</h4><p>An agent trained on your docs, past tickets, and help center. It resolves the repetitive majority instantly with citations — and hands complex cases to humans with full context.</p></div>
+            <div><h4>What we build</h4><ul class="ticks"><li>Trained on docs, tickets, and help center</li><li>Source citations on every answer</li><li>Smart escalation with full conversation history</li><li>Deploys as web widget, Slack bot, or email</li></ul></div>
+            <div class="x-out"><h4>Typical outcome</h4><p>Up to 60% ticket deflection — with 24/7 coverage</p></div>
+          </div></div></div>
+        </article>
+        <article class="panel x-acc" data-reveal>
+          <p class="x-job__n mono">03 / Ops</p>
+          <h3><button class="x-acc__btn" type="button" id="job-3" aria-expanded="false" aria-controls="job-3-body"><span class="panel__title">Automate internal ops</span><span class="x-job__line">Kill the copy-paste between your tools</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="job-3-body" role="region" aria-labelledby="job-3"><div><div class="x-job__in">
+            <div><h4>The scenario</h4><p>n8n workflows that eliminate manual data shuffling between CRM, spreadsheets, email, and Slack. Every handoff that needed a human becomes an automated step that never forgets.</p></div>
+            <div><h4>What we build</h4><ul class="ticks"><li>Data sync across CRM, sheets, inbox, and Slack</li><li>Scheduled reports and real-time alerts</li><li>Error handling and retry logic baked in</li><li>Fully documented for team handover</li></ul></div>
+            <div class="x-out"><h4>Typical outcome</h4><p>Hours saved every week, per team member</p></div>
+          </div></div></div>
+        </article>
+        <article class="panel x-acc" data-reveal style="--d:.1s">
+          <p class="x-job__n mono">04 / Knowledge</p>
+          <h3><button class="x-acc__btn" type="button" id="job-4" aria-expanded="false" aria-controls="job-4-body"><span class="panel__title">Answer any internal question instantly</span><span class="x-job__line">From your docs, tickets, and Slack history</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="job-4-body" role="region" aria-labelledby="job-4"><div><div class="x-job__in">
+            <div><h4>The scenario</h4><p>A private RAG assistant that answers from your internal documents, past tickets, and Slack history — with the exact source cited every time.</p></div>
+            <div><h4>What we build</h4><ul class="ticks"><li>Vector search over your knowledge base</li><li>Every answer cites its source document</li><li>Role-based access — sales sees sales, ops sees ops</li><li>Deploys as Slack bot, web app, or internal API</li></ul></div>
+            <div class="x-out"><h4>Typical outcome</h4><p>Answers in seconds from internal docs</p></div>
+          </div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- 3. TWO FUTURES -->
+  <section class="sec" id="futures">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">03 / Two futures</p>
+        <h2>What changes when the agent is <span class="gtext">actually running.</span></h2>
+      </div>
+      <div class="x-days">
+        <article class="x-day x-day--off" data-reveal>
+          <p class="x-day__k mono">Without an agent</p>
+          <h3>A Tuesday afternoon</h3>
+          <ol>
+            <li>A new lead lands in your shared inbox at 2:14 PM</li>
+            <li>Nobody notices until 5:30 PM</li>
+            <li>They've already contacted two other agencies</li>
+            <li>You reply — they've gone cold</li>
+            <li>Meanwhile, 8 support tickets stack up</li>
+            <li>Your ops person spends 2 hours re-entering data</li>
+          </ol>
+        </article>
+        <article class="x-day x-day--on" data-reveal style="--d:.12s">
+          <p class="x-day__k mono">With an agent</p>
+          <h3>Same Tuesday afternoon</h3>
+          <ol>
+            <li>Same lead lands at 2:14 PM</li>
+            <li>Agent responds at 2:14:22 PM with a personalized reply</li>
+            <li>Lead books a call for Wednesday 9 AM</li>
+            <li>You get a Slack ping with full context</li>
+            <li>6 of 8 tickets auto-resolved, 2 escalated with summaries</li>
+            <li>Your ops person does 0 minutes of data entry</li>
+          </ol>
+        </article>
+      </div>
+      <div data-reveal>
+        <p class="x-line">Same team. Same tools. Same day. <span>The only difference is who does the repetitive work.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">04 / FAQ</p>
+        <h2>Things buyers <span class="gtext">usually ask.</span></h2>
+      </div>
+      <div class="x-faq" data-reveal>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-1" aria-expanded="false" aria-controls="faq-1-body"><span class="x-q">How long does a typical build take?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-1-body" role="region" aria-labelledby="faq-1"><div><p>Most single-agent systems go live in 2–4 weeks. Multi-agent platforms with custom integrations take 4–6 weeks. You'll know the exact timeline before we start.</p></div></div>
+        </div>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-2" aria-expanded="false" aria-controls="faq-2-body"><span class="x-q">No-code, or actual code?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-2-body" role="region" aria-labelledby="faq-2"><div><p>Both, depending on what makes sense. n8n for orchestration and integrations, custom TypeScript/Python where logic needs it.</p></div></div>
+        </div>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-3" aria-expanded="false" aria-controls="faq-3-body"><span class="x-q">What if the AI gets something wrong?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-3-body" role="region" aria-labelledby="faq-3"><div><p>Every production system has guardrails: confidence thresholds, human approval for high-stakes actions, fallback responses, and full logging.</p></div></div>
+        </div>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-4" aria-expanded="false" aria-controls="faq-4-body"><span class="x-q">Will this work with my current stack?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-4-body" role="region" aria-labelledby="faq-4"><div><p>Almost certainly. We integrate with HubSpot, Salesforce, Pipedrive, Slack, Gmail, Outlook, Notion, Airtable, Google Sheets, Cal.com, Calendly, WhatsApp, and anything with an API.</p></div></div>
+        </div>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-5" aria-expanded="false" aria-controls="faq-5-body"><span class="x-q">What does it cost?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-5-body" role="region" aria-labelledby="faq-5"><div><p>It depends on scope. Every project gets a fixed-price blueprint before we build, so no surprises.</p></div></div>
+        </div>
+        <div class="x-acc">
+          <h3><button class="x-acc__btn" type="button" id="faq-6" aria-expanded="false" aria-controls="faq-6-body"><span class="x-q">Is this replacing my team?</span><span class="x-plus" aria-hidden="true"></span></button></h3>
+          <div class="x-acc__body" id="faq-6-body" role="region" aria-labelledby="faq-6"><div><p>No — it's a force multiplier. Your team stops doing repetitive work and focuses on what needs a human.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FINAL CTA -->
+  <section class="final" id="contact">
+    <div class="wrap" data-reveal>
+      <p class="eyebrow mono">Next step</p>
+      <h2>Which job would you hand to<br><span class="sel">an agent first?</span></h2>
+      <p class="final__sub">Book a call. We'll map the workflow live, show you exactly what an agent would replace, and send a fixed-price blueprint within 72 hours.</p>
+      <div class="cta">
+        <a class="btn btn--grad btn--lg" href="/contact">Book a Discovery Call <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--link btn--lg" href="/services">Explore All Services <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid" data-reveal>
+      <nav aria-label="Services">
+        <p class="foot__h mono">Services</p>
+        <ul>
+          <li><a href="/ai-automation" aria-current="page">AI Automation</a></li>
+          <li><a href="/web-app-development">Web &amp; App Development</a></li>
+          <li><a href="/services">All Services</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="foot__h mono">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot__h mono">Contact</p>
+        <ul>
+          <li><a href="mailto:info@devzink.com">info@devzink.com</a></li>
+          <li><a href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <a class="btn btn--link foot__top" href="#top">Back to top <span class="arrow arrow--up" aria-hidden="true">↑</span></a>
+    </div>
+    <div class="wm" data-reveal aria-hidden="true">
+      <svg viewBox="0 30 1000 185"><defs><linearGradient id="wmS" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="none" stroke="url(#wmS)" stroke-width="1.5" vector-effect="non-scaling-stroke">Devzink</text></svg>
+      <svg class="wm__fill" viewBox="0 30 1000 185"><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="url(#wmS)">Devzink</text></svg>
+    </div>
+  </div>
+  <div class="foot__legal"><p class="wrap" data-reveal>© 2026 Devzink. All rights reserved. · <a href="#" data-cookie-settings>Cookie settings</a></p></div>
+</footer>
+<script>
+/* CTA headline split: words flip in, selected words type in letter by letter */
+(function(){
+  var h=document.querySelector(".final h2");if(!h||h.dataset.split)return;h.dataset.split=1;
+  var w=0,c=0;
+  function walk(n,inSel){
+    Array.prototype.slice.call(n.childNodes).forEach(function(k){
+      if(k.nodeType===3){
+        var parts=k.textContent.split(/(\s+)/),f=document.createDocumentFragment();
+        parts.forEach(function(p){
+          if(!p)return;
+          if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(" "));return}
+          var o=document.createElement("span");o.className="cw";var i=document.createElement("span");i.className="cw__i";i.style.setProperty("--w",w++);
+          if(inSel){p.split("").forEach(function(ch){var s=document.createElement("span");s.className="cc";s.style.setProperty("--c",c++);s.textContent=ch;i.appendChild(s)})}else i.textContent=p;
+          o.appendChild(i);f.appendChild(o);
+        });
+        k.parentNode.replaceChild(f,k);
+      }else if(k.nodeType===1&&k.tagName!=="BR"){walk(k,inSel||k.classList.contains("sel"))}
+    });
+  }
+  walk(h,false);
+  var sd=(w*110+250)/1000;h.style.setProperty("--sd",sd+"s");
+  var end=sd+c*.045+.4;h.style.setProperty("--sc",end+"s");h.style.setProperty("--bx",(end+.2)+"s");
+})();
+</script>
+<script>
+/* CTA attention cursor: runs once when the CTA scrolls into view */
+(function(){
+  var cta=document.querySelector(".final .cta"),b=cta&&cta.querySelector(".btn--grad"),h=document.querySelector(".final h2");if(!b)return;
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var cur=document.createElement("span");cur.className="x-cur";cur.setAttribute("aria-hidden","true");
+  cur.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 2.5 19.5 10l-6.6 1.9 3.9 7.3-2.7 1.4-3.9-7.3L5.4 18z" fill="#fff" stroke="#030305" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+  var r1=document.createElement("span"),r2=document.createElement("span");r1.className=r2.className="x-rip";r1.setAttribute("aria-hidden","true");r2.setAttribute("aria-hidden","true");
+  cta.appendChild(r1);cta.appendChild(r2);cta.appendChild(cur);
+  function pos(){var c=cta.getBoundingClientRect(),q=b.getBoundingClientRect();var x=q.left-c.left+q.width*.72,y=q.top-c.top+q.height*.55;
+    cta.style.setProperty("--tx",x+"px");cta.style.setProperty("--ty",y+"px")}
+  var done=false;
+  function run(){if(done)return;done=true;pos();
+    var d=h?parseFloat(getComputedStyle(h).getPropertyValue("--bx"))||1.7:1.7;
+    setTimeout(function(){pos();cur.classList.add("go");r1.classList.add("go");r2.classList.add("go");
+      setTimeout(function(){b.classList.add("x-hit")},1380);
+      setTimeout(function(){b.classList.remove("x-hit");b.classList.add("x-glow")},2000);
+    },(d+1.1)*1000)}
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run();io.disconnect()}})},{threshold:.5});io.observe(cta)}else run();
+  addEventListener("resize",pos);
+})();
+</script>
+<script>
+/* accordions: one delegated listener (survives the reveal system re-wrapping headings) */
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".x-acc__btn");if(!b)return;
+  var item=b.closest(".x-acc"),o=!item.classList.contains("open");
+  item.classList.toggle("open",o);b.setAttribute("aria-expanded",o?"true":"false");
+});
+/* selection box over the CTA's last words: an absolutely positioned overlay sized to the words' glyphs */
+document.addEventListener("DOMContentLoaded",function(){
+  var h=document.querySelector(".final h2");if(!h)return;
+  var s=h.querySelector(".sel");if(!s)return;
+  var host=s.closest(".rv-in")||h;if(host===h)h.style.position="relative";
+  var ns="http://www.w3.org/2000/svg",o=document.createElement("span");
+  o.className="x-sel";o.setAttribute("aria-hidden","true");
+  o.innerHTML='<svg class="x-sel__box" xmlns="'+ns+'"><rect x="0" y="0" width="100%" height="100%" pathLength="1"/></svg>'+
+    '<span class="x-sel__h"></span><span class="x-sel__h"></span><span class="x-sel__h"></span><span class="x-sel__h"></span>';
+  host.appendChild(o);
+  function place(){
+    var em=parseFloat(getComputedStyle(h).fontSize),b=host.getBoundingClientRect(),rg=document.createRange();rg.selectNodeContents(s);var ws=s.querySelectorAll(".cw");var rs=ws.length?Array.prototype.map.call(ws,function(e){return e.getBoundingClientRect()}):Array.prototype.filter.call(rg.getClientRects(),function(r){return r.width>1&&r.height>1});
+    if(!rs.length)return;
+    var L=1/0,T=1/0,R=-1/0,B=-1/0;
+    for(var i=0;i<rs.length;i++){var r=rs[i],m=(r.top+r.bottom)/2,hh=Math.min(r.height,em)/2;
+      L=Math.min(L,r.left);R=Math.max(R,r.right);T=Math.min(T,m-hh);B=Math.max(B,m+hh)}
+    var px=.1*em,py=.04*em,pb=.24*em;
+    o.style.left=(L-b.left-px)+"px";o.style.top=(T-b.top-py)+"px";
+    o.style.width=(R-L+2*px)+"px";o.style.height=(B-T+py+pb)+"px";
+  }
+  place();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);
+  if(window.ResizeObserver)new ResizeObserver(place).observe(h);else addEventListener("resize",place);
+});
+</script>
+
+<script>
+(function(){
+  var c=document.getElementById("agentConsole");if(!c)return;
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce)return;
+  var runs=[
+    {n:"lead-qualifier",l:['› lead.received — <em>form · 11:00 PM</em>','› ai.score 87/100 <strong>HOT</strong>','› calendar.booked <em>Wed 9:00</em>','› crm.synced <em>✓</em>'],t:"28.4s"},
+    {n:"support-agent",l:['› ticket.new — <em>"Where is my order?"</em>','› kb.search <strong>3 sources</strong>','› reply.sent <em>brand voice · 41s</em>','› ticket.resolved <em>✓</em>'],t:"41.2s"},
+    {n:"invoice-ops",l:['› email.attachment — <em>invoice_0921.pdf</em>','› ai.extract <strong>12 fields</strong>','› sheet.updated <em>row 214</em>','› slack.notify <em>#finance ✓</em>'],t:"9.7s"}
+  ];
+  var log=c.querySelector(".ac-log"),lab=c.querySelector(".ac-label"),tm=c.querySelector(".ac-time"),task=c.querySelector(".ac-task"),bar=c.querySelector(".ac-bar i"),nm=c.querySelector(".ac-name");
+  var ri=0,id=142,timer=null;
+  function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+  function strip(h){var d=document.createElement("div");d.innerHTML=h;return d.textContent}
+  async function typeLine(p,html){
+    var txt=strip(html);p.classList.add("typing");
+    for(var i=1;i<=txt.length;i++){p.textContent=txt.slice(0,i);await sleep(18+Math.random()*22)}
+    p.innerHTML=html;p.classList.remove("typing");
+  }
+  async function play(){
+    while(true){
+      var r=runs[ri%runs.length];ri++;id++;
+      nm.textContent="agent.run #0"+id;lab.textContent=r.n;task.classList.remove("done");bar.style.width="0";
+      log.innerHTML="";var ps=r.l.map(function(){var p=document.createElement("p");log.appendChild(p);return p});
+      var t0=performance.now();clearInterval(timer);
+      timer=setInterval(function(){tm.textContent=((performance.now()-t0)/1000).toFixed(1)+"s"},100);
+      for(var i=0;i<r.l.length;i++){await typeLine(ps[i],r.l[i]);bar.style.width=((i+1)/r.l.length*100)+"%";await sleep(380)}
+      clearInterval(timer);tm.textContent="done · "+r.t;task.classList.add("done");c.classList.add("flash");
+      await sleep(2600);c.classList.remove("flash");await sleep(300);
+    }
+  }
+  setTimeout(play,1600);
+})();
+</script>
+<a class="wa-fab" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with DevZink on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.5.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"/></svg><span>Chat on WhatsApp</span></a>
+<script>(function(){var b=document.querySelector(".wa-fab");if(!b)return;function t(){b.classList.toggle("on",scrollY>window.innerHeight*.5)}addEventListener("scroll",t,{passive:true});t()})();</script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>
