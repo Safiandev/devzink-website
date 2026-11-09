@@ -639,7 +639,7 @@ document.addEventListener("DOMContentLoaded",function(){
             3) Formspree: set action="https://formspree.io/f/YOUR_ID" on this form, remove data-netlify,
                and set USE_MAILTO = false.
           -->
-          <form class="x-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact?sent=1">
+          <form class="x-form" id="contact-form" name="contact" method="POST" action="/contact?sent=1">
             <input type="hidden" name="form-name" value="contact" />
             <p class="x-hide"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
             <div class="x-f">
@@ -841,7 +841,11 @@ document.addEventListener("DOMContentLoaded",function(){
     }
     if(!USE_MAILTO){
       var btn=form.querySelector(".x-submit");if(btn){btn.disabled=true;btn.dataset.t=btn.innerHTML;btn.innerHTML="Sending…"}
-      fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()})
+      var data={};new FormData(form).forEach(function(v,k){data[k]=v});
+      var W3F="W3F_ACCESS_KEY";
+      if(W3F.indexOf("W3F_")!==0){var m=Object.assign({access_key:W3F,subject:"New DevZink lead: "+(data.name||"")+" ("+(data.service||"")+")",from_name:"DevZink website",replyto:data.email,botcheck:data["bot-field"]||""},data);delete m["bot-field"];delete m["form-name"];
+        fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(m)}).catch(function(){})}
+      fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
         .then(function(r){if(!r.ok)throw 0;showDone();form.reset();if(window.gtag)gtag("event","generate_lead")})
         .catch(function(){if(btn){btn.disabled=false;btn.innerHTML=btn.dataset.t}USE_MAILTO=true;form.requestSubmit?form.requestSubmit():form.dispatchEvent(new Event("submit",{cancelable:true}))});
       return;
@@ -871,7 +875,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <a class="wa-fab" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with DevZink on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.5.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"/></svg><span>Chat on WhatsApp</span></a>
 <script>(function(){var b=document.querySelector(".wa-fab");if(!b)return;function t(){b.classList.toggle("on",scrollY>window.innerHeight*.5)}addEventListener("scroll",t,{passive:true});t()})();</script>
 <script src="/cookie-consent.js" defer></script>
-
+<!-- n8n lead webhook: localhost URL only works on the PC running n8n; replace with the Production webhook URL before relying on it live -->
 <script>
 let n8nSent = false;
 document.querySelector("#contact-form").addEventListener("submit", function(e) {
@@ -894,8 +898,5 @@ document.querySelector("#contact-form").addEventListener("submit", function(e) {
   }).catch(err => console.log("n8n webhook error", err));
 });
 </script>
-
-
-
 </body>
 </html>

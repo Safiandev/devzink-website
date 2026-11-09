@@ -676,7 +676,7 @@ body.dm-lock{overflow:hidden}
 .final .cta .btn--grad.x-glow{animation:btnGlow 2.8s ease-in-out infinite}
 @keyframes btnGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.55),0 10px 30px -10px rgba(3,3,5,.4)}50%{box-shadow:0 0 0 12px rgba(255,255,255,0),0 16px 40px -10px rgba(3,3,5,.5)}}
 @media (prefers-reduced-motion:reduce){.x-cur,.x-rip{display:none}.final .cta .btn--grad.x-glow{animation:none}}
-</style>
+.js .final .sel::after,.final .sel::after{display:none!important}.x-caret{display:inline-block;width:.06em;height:.78em;margin-left:.05em;vertical-align:-.02em;background:#fff;opacity:0;border-radius:1px}.js .final .in .x-caret{animation:ccCaret .9s steps(1) var(--sc,1.4s) 4 forwards}@media (prefers-reduced-motion:reduce){.x-caret{display:none}}</style>
 <script>
 document.documentElement.classList.add("js");
 if(!(window.CSS&&CSS.registerProperty))document.documentElement.classList.add("no-atprop");
@@ -1272,6 +1272,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
   }
   walk(h,false);
+  var lc=h.querySelectorAll(".cc");if(lc.length){var cr=document.createElement("span");cr.className="x-caret";cr.setAttribute("aria-hidden","true");lc[lc.length-1].parentNode.appendChild(cr)}
   var sd=(w*110+250)/1000;h.style.setProperty("--sd",sd+"s");
   var end=sd+c*.045+.4;h.style.setProperty("--sc",end+"s");h.style.setProperty("--bx",(end+.2)+"s");
 })();
