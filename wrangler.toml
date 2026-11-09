@@ -1,0 +1,20 @@
+# REPO VARIANT — for the GitHub repo root (Safiandev/devzink-website).
+# The repo keeps the site files at the ROOT (flat layout), so the assets
+# directory here is "." — NOT "./site" (that path is only for the local
+# deploy folder ~/workspace/devzink-permanent-fix-v1/, where files live
+# under site/). Everything else is identical to wrangler.toml.
+# DO NOT DEPLOY until the KV id below is replaced with the real
+# devzink-consent id from the dashboard (Workers & Pages > devzink >
+# Settings > Bindings) and SALT exists as a dashboard Secret.
+name = "devzink"
+main = "worker.js"
+compatibility_date = "2025-10-27"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = true
+
+[[kv_namespaces]]
+binding = "CONSENT"
+id = "95dea9c5f4bf46b0b77f61548d946f86"
