@@ -610,6 +610,11 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 .sh-card-price{font-family:var(--f-head);font-size:clamp(26px,2.4vw,32px);line-height:1.05;margin:14px 0 2px}
 .sh-card-price span{font-family:var(--f-body);font-size:14px;color:var(--muted)}
 .sh-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top center;border-radius:14px;display:block;margin:2px 0 14px}
+.sh-sale{display:inline-block;margin:0 0 14px;padding:7px 12px;border-radius:99px;background:linear-gradient(135deg,#8B5CF6,#22D3EE);color:#030305;font:600 12px/1 "General Sans",system-ui,sans-serif;letter-spacing:.04em}
+.sh-sale-banner{margin:0 0 28px;padding:18px 20px;border-radius:18px;border:1px solid rgba(139,92,246,.45);background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(34,211,238,.10));text-align:center}
+.sh-sale-banner__tag{display:inline-block;margin:0 0 8px;padding:5px 12px;border-radius:99px;background:linear-gradient(135deg,#8B5CF6,#22D3EE);color:#030305;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.sh-sale-banner__text{margin:0 0 6px;font-size:clamp(16px,1.5vw,19px)}
+.sh-sale-banner__count{margin:0;color:var(--cyan);font-size:15px;letter-spacing:.06em}
 .sh-card-care{color:var(--muted);font-size:14px;margin-bottom:4px}
 .sh-price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
 @media(max-width:900px){.sh-price{grid-template-columns:1fr}}
@@ -815,6 +820,13 @@ document.addEventListener("DOMContentLoaded",function(){
         <p class="sec__sub">Click any product to see the full detail, packages and pricing in a popup. Every system is built, tested and ready to install on your website.</p>
       </div>
 
+      <div class="sh-sale-banner" data-reveal>
+        <p class="mono sh-sale-banner__tag">Launch Offer</p>
+        <p class="sh-sale-banner__text"><b>20% off setup fees</b> on all three systems — ends 30 November 2026</p>
+        <p class="mono sh-sale-banner__count" id="sh-sale-count">Ends in …</p>
+      </div>
+      <script>(function(){var el=document.getElementById("sh-sale-count");if(!el)return;var end=new Date("2026-11-30T23:59:59+05:00").getTime();function tick(){var d=end-Date.now();if(d<=0){el.textContent="Launch offer has ended";return}var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);el.textContent="Ends in "+days+"d "+String(h).padStart(2,"0")+"h "+String(m).padStart(2,"0")+"m "+String(sec).padStart(2,"0")+"s"}tick();setInterval(tick,1000)})();</script>
+
       <div class="sh-grid" data-fx=".case__in">
         <article class="case" id="case-lead-automation" data-reveal style="--i:0;--s:0.84">
           <div class="case__out"><div class="case__in">
@@ -824,12 +836,13 @@ document.addEventListener("DOMContentLoaded",function(){
             <p>Instant confirmation, lead scoring, owner alerts, automatic follow-ups and an AI assistant that answers customer replies from your own FAQ.</p>
             <p class="sh-card-price">$600 <span>from · one-time setup</span></p>
             <p class="sh-card-care">Care plans from $79/mo · Tested live on our website</p>
+            <p><span class="sh-sale">Launch Offer — 20% off setup until 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Purchase <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">AI Agent · Lead Automation</p>
               <h2 class="dm-title" id="dm-title">AI Lead Response &amp; Follow-Up System</h2>
               <p class="dm-lead">Reply in seconds. Follow up automatically. Close more.</p>
-              <p><b>From $600</b> one-time setup · Care from $79/mo · Live in 3–5 days (Starter) · 7 days close support after launch.</p>
+              <p><b>From $600</b> one-time setup · Care from $79/mo · Live in 3–5 days (Starter) · 7 days close support after launch. <b>Launch Offer: 20% off setup until 30 Nov 2026.</b></p>
               <p>Every website enquiry gets an instant reply, a quality score and a follow-up — and you only step in where a human is needed.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
                 <li>Instant confirmation to the lead and instant alert to you — within about a minute.</li>
@@ -909,18 +922,19 @@ document.addEventListener("DOMContentLoaded",function(){
             <div class="case__top"><p class="mono case__cat">AI Agent · Customer Support</p><p class="mono case__num">02 / 04</p></div>
             <img class="sh-card-img" src="/rag-support-product.jpg" alt="RAG Customer Support Agent — every question answered instantly" loading="lazy" />
             <h3>RAG Customer Support Agent</h3>
-            <p>An AI assistant that answers customer questions from your own FAQ, menu and website pages — instantly, day or night.</p>
+            <p>An AI assistant that answers customer questions from your entire business data — every doc, PDF and page on your website — instantly, day or night.</p>
             <p class="sh-card-price">$500 <span>from · one-time setup</span></p>
             <p class="sh-card-care">Care plans from $69/mo · Built and tested</p>
+            <p><span class="sh-sale">Launch Offer — 20% off setup until 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Purchase <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">AI Agent · Customer Support</p>
               <h2 class="dm-title" id="dm-title">RAG Customer Support Agent</h2>
               <p class="dm-lead">Answers from your own content. Instantly, 24/7.</p>
-              <p><b>From $500</b> one-time setup · Care from $69/mo · Live in about 1 week (Starter).</p>
-              <p>Customers ask the same questions all day — opening hours, prices, delivery, bookings. This agent answers them instantly from your own FAQ, menu and website pages, day or night, and hands over to a human whenever it is unsure.</p>
+              <p><b>From $500</b> one-time setup · Care from $69/mo · Live in about 1 week (Starter). <b>Launch Offer: 20% off setup until 30 Nov 2026.</b></p>
+              <p>Customers ask the same questions all day — opening hours, prices, delivery, bookings. This agent answers them instantly from your entire business data — every document, PDF and page on your website, day or night — and hands over to a human whenever it is unsure.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
-                <li>Instant answers from your own FAQ, menu and website pages.</li>
+                <li>Instant answers from your entire business data — docs, PDFs, website.</li>
                 <li>Never invents prices or promises — replies only from your content.</li>
                 <li>Human handoff when unsure, plus complaints always go to a person.</li>
                 <li>Works on your website; WhatsApp available in Growth and Pro.</li>
@@ -944,7 +958,7 @@ document.addEventListener("DOMContentLoaded",function(){
                     <p class="sh-plan__care">Care plan: $69/mo (optional)</p>
                     <ul class="dm-feats">
                       <li>Website chat widget</li>
-                      <li>Up to 20 FAQ items and 5 pages</li>
+                      <li>Up to 20 documents and 5 website pages</li>
                       <li>Instant answers from your content</li>
                       <li>Human handoff when unsure</li>
                     </ul>
@@ -958,7 +972,7 @@ document.addEventListener("DOMContentLoaded",function(){
                     <p class="sh-plan__care">Care plan: $129/mo (optional)</p>
                     <ul class="dm-feats">
                       <li>Everything in Starter, plus:</li>
-                      <li>Up to 50 FAQ items and 20 pages</li>
+                      <li>Up to 50 documents and 20 website pages</li>
                       <li>WhatsApp chat</li>
                       <li>Conversation log in Google Sheets</li>
                     </ul>
@@ -972,7 +986,7 @@ document.addEventListener("DOMContentLoaded",function(){
                     <p class="sh-plan__care">Care plan: $229/mo (optional)</p>
                     <ul class="dm-feats">
                       <li>Everything in Growth, plus:</li>
-                      <li>Up to 100 FAQ items and 50 pages</li>
+                      <li>Up to 100 documents and 50 website pages</li>
                       <li>Custom tone and greeting</li>
                       <li>Monthly content updates (care plan)</li>
                     </ul>
@@ -994,12 +1008,13 @@ document.addEventListener("DOMContentLoaded",function(){
             <p>When a shopper leaves items in the cart, this system follows up automatically — timed reminders that bring them back to buy.</p>
             <p class="sh-card-price">$400 <span>from · one-time setup</span></p>
             <p class="sh-card-care">Care plans from $59/mo · Built and tested</p>
+            <p><span class="sh-sale">Launch Offer — 20% off setup until 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Purchase <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">Automation · E-commerce</p>
               <h2 class="dm-title" id="dm-title">Abandoned Cart Recovery System</h2>
               <p class="dm-lead">Bring back the carts. Recover the sales.</p>
-              <p><b>From $400</b> one-time setup · Care from $59/mo · Live in about 1 week (Starter).</p>
+              <p><b>From $400</b> one-time setup · Care from $59/mo · Live in about 1 week (Starter). <b>Launch Offer: 20% off setup until 30 Nov 2026.</b></p>
               <p>Most shoppers who add to cart never check out. This system follows up automatically — a reminder at 1 hour, 24 hours and 72 hours — and stops the moment they buy.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
                 <li>Automatic reminders at 1h, 24h and 72h.</li>
