@@ -42,7 +42,7 @@
 <meta name="twitter:image:alt" content="DevZink AI automation agency" />
 <link rel="alternate" hreflang="en" href="https://devzink.com/shop" />
 <link rel="alternate" hreflang="x-default" href="https://devzink.com/shop" />
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://devzink.com/#org", "name": "DevZink", "alternateName": "Devzink", "url": "https://devzink.com/", "logo": "https://devzink.com/logo-512.png", "image": "https://devzink.com/og-image.png", "email": "info@devzink.com", "telephone": "+923304613837", "description": "DevZink is an AI automation agency building AI agents, n8n automations, web apps and mobile apps for businesses worldwide.", "areaServed": "Worldwide", "knowsAbout": ["AI automation", "AI agents", "Agentic AI", "n8n automation", "RAG chatbots", "Lead generation automation", "Web development", "SaaS development", "Mobile app development"]}, {"@type": "WebSite", "@id": "https://devzink.com/#website", "url": "https://devzink.com/", "name": "DevZink", "publisher": {"@id": "https://devzink.com/#org"}}, {"@type": "CollectionPage", "@id": "https://devzink.com/shop#webpage", "url": "https://devzink.com/shop", "name": "Shop — Ready-Made AI Automations | DevZink", "description": "Ready-made AI automations, tested live on our own website. Shop the AI Lead Response & Follow-Up System, the RAG Customer Support Agent and the Abandoned Cart Recovery System.", "isPartOf": {"@id": "https://devzink.com/#website"}, "about": {"@id": "https://devzink.com/#org"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devzink.com/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://devzink.com/shop"}]}, {"@type": "ItemList", "name": "DevZink shop products", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "AI Lead Response & Follow-Up System", "url": "https://devzink.com/shop#case-lead-automation"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://devzink.com/#org", "name": "DevZink", "alternateName": "Devzink", "url": "https://devzink.com/", "logo": "https://devzink.com/logo-512.png", "image": "https://devzink.com/og-image.png", "email": "info@devzink.com", "telephone": "+923304613837", "description": "DevZink is an AI automation agency building AI agents, n8n automations, web apps and mobile apps for businesses worldwide.", "areaServed": "Worldwide", "knowsAbout": ["AI automation", "AI agents", "Agentic AI", "n8n automation", "RAG chatbots", "Lead generation automation", "Web development", "SaaS development", "Mobile app development"]}, {"@type": "WebSite", "@id": "https://devzink.com/#website", "url": "https://devzink.com/", "name": "DevZink", "publisher": {"@id": "https://devzink.com/#org"}}, {"@type": "CollectionPage", "@id": "https://devzink.com/shop#webpage", "url": "https://devzink.com/shop", "name": "Shop — Ready-Made AI Automations | DevZink", "description": "Ready-made AI automations, tested live on our own website. Shop the AI Lead Response & Follow-Up System, the RAG Customer Support Agent and the Abandoned Cart Recovery System.", "isPartOf": {"@id": "https://devzink.com/#website"}, "about": {"@id": "https://devzink.com/#org"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devzink.com/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://devzink.com/shop"}]}, {"@type": "ItemList", "name": "DevZink shop products", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "AI Lead Response & Follow-Up System", "url": "https://devzink.com/shop#case-lead-automation"}, {"@type": "ListItem", "position": 2, "name": "RAG Customer Support Agent", "url": "https://devzink.com/shop#case-rag-support"}, {"@type": "ListItem", "position": 3, "name": "Abandoned Cart Recovery System", "url": "https://devzink.com/shop#case-cart-recovery"}]}]}</script>
 <!-- seo:end -->
 <style>
 /* ===== Fonts ===== */
@@ -170,7 +170,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
 .pre{display:none}
 .is-loading{overflow:hidden}
 .is-loading .pre{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:#030305;transition:transform .9s cubic-bezier(.76,0,.24,1)}
-.pre.done{transform:translateY(-100%)}
+.pre.done{transform:translateY(-100%);pointer-events:none}
 .pre__in{display:grid;justify-items:center;gap:22px;transition:opacity .4s var(--ease),transform .6s var(--ease)}
 .pre.done .pre__in{opacity:0;transform:translateY(-30px)}
 .pre__mark{width:64px;height:64px;overflow:visible;filter:drop-shadow(0 0 18px rgba(139,92,246,.55))}
@@ -712,7 +712,7 @@ document.addEventListener("DOMContentLoaded",function(){
   var pre=document.querySelector(".pre"),bar=pre.querySelector(".pre__bar i"),num=pre.querySelector(".pre__pct span"),loaded=document.readyState==="complete",done=false,shown=0;
   addEventListener("load",function(){loaded=true});
   function paint(){bar.style.transform="scaleX("+shown/100+")";num.textContent=Math.round(shown)}
-  function finish(){if(done)return;done=true;shown=100;paint();setTimeout(function(){pre.classList.add("done");setTimeout(function(){r.classList.remove("is-loading")},450);setTimeout(function(){pre.remove()},1000)},140)}
+  function finish(){if(done)return;done=true;shown=100;paint();pre.style.pointerEvents="none";setTimeout(function(){pre.classList.add("done");setTimeout(function(){r.classList.remove("is-loading")},450);setTimeout(function(){pre.remove()},1000)},140)}
   function tick(){if(done)return;var t=performance.now();
     if(t>=1800){finish();return}
     if(loaded&&t>=600){shown+=(100-shown)*.35;if(shown>99.4){finish();return}}
@@ -812,7 +812,7 @@ document.addEventListener("DOMContentLoaded",function(){
       <div class="sec__head" data-reveal>
         <p class="eyebrow mono">The shop</p>
         <h2>Pick a system. We install it for you.</h2>
-        <p class="sec__sub">Click any product to see the full detail, packages and pricing in a popup. The first system is live and tested on our own website; the other two are demo listings, priced for review.</p>
+        <p class="sec__sub">Click any product to see the full detail, packages and pricing in a popup. Every system is built, tested and ready to install on your website.</p>
       </div>
 
       <div class="sh-grid" data-fx=".case__in">
@@ -896,9 +896,8 @@ document.addEventListener("DOMContentLoaded",function(){
                 </div>
               </div>
               <div class="dm-block"><h3>Full product detail</h3>
-                <p>Problems, features, safety rules, limits and FAQ — read the full 7-page detail right here, or download it below:</p>
-                <iframe class="dm-pdf" src="/DevZink-Lead-Automation-Details.pdf" title="Lead Automation Detail (PDF)">Your browser cannot show the PDF inline. Use the download buttons below.</iframe>
-                <div class="dm-btns"><a class="btn btn--grad" href="/DevZink-Lead-Automation-Details.pdf" download="DevZink-Lead-Automation-Details.pdf">Download Product Details (PDF) <span class="arrow" aria-hidden="true">↓</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Setup-Guide.pdf" download="DevZink-Lead-Automation-Setup-Guide.pdf">Download Setup Guide (PDF) <span class="arrow" aria-hidden="true">↓</span></a></div>
+                <p>Problems, features, safety rules, limits and FAQ — read the full 7-page detail, or download it below:</p>
+                <div class="dm-btns"><a class="btn btn--grad" href="/DevZink-Lead-Automation-Details.pdf" target="_blank" rel="noopener">Open Product Details (PDF) <span class="arrow" aria-hidden="true">↗</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Details.pdf" download="DevZink-Lead-Automation-Details.pdf">Download Product Details (PDF) <span class="arrow" aria-hidden="true">↓</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Setup-Guide.pdf" download="DevZink-Lead-Automation-Setup-Guide.pdf">Download Setup Guide (PDF) <span class="arrow" aria-hidden="true">↓</span></a></div>
               </div>
               <div class="dm-cta"><div><h3>Ready to stop losing leads?</h3><p>Book your free 20-minute setup call. We confirm the fit and the package, you share the checklist, we build and test — then you approve before anything goes live.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
@@ -907,17 +906,17 @@ document.addEventListener("DOMContentLoaded",function(){
 
         <article class="case" id="case-rag-support" data-reveal style="--i:1;--s:0.86">
           <div class="case__out"><div class="case__in">
-            <div class="case__top"><p class="mono case__cat">AI Agent · Customer Support <span class="sh-demo">Demo</span></p><p class="mono case__num">02 / 04</p></div>
+            <div class="case__top"><p class="mono case__cat">AI Agent · Customer Support</p><p class="mono case__num">02 / 04</p></div>
+            <img class="sh-card-img" src="/rag-support-product.jpg" alt="RAG Customer Support Agent — every question answered instantly" loading="lazy" />
             <h3>RAG Customer Support Agent</h3>
             <p>An AI assistant that answers customer questions from your own FAQ, menu and website pages — instantly, day or night.</p>
             <p class="sh-card-price">$500 <span>from · one-time setup</span></p>
-            <p class="sh-card-care">Care plans from $69/mo · Demo listing</p>
+            <p class="sh-card-care">Care plans from $69/mo · Built and tested</p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Purchase <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">AI Agent · Customer Support</p>
               <h2 class="dm-title" id="dm-title">RAG Customer Support Agent</h2>
               <p class="dm-lead">Answers from your own content. Instantly, 24/7.</p>
-              <p><b>Demo listing</b> — this product is shown so you can see the shop layout. Prices and package details are placeholders; final pricing to be confirmed.</p>
               <p><b>From $500</b> one-time setup · Care from $69/mo · Live in about 1 week (Starter).</p>
               <p>Customers ask the same questions all day — opening hours, prices, delivery, bookings. This agent answers them instantly from your own FAQ, menu and website pages, day or night, and hands over to a human whenever it is unsure.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
@@ -982,9 +981,6 @@ document.addEventListener("DOMContentLoaded",function(){
                   </article>
                 </div>
               </div>
-              <div class="dm-block"><h3>Full product detail</h3>
-                <p>Full details PDF coming soon.</p>
-              </div>
               <div class="dm-cta"><div><h3>Want this on your website?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it with your own content.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
           </div></div>
@@ -992,17 +988,17 @@ document.addEventListener("DOMContentLoaded",function(){
 
         <article class="case" id="case-cart-recovery" data-reveal style="--i:2;--s:0.88">
           <div class="case__out"><div class="case__in">
-            <div class="case__top"><p class="mono case__cat">Automation · E-commerce <span class="sh-demo">Demo</span></p><p class="mono case__num">03 / 04</p></div>
+            <div class="case__top"><p class="mono case__cat">Automation · E-commerce</p><p class="mono case__num">03 / 04</p></div>
+            <img class="sh-card-img" src="/cart-recovery-product.jpg" alt="Abandoned Cart Recovery System — bring back every abandoned cart" loading="lazy" />
             <h3>Abandoned Cart Recovery System</h3>
             <p>When a shopper leaves items in the cart, this system follows up automatically — timed reminders that bring them back to buy.</p>
             <p class="sh-card-price">$400 <span>from · one-time setup</span></p>
-            <p class="sh-card-care">Care plans from $59/mo · Demo listing</p>
+            <p class="sh-card-care">Care plans from $59/mo · Built and tested</p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Purchase <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">Automation · E-commerce</p>
               <h2 class="dm-title" id="dm-title">Abandoned Cart Recovery System</h2>
               <p class="dm-lead">Bring back the carts. Recover the sales.</p>
-              <p><b>Demo listing</b> — this product is shown so you can see the shop layout. Prices and package details are placeholders; final pricing to be confirmed.</p>
               <p><b>From $400</b> one-time setup · Care from $59/mo · Live in about 1 week (Starter).</p>
               <p>Most shoppers who add to cart never check out. This system follows up automatically — a reminder at 1 hour, 24 hours and 72 hours — and stops the moment they buy.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
@@ -1064,9 +1060,6 @@ document.addEventListener("DOMContentLoaded",function(){
                     <a class="btn btn--grad" href="/contact#book">Buy Pro — $1,500 <span class="arrow" aria-hidden="true">→</span></a>
                   </article>
                 </div>
-              </div>
-              <div class="dm-block"><h3>Full product detail</h3>
-                <p>Full details PDF coming soon.</p>
               </div>
               <div class="dm-cta"><div><h3>Want your carts back?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it on your store.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
