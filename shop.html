@@ -572,7 +572,7 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 .js .final .cc{display:inline-block;opacity:0;transform:translateY(.25em) scale(.4);filter:blur(8px);transition:opacity .35s ease,transform .6s cubic-bezier(.34,1.7,.5,1),filter .4s ease;transition-delay:calc(var(--c)*45ms + var(--sd,.7s))}
 .js .final .in .cc{opacity:1;transform:none;filter:none}
 .final .sel{position:relative}
-.js .final .sel::after{content:"";position:absolute;right:.08em;top:auto;bottom:.14em;height:1em;width:.06em;background:#fff;opacity:0}
+.js .final .sel::after{content:"";display:inline-block;width:.06em;height:.9em;margin-left:.08em;background:#fff;vertical-align:-.1em;opacity:0}
 .js .final .in .sel::after{animation:ccCaret .9s steps(1) var(--sc,1.4s) 4 forwards}
 @keyframes ccCaret{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
 .final .x-sel__box rect{transition-delay:var(--bx,1.7s)!important}
@@ -1134,7 +1134,6 @@ document.addEventListener("DOMContentLoaded",function(){
       <p class="final__sub">20 minutes. We confirm the fit and the package, you share the checklist, we build and test — then you approve before anything goes live.</p>
       <div class="cta">
         <a class="btn btn--grad btn--lg" href="/contact#book">Book a free 20-minute setup call <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="btn btn--link btn--lg" href="/DevZink-Lead-Automation-Setup-Guide.pdf" download="DevZink-Lead-Automation-Setup-Guide.pdf">Download Setup Guide <span class="arrow" aria-hidden="true">↓</span></a>
         <a class="btn btn--link btn--lg" href="https://wa.me/923304613837?text=Hi%20DevZink%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Message on WhatsApp <span class="arrow arrow--out" aria-hidden="true">↗</span></a>
       </div>
     </div>
