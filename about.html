@@ -31,8 +31,8 @@
 <meta name="twitter:description" content="DevZink is a senior AI automation agency and product studio building AI agents, automations, web platforms and mobile apps that work in production." />
 <meta name="twitter:image" content="https://devzink.com/og-image.png" />
 <meta name="description" content="DevZink is a senior AI automation agency and product studio building AI agents, automations, web platforms and mobile apps that work in production." />
-<link rel="preload" href="clash-display-600.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="general-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/bricolage-grotesque-400.woff2" as="font" type="font/woff2" crossorigin />
 <!-- seo:start -->
 <meta name="keywords" content="AI automation agency, AI engineering studio, agentic AI engineers, product engineering studio" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -46,9 +46,8 @@
 <!-- seo:end -->
 <style>
 /* ===== Fonts ===== */
-@font-face{font-family:"Clash Display";src:url(clash-display-600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"General Sans";src:url(general-sans-400.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"General Sans";src:url(general-sans-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-grotesque-800.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-grotesque-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"JetBrains Mono";src:url(jetbrains-mono.woff2) format("woff2");font-weight:400;font-display:swap}
 
 /* ===== Tokens ===== */
@@ -60,8 +59,8 @@
   --glass:linear-gradient(rgba(255,255,255,.045),rgba(255,255,255,.045)) transparent;--glass-b:rgba(255,255,255,.09);
   --ease:cubic-bezier(.22,1,.36,1);
   --max:1280px;--gut:clamp(20px,4vw,40px);
-  --f-head:"Clash Display",system-ui,sans-serif;
-  --f-body:"General Sans",system-ui,sans-serif;
+  --f-head:"Bricolage Grotesque",system-ui,sans-serif;
+  --f-body:"Bricolage Grotesque",system-ui,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,monospace;
   --r:26px;--tap:44px;
 }
@@ -81,7 +80,7 @@ a{color:inherit;text-decoration:none}
 ul{list-style:none}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;box-shadow:0 0 0 6px rgba(34,211,238,.18)}
 a:not(.btn):focus-visible{border-radius:6px}
-h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-height:1.02}
+h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-height:1.02}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .mono{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .gtext{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:#A78BFA;-webkit-text-fill-color:transparent}
@@ -112,7 +111,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
 .nav::before{content:"";position:absolute;inset:0;background:rgba(8,8,16,.72);border-bottom:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);opacity:0;transition:opacity .4s var(--ease)}
 .nav.scrolled::before{opacity:1}
 .nav.scrolled .nav__bar{height:64px}
-.logo{position:relative;display:flex;align-items:center;gap:10px;font:600 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
+.logo{position:relative;display:flex;align-items:center;gap:10px;font:800 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
 .logo svg{width:28px;height:28px}
 .nav__links{position:relative;display:flex;gap:4px}
 .nav__links a{display:flex;align-items:center;min-height:var(--tap);padding:0 16px;color:var(--muted);font-weight:500;font-size:16px;border-radius:99px;transition:color .3s}
@@ -152,7 +151,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
 .menu-open .mmenu{clip-path:circle(150% at calc(100% - 44px) 42px);visibility:visible;transition-delay:0s}
 .mmenu__list>li{padding:6px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateY(28px);transition:opacity .4s var(--ease),transform .6s var(--ease)}
 .menu-open .mmenu__list>li{opacity:1;transform:none;transition-delay:calc(.18s + var(--i) * .07s)}
-.mmenu__big{display:flex;align-items:center;justify-content:space-between;min-height:60px;font:600 clamp(36px,10vw,52px)/1 var(--f-head);letter-spacing:-.03em}
+.mmenu__big{display:flex;align-items:center;justify-content:space-between;min-height:60px;font:800 clamp(36px,10vw,52px)/1 var(--f-head);letter-spacing:-.03em}
 .mmenu__sub{margin:0 0 10px}
 .mmenu__sub a{display:flex;align-items:center;gap:10px;min-height:48px;color:var(--muted);font-size:16px}
 .mmenu__sub a::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
@@ -315,7 +314,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
 /* studio facts: glass tiles */
 .x-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .x-facts .pr{gap:10px}
-.x-fact{font:600 clamp(22px,2vw,28px)/1.12 var(--f-head);letter-spacing:-.02em;color:var(--text)}
+.x-fact{font:800 clamp(22px,2vw,28px)/1.12 var(--f-head);letter-spacing:-.02em;color:var(--text)}
 .x-facts .pr p.x-fact__s{font-size:15px;line-height:1.5}
 
 /* ===== Final CTA ===== */
@@ -458,7 +457,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
 .fl__ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.05);color:#A78BFA;animation:flIc 6s ease-in-out var(--d) infinite}
 .fl__ic svg{width:20px;height:20px}
 .fl__t{display:grid;gap:4px;min-width:0}
-.fl__t b{font:600 15px/1.15 var(--f-head);color:var(--text);letter-spacing:-.01em}
+.fl__t b{font:800 15px/1.15 var(--f-head);color:var(--text);letter-spacing:-.01em}
 .fl__t small{font:400 11px/1.2 var(--f-mono);color:var(--dim);letter-spacing:.04em;text-transform:uppercase}
 .fl__ok{margin-left:auto;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(74,222,128,.15);color:#4ADE80;opacity:0;transform:scale(.5);animation:flOk 6s ease-in-out var(--d) infinite}
 .fl__ok svg{width:12px;height:12px}
@@ -503,7 +502,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:600;letter-spacing:-.025em;line-h
   .hx-mark{opacity:1}.ob__hex{stroke-dashoffset:0}
 }
 
-.wa-fab{position:fixed;left:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:99px;background:#25D366;color:#04140a;font:600 15px/1 inherit;text-decoration:none;box-shadow:0 10px 30px -8px rgba(37,211,102,.55);transform:translateY(90px);opacity:0;transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .4s,box-shadow .3s}
+.wa-fab{position:fixed;left:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:99px;background:#25D366;color:#04140a;font:800 15px/1 inherit;text-decoration:none;box-shadow:0 10px 30px -8px rgba(37,211,102,.55);transform:translateY(90px);opacity:0;transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .4s,box-shadow .3s}
 .wa-fab.on{transform:none;opacity:1}
 .wa-fab:hover{box-shadow:0 14px 36px -8px rgba(37,211,102,.75);transform:translateY(-2px)}
 .wa-fab svg{width:24px;height:24px;flex:none}
@@ -651,16 +650,15 @@ document.addEventListener("DOMContentLoaded",function(){
     </a>
     <nav class="nav__links" aria-label="Primary">
       <div class="dd">
-        <button class="dd__btn" type="button" aria-expanded="false" aria-controls="dd-services">Services <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="dd__btn" type="button" aria-expanded="false" aria-controls="dd-services">Solutions <svg viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="dd__panel" id="dd-services">
           <div class="dd__in">
             <ul class="dd__list">
-              <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Run your operations without the manual work.</span></a></li>
-              <li style="--i:1"><a href="/web-app-development"><b>AI Product Engineering</b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
-              <li style="--i:2"><a href="/services#web"><b>Web Engineering</b><span>GSAP, Spline 3D, corporate platforms</span></a></li>
-              <li style="--i:3"><a href="/services#mobile"><b>Cross-Platform Mobile</b><span>iOS &amp; Android with Flutter</span></a></li>
-              <li style="--i:4"><a href="/services#uiux"><b>UI/UX &amp; Design Systems</b><span>Prototypes, design tokens, Figma</span></a></li>
-              <li style="--i:5"><a class="dd__all" href="/services">View all services <span class="arrow" aria-hidden="true">→</span></a></li>
+              <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Lead capture, replies &amp; follow-up, hands-free.</span></a></li>
+              <li style="--i:1"><a href="/services#web"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
+              <li style="--i:2"><a href="/web-app-development"><b>AI Product Engineering</b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
+              <li style="--i:3"><a href="/services#mobile"><b>Cross-Platform Mobile Apps</b><span>iOS &amp; Android with Flutter</span></a></li>
+              <li style="--i:4"><a class="dd__all" href="/services">View all solutions <span class="arrow" aria-hidden="true">→</span></a></li>
             </ul>
           </div>
         </div>
@@ -675,13 +673,12 @@ document.addEventListener("DOMContentLoaded",function(){
 </header>
 <nav class="mmenu" id="mmenu" aria-label="Mobile">
   <ul class="mmenu__list">
-    <li style="--i:0"><a class="mmenu__big" href="/services">Services <span class="arrow" aria-hidden="true">→</span></a>
+    <li style="--i:0"><a class="mmenu__big" href="/services">Solutions <span class="arrow" aria-hidden="true">→</span></a>
       <ul class="mmenu__sub">
         <li><a href="/ai-automation">AI Agents &amp; Automation</a></li>
+        <li><a href="/services#web">AI Web Engineering</a></li>
         <li><a href="/web-app-development">AI Product Engineering</a></li>
-        <li><a href="/services#web">Web Engineering</a></li>
-        <li><a href="/services#mobile">Cross-Platform Mobile</a></li>
-        <li><a href="/services#uiux">UI/UX &amp; Design Systems</a></li>
+        <li><a href="/services#mobile">Cross-Platform Mobile Apps</a></li>
       </ul>
     </li>
     <li style="--i:1"><a class="mmenu__big" href="/work">Work <span class="arrow" aria-hidden="true">→</span></a></li>
@@ -707,7 +704,7 @@ document.addEventListener("DOMContentLoaded",function(){
           <span class="line"><span style="--i:1">Senior builders.</span></span>
           <span class="line"><span style="--i:2"><span class="hl">Real</span> <span class="rotw" aria-hidden="true"><span class="rotw__w" style="--k:0">systems.</span><span class="rotw__w" style="--k:1">agents.</span><span class="rotw__w" style="--k:2">products.</span><span class="rotw__w" style="--k:3">results.</span></span><span class="sr">systems.</span></span></span>
         </h1>
-        <p class="hero__sub fade-up" style="--d:.6s">Not a 50-person agency. Not a freelancer with a logo. A small, senior team that takes on a handful of clients at a time — so every system gets built properly.</p>
+        <p class="hero__sub fade-up" style="--d:.6s">We build AI systems for home service businesses, not for everyone. A small, senior team that takes on a handful of clients at a time — so every system gets built properly.</p>
         <a class="scroll-cue fade-up" style="--d:.8s" href="#straight-talk"><span class="scroll-cue__m" aria-hidden="true"></span>Scroll to explore</a>
       </div>
       <div class="hx-mark ob" aria-hidden="true">
@@ -779,9 +776,9 @@ document.addEventListener("DOMContentLoaded",function(){
       <div class="panels x-panels3" data-fx=".panel">
         <article class="panel" data-reveal>
           <div class="panel__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></svg></div>
-          <p class="eyebrow mono">SMBs &amp; mid-market</p>
-          <h3><span class="panel__title">Automating operations</span></h3>
-          <p class="panel__lead">Teams drowning in manual work who need AI agents and workflows to scale without adding headcount. Usually a 4–8 week engagement, then ongoing support.</p>
+          <p class="eyebrow mono">Home service businesses</p>
+          <h3><span class="panel__title">AI that answers every lead</span></h3>
+          <p class="panel__lead">Plumbers, HVAC and electricians in the UK and US, with 3&ndash;15 staff, where the owner still replies to enquiries manually. Lead agent, support agent and booking &mdash; live in weeks.</p>
           <a class="textlink" href="/ai-automation">Explore AI Automation <span class="arrow" aria-hidden="true">→</span></a>
         </article>
         <article class="panel" data-reveal style="--d:.1s">
@@ -798,6 +795,17 @@ document.addEventListener("DOMContentLoaded",function(){
           <p class="panel__lead">Companies with working products that need RAG assistants, semantic search, or LLM workflows added without a rewrite. Usually 3–6 week sprints.</p>
           <a class="textlink" href="/web-app-development">Add AI to your product <span class="arrow" aria-hidden="true">→</span></a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. WHERE WE COME FROM -->
+  <section class="sec" id="background">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">Where we come from</p>
+        <h2>Design first. <span class="gtext">AI ever since.</span></h2>
+        <p class="sec__sub">Before DevZink, we spent 2023&ndash;2025 in design &mdash; 600+ projects for clients worldwide. That eye for clean, fast, usable interfaces is still in everything we build. Since 2026, the work is AI systems: agents and automations that answer leads, book jobs and cut manual work for home service businesses.</p>
       </div>
     </div>
   </section>
@@ -844,12 +852,12 @@ document.addEventListener("DOMContentLoaded",function(){
 <footer class="foot">
   <div class="wrap">
     <div class="foot__grid" data-reveal>
-      <nav aria-label="Services">
-        <p class="foot__h mono">Services</p>
+      <nav aria-label="Solutions">
+        <p class="foot__h mono">Solutions</p>
         <ul>
           <li><a href="/ai-automation">AI Automation</a></li>
           <li><a href="/web-app-development">Web &amp; App Development</a></li>
-          <li><a href="/services">All Services</a></li>
+          <li><a href="/services">All Solutions</a></li>
         </ul>
       </nav>
       <nav aria-label="Company">
@@ -871,8 +879,8 @@ document.addEventListener("DOMContentLoaded",function(){
       <a class="btn btn--link foot__top" href="#top">Back to top <span class="arrow arrow--up" aria-hidden="true">↑</span></a>
     </div>
     <div class="wm" data-reveal aria-hidden="true">
-      <svg viewBox="0 30 1000 185"><defs><linearGradient id="wmS" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="none" stroke="url(#wmS)" stroke-width="1.5" vector-effect="non-scaling-stroke">Devzink</text></svg>
-      <svg class="wm__fill" viewBox="0 30 1000 185"><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Clash Display, system-ui, sans-serif" font-weight="600" font-size="270" fill="url(#wmS)">Devzink</text></svg>
+      <svg viewBox="0 30 1000 185"><defs><linearGradient id="wmS" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="800" font-size="270" fill="none" stroke="url(#wmS)" stroke-width="1.5" vector-effect="non-scaling-stroke">Devzink</text></svg>
+      <svg class="wm__fill" viewBox="0 30 1000 185"><text x="500" y="240" text-anchor="middle" textLength="990" lengthAdjust="spacingAndGlyphs" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="800" font-size="270" fill="url(#wmS)">Devzink</text></svg>
     </div>
   </div>
   <div class="foot__legal"><p class="wrap" data-reveal>© 2026 Devzink. All rights reserved. · <a href="#" data-cookie-settings>Cookie settings</a></p></div>
