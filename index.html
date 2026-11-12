@@ -295,6 +295,21 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .fit-list--not li{color:var(--muted)}
 .fit-list--not .x-ico{color:#85858F;background:rgba(255,255,255,.06)}
 
+/* ===== Compare: old way vs DevZink way ===== */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px)}
+.compare__label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
+.compare__col--new .compare__label{color:var(--cyan)}
+.compare__col .fit-list{max-width:none}
+@media (max-width:760px){.compare{grid-template-columns:1fr}}
+
+/* ===== Founder ===== */
+.founder{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.founder__photo{border-radius:24px;overflow:hidden}
+.founder__photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.founder__text p{color:var(--muted);font-size:clamp(18px,1.6vw,21px);line-height:1.6;max-width:56ch}
+.founder__text .textlink{margin-top:24px;display:inline-block}
+@media (max-width:760px){.founder{grid-template-columns:1fr}}
+
 /* ===== Ticker ===== */
 .ticker{display:flex;align-items:center;background:var(--bg-2);border-block:1px solid var(--border);overflow:hidden}
 .ticker__label{flex:none;position:relative;z-index:1;padding:20px var(--gut);background:var(--bg-2);color:var(--text);font-size:12px;border-right:1px solid var(--border);box-shadow:24px 0 24px var(--bg-2)}
@@ -949,11 +964,45 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 2. HOW IT WORKS -->
+  <!-- 2. OLD WAY VS DEVZINK WAY -->
+  <section class="sec sec--plain" id="old-way">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">02 / The old way vs the DevZink way</p>
+        <h2>The old way loses leads. <span class="gtext">The DevZink way books them.</span></h2>
+        <p class="sec__sub">Same enquiry. Two very different outcomes.</p>
+      </div>
+      <div class="compare" data-reveal>
+        <div class="compare__col compare__col--old">
+          <p class="compare__label mono">The old way</p>
+          <ul class="fit-list fit-list--not">
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Run ads or rely on word of mouth and hope</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Reply hours later, when you finally get a minute</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Leads go cold overnight</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Missed calls after hours or while you&rsquo;re on a job</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Manual follow-up gets forgotten</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Lose jobs to faster competitors</li>
+          </ul>
+        </div>
+        <div class="compare__col compare__col--new">
+          <p class="compare__label mono">The DevZink way</p>
+          <ul class="fit-list">
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2L5 8.5L9.5 3.5"/></svg></span>AI answers every lead in seconds, day or night</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2L5 8.5L9.5 3.5"/></svg></span>AI follows up automatically until they book or say no</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2L5 8.5L9.5 3.5"/></svg></span>Missed-call text-back, 24/7</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2L5 8.5L9.5 3.5"/></svg></span>Every enquiry logged and followed up, nothing lost</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2L5 8.5L9.5 3.5"/></svg></span>First to respond, every single time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
   <section class="sec sec--glow" id="how-it-works">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">02 / How it works</p>
+        <p class="eyebrow mono">03 / How it works</p>
         <h2>From enquiry to booked job, <span class="gtext">without you lifting a finger.</span></h2>
         <p class="sec__sub">Four steps. Every lead, every time.</p>
       </div>
@@ -972,11 +1021,11 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 3. SOLUTIONS -->
+  <!-- 4. SOLUTIONS -->
   <section class="sec" id="solutions">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">03 / Solutions</p>
+        <p class="eyebrow mono">04 / Solutions</p>
         <h2>Two solutions. <span class="gtext">One outcome: no lead left waiting.</span></h2>
         <p class="sec__sub">Everything we build for home service businesses comes down to these two.</p>
       </div>
@@ -1013,11 +1062,11 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 4. DEALS -->
+  <!-- 5. DEALS -->
   <section class="sec sec--band" id="deals">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">04 / Deals</p>
+        <p class="eyebrow mono">05 / Deals</p>
         <h2>One website. <span class="gtext">Every lead answered.</span></h2>
         <p class="sec__sub">Pick a deal. We build it, connect it, and watch the first 7 days with you.</p>
       </div>
@@ -1126,11 +1175,11 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 5. WHO IT'S FOR -->
+  <!-- 6. WHO IT'S FOR -->
   <section class="sec sec--plain" id="who-for">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">05 / Who it&rsquo;s for</p>
+        <p class="eyebrow mono">06 / Who it&rsquo;s for</p>
         <h2>Built for home service businesses. <span class="gtext">Not for everyone.</span></h2>
         <p class="sec__sub">If this sounds like you, the system will fit.</p>
       </div>
@@ -1143,11 +1192,11 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 6. WHO IT'S NOT FOR -->
+  <!-- 7. WHO IT'S NOT FOR -->
   <section class="sec" id="who-not">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">06 / Who it&rsquo;s not for</p>
+        <p class="eyebrow mono">07 / Who it&rsquo;s not for</p>
         <h2>Honest about fit. <span class="gtext">We say no, too.</span></h2>
         <p class="sec__sub">If any of these is you, we&rsquo;re not the right team &mdash; and we&rsquo;ll tell you that on the first call.</p>
       </div>
@@ -1159,7 +1208,26 @@ document.addEventListener("DOMContentLoaded",function(){
     </div>
   </section>
 
-  <!-- 7. FINAL CTA -->
+  <!-- 8. FOUNDER -->
+  <section class="sec" id="founder">
+    <div class="wrap">
+      <div class="sec__head" data-reveal>
+        <p class="eyebrow mono">08 / Meet the founder</p>
+        <h2>Meet the founder. <span class="gtext">Safian Abid.</span></h2>
+      </div>
+      <div class="founder" data-reveal>
+        <div class="founder__photo">
+          <img src="/safian-founder.webp" alt="Safian Abid, founder of DevZink" width="960" height="960" loading="lazy" decoding="async">
+        </div>
+        <div class="founder__text">
+          <p>I&rsquo;m an AI automation engineer. I build AI agents and automations for home service businesses &mdash; systems that answer every lead in seconds, book the job and follow up, so no work gets lost.</p>
+          <a class="textlink" href="/about">More About Me <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CTA -->
   <section class="final" id="contact">
     <div class="wrap" data-reveal>
       <p class="eyebrow mono">Next step</p>
@@ -1174,7 +1242,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 </main>
 
-<!-- 9. FOOTER -->
+<!-- 10. FOOTER -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot__grid" data-reveal>
