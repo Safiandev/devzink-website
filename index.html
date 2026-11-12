@@ -266,6 +266,30 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .badge{position:absolute;right:-6%;top:6%;z-index:2;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;font:400 12px/1 var(--f-mono);color:var(--text);animation-delay:-3s}
 .badge .pulse{background:#4ADE80}.badge .pulse::after{background:#4ADE80}
 
+/* phone chat visual */
+.phone3d{transform:perspective(1200px) rotateY(-9deg) rotateX(2deg);transform-style:preserve-3d}
+.phone-img{position:relative;z-index:1;display:block;width:min(400px,88vw);height:auto;margin:0 auto}
+.phone{position:relative;z-index:1;width:min(300px,80vw);margin:0 auto;border-radius:46px;background:#0B0B12;padding:10px;box-shadow:-32px 48px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08)}
+.phone::after{content:"";position:absolute;top:10px;bottom:10px;right:-2px;width:5px;border-radius:0 24px 24px 0;background:linear-gradient(180deg,#F2F2F5,#B9B9C0 45%,#7A7A85);box-shadow:1px 0 2px rgba(255,255,255,.35)}
+.phone__screen{position:relative;overflow:hidden;border-radius:38px;background:#F6F6F8;color:#111;display:flex;flex-direction:column;min-height:480px}
+.phone__screen::before{content:"";position:absolute;left:50%;top:10px;transform:translateX(-50%);width:96px;height:26px;border-radius:99px;background:#0B0B12;z-index:2}
+.phone__screen::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 32%);pointer-events:none}
+.phone__status{display:flex;justify-content:space-between;align-items:center;padding:14px 26px 6px;font:600 13px/1 var(--f-body);color:#111}
+.phone__icons{display:flex;align-items:center;gap:5px}
+.phone__head{position:relative;display:flex;align-items:center;justify-content:center;padding:8px 16px 10px;border-bottom:1px solid #E8E8EC}
+.phone__back{position:absolute;left:16px;top:50%;transform:translateY(-50%)}
+.phone__who{display:flex;flex-direction:column;align-items:center;gap:3px}
+.phone__who b{font:700 14px/1.2 var(--f-body);color:#111}
+.phone__chat{display:flex;flex-direction:column;gap:10px;padding:18px 14px;flex:1}
+.phone__row{display:flex;gap:8px;align-items:flex-end}
+.phone__row--me{justify-content:flex-end}
+.phone__mini{flex:none;width:22px;height:22px;border-radius:50%;background:#111;display:grid;place-items:center}
+.phone__mini svg{width:13px;height:13px}
+.phone__msg{max-width:82%;margin:0;padding:11px 13px;border-radius:18px;font-size:14px;line-height:1.45}
+.phone__msg--me{max-width:78%;background:#2F7CF6;color:#fff;border-bottom-right-radius:6px}
+.phone__msg--agent{max-width:88%;background:#fff;color:#111;border:1px solid #E5E7EB;border-bottom-left-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.badge--booked{top:auto;bottom:9%;right:-4%;background:rgba(6,40,22,.88);border:1px solid rgba(74,222,128,.45);color:#BBF7D0;box-shadow:0 12px 40px rgba(34,197,94,.25);font-family:var(--f-body);font-weight:600;font-size:12px;line-height:1.4;text-align:left}
+
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,8vw,96px);border-top:1px solid var(--border)}
 .stat{padding:28px 28px 8px;border-left:1px solid var(--border)}
@@ -277,7 +301,8 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .hero .stat:first-child{padding-left:0}
 
 /* ===== ICP section treatments: plain / glow / band alternate, CTAs stand out ===== */
-.hero__note{margin-top:20px;padding-left:14px;border-left:2px solid;border-image:linear-gradient(#8B5CF6,#22D3EE) 1;color:var(--muted);font-size:15px;line-height:1.55;max-width:560px}
+.hero__trust{margin-top:22px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:15px}
+.hero__stars{color:#FBBF24;letter-spacing:1px;font-size:13px}
 .sec--plain{background:var(--bg)}
 .sec--band{position:relative;background:var(--bg-2)}
 .deal__price{font:800 26px/1 var(--f-head);letter-spacing:-.02em;margin:18px 0 6px}
@@ -647,7 +672,7 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 @keyframes dmFade{from{opacity:0}}
 .dm__frame{padding:1px;border-radius:var(--r);background:linear-gradient(135deg,rgba(139,92,246,.8),rgba(255,255,255,.08) 40%,rgba(255,255,255,.08) 60%,rgba(34,211,238,.8));box-shadow:0 40px 120px rgba(0,0,0,.7)}
 .dm__body{position:relative;max-height:calc(100dvh - 50px);overflow:auto;overscroll-behavior:contain;border-radius:calc(var(--r) - 1px);background:var(--bg-3);padding:clamp(24px,4vw,56px);display:grid;gap:clamp(24px,3vw,36px);scrollbar-width:thin;scrollbar-color:rgba(139,92,246,.5) transparent}
-.dm__x{position:sticky;top:0;justify-self:end;margin:-8px -8px -60px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:rgba(12,12,22,.9);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .3s}
+.dm__x{position:sticky;top:0;justify-self:end;margin:-8px -8px -60px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:#0c0c16;box-shadow:0 4px 16px rgba(0,0,0,.5);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .3s}
 .dm__x:hover{background:rgba(139,92,246,.25);transform:rotate(90deg)}
 .dm__x svg{width:18px;height:18px}
 .dm-cat{color:var(--cyan);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-right:56px}
@@ -665,6 +690,7 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 .dm-steps li{counter-increment:st;position:relative;padding:14px 16px 14px 60px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--glass-b);color:var(--muted)}
 .dm-steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:14px;font:600 14px/1.6 var(--f-mono);background:linear-gradient(90deg,#A78BFA,#22D3EE);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .dm-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.dm-feats--single{grid-template-columns:1fr}
 .dm-feats li{position:relative;padding-left:28px;color:var(--muted);line-height:1.55}
 .dm-feats li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#22D3EE);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
 .dm-gal{display:grid;gap:16px}
@@ -824,7 +850,7 @@ document.addEventListener("DOMContentLoaded",function(){
           <div class="dd__in">
             <ul class="dd__list">
               <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Lead capture, replies &amp; follow-up, hands-free.</span></a></li>
-              <li style="--i:1"><a href="/services#web"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
+              <li style="--i:1"><a href="/ai-web-engineering"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
               <li style="--i:2"><a href="/web-app-development"><b>AI Product Engineering <span class="dd__tag">On-Demand</span></b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
               <li style="--i:3"><a class="dd__all" href="/services">View all solutions <span class="arrow" aria-hidden="true">→</span></a></li>
             </ul>
@@ -844,7 +870,7 @@ document.addEventListener("DOMContentLoaded",function(){
     <li style="--i:0"><a class="mmenu__big" href="/services">Solutions <span class="arrow" aria-hidden="true">→</span></a>
       <ul class="mmenu__sub">
         <li><a href="/ai-automation">AI Agents &amp; Automation</a></li>
-        <li><a href="/services#web">AI Web Engineering</a></li>
+        <li><a href="/ai-web-engineering">AI Web Engineering</a></li>
         <li><a href="/web-app-development">AI Product Engineering <span class="dd__tag">On-Demand</span></a></li>
       </ul>
     </li>
@@ -871,12 +897,12 @@ document.addEventListener("DOMContentLoaded",function(){
             <span class="line"><span style="--i:0">We book the leads</span></span>
             <span class="line"><span style="--i:1"><span class="hl">you lose.</span></span></span>
           </h1>
-          <p class="hero__sub fade-up" style="--d:.6s">For home service businesses in the UK and US, plumbers, HVAC, and electricians, with 3-15 staff, where the owner still replies to enquiries manually.</p>
+          <p class="hero__sub fade-up" style="--d:.6s">For plumbers, HVAC, and electricians in the UK &amp; US who are tired of losing jobs to faster competitors.</p>
           <div class="cta fade-up" style="--d:.75s">
             <a class="btn btn--grad btn--lg" href="https://calendly.com/devzink/30min" target="_blank" rel="noopener">Book a Demo <span class="arrow" aria-hidden="true">→</span></a>
             <a class="btn btn--link btn--lg" href="#how-it-works">See How It Works <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <p class="hero__note fade-up" style="--d:.9s">Works with any form, website, web app, or landing page, via webhook, no rebuild needed.</p>
+          <p class="hero__trust fade-up" style="--d:.82s"><span class="hero__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Trusted by UK &amp; US home service teams</p>
         </div>
 
         <div class="visual fade-up" style="--d:.4s">
@@ -941,9 +967,9 @@ document.addEventListener("DOMContentLoaded",function(){
       </div>
 
       <div class="stats">
-        <div class="stat" data-reveal><b>2–6 weeks</b><span class="mono">First system shipped</span></div>
-        <div class="stat" data-reveal style="--d:.1s"><b>UK &amp; US</b><span class="mono">Home service businesses</span></div>
-        <div class="stat" data-reveal style="--d:.2s"><b>24/7</b><span class="mono">Every lead answered, day or night</span></div>
+        <div class="stat" data-reveal><b>&lt; 30 Sec</b><span class="mono">AVG RESPONSE TIME</span></div>
+        <div class="stat" data-reveal style="--d:.1s"><b>3x More</b><span class="mono">BOOKED ESTIMATES</span></div>
+        <div class="stat" data-reveal style="--d:.2s"><b>24/7</b><span class="mono">EVERY LEAD ANSWERED</span></div>
       </div>
     </div>
   </section>
@@ -1046,7 +1072,7 @@ document.addEventListener("DOMContentLoaded",function(){
             <li>Clean, fast, mobile-first design, with AI built in.</li>
           </ul>
           <ul class="tags" aria-label="Stack"><li>Next.js</li><li>n8n</li><li>Gemini</li><li>Pinecone</li></ul>
-          <a class="textlink" href="/services#web">Explore AI Web Engineering <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="textlink" href="/ai-web-engineering">Explore AI Web Engineering <span class="arrow" aria-hidden="true">&rarr;</span></a>
         </article>
       </div>
     </div>
@@ -1090,7 +1116,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <div class="dm-block"><h3>Value</h3>
                 <p>You look responsive 24 hours a day, spend your time only on the leads most likely to buy, and win back quiet leads without annoying anyone. You stay in control &mdash; every lead, answer and follow-up is logged in your own database.</p>
               </div>
-              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats">
+              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats dm-feats--single">
                 <li><b>Starter &middot; $600</b> &mdash; Capture: form connected, spam filtering, lead scoring, instant confirmation and owner alert. Care $79/mo. Live in 3&ndash;5 days.</li>
                 <li><b>Growth &middot; $1,200</b> &mdash; Capture + Follow-up: 2 automatic follow-ups, status control, reply detection, STOP handling. Care $149/mo. Live in about 1 week.</li>
                 <li><b>Pro &middot; $2,000</b> &mdash; Full Autopilot: AI assistant answering from your FAQ (up to 20 FAQs and 10 pages). Care $249/mo. Live in 1&ndash;2 weeks.</li>
@@ -1135,7 +1161,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <div class="dm-block"><h3>Value</h3>
                 <p>Customers get instant, accurate answers day or night &mdash; from your own content, never invented. Your team only handles the questions that need a human.</p>
               </div>
-              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats">
+              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats dm-feats--single">
                 <li><b>Starter &middot; $500</b> &mdash; Answer: website chat widget, up to 20 documents and 5 website pages, human handoff when unsure. Care $69/mo. Live in about 1 week.</li>
                 <li><b>Growth &middot; $1,000</b> &mdash; Answer + WhatsApp: up to 50 documents and 20 website pages, WhatsApp chat, conversation log in Google Sheets. Care $129/mo. Live in about 1&ndash;2 weeks.</li>
                 <li><b>Pro &middot; $1,800</b> &mdash; Full Support Agent: up to 100 documents and 50 website pages, custom tone and greeting, monthly content updates (care plan). Care $229/mo. Live in 2&ndash;3 weeks.</li>
@@ -1176,7 +1202,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <div class="dm-block"><h3>Value</h3>
                 <p>Timed reminders bring shoppers back to buy &mdash; automatically. Every recovered order is logged in one sheet, and reminders stop the moment they buy.</p>
               </div>
-              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats">
+              <div class="dm-block"><h3>Packages</h3><ul class="dm-feats dm-feats--single">
                 <li><b>Starter &middot; $400</b> &mdash; Recover: email reminders (3-step sequence), cart log in Google Sheets, stops when the shopper buys. Care $59/mo. Live in about 1 week.</li>
                 <li><b>Growth &middot; $800</b> &mdash; Recover + WhatsApp: WhatsApp reminders, discount codes, owner alerts for high-value carts. Care $99/mo. Live in about 1&ndash;2 weeks.</li>
                 <li><b>Pro &middot; $1,500</b> &mdash; Full Recovery: win-back campaigns for old carts, monthly sequence review (care plan). Care $199/mo. Live in 2&ndash;3 weeks.</li>

@@ -532,7 +532,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 @keyframes dmFade{from{opacity:0}}
 .dm__frame{padding:1px;border-radius:var(--r);background:linear-gradient(135deg,rgba(139,92,246,.8),rgba(255,255,255,.08) 40%,rgba(255,255,255,.08) 60%,rgba(34,211,238,.8));box-shadow:0 40px 120px rgba(0,0,0,.7)}
 .dm__body{position:relative;max-height:calc(100dvh - 50px);overflow:auto;overscroll-behavior:contain;border-radius:calc(var(--r) - 1px);background:var(--bg-3);padding:clamp(24px,4vw,56px);display:grid;gap:clamp(24px,3vw,36px);scrollbar-width:thin;scrollbar-color:rgba(139,92,246,.5) transparent}
-.dm__x{position:sticky;top:0;justify-self:end;margin:-8px -8px -60px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:rgba(12,12,22,.9);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .3s}
+.dm__x{position:sticky;top:0;justify-self:end;margin:-8px -8px -60px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-b);background:#0c0c16;box-shadow:0 4px 16px rgba(0,0,0,.5);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .3s}
 .dm__x:hover{background:rgba(139,92,246,.25);transform:rotate(90deg)}
 .dm__x svg{width:18px;height:18px}
 .dm-cat{color:var(--cyan);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-right:56px}
@@ -755,7 +755,7 @@ document.addEventListener("DOMContentLoaded",function(){
           <div class="dd__in">
             <ul class="dd__list">
               <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Lead capture, replies &amp; follow-up, hands-free.</span></a></li>
-              <li style="--i:1"><a href="/services#web"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
+              <li style="--i:1"><a href="/ai-web-engineering"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
               <li style="--i:2"><a href="/web-app-development"><b>AI Product Engineering <span class="dd__tag">On-Demand</span></b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
               <li style="--i:3"><a class="dd__all" href="/services">View all solutions <span class="arrow" aria-hidden="true">→</span></a></li>
             </ul>
@@ -775,7 +775,7 @@ document.addEventListener("DOMContentLoaded",function(){
     <li style="--i:0"><a class="mmenu__big" href="/services">Solutions <span class="arrow" aria-hidden="true">→</span></a>
       <ul class="mmenu__sub">
         <li><a href="/ai-automation">AI Agents &amp; Automation</a></li>
-        <li><a href="/services#web">AI Web Engineering</a></li>
+        <li><a href="/ai-web-engineering">AI Web Engineering</a></li>
         <li><a href="/web-app-development">AI Product Engineering <span class="dd__tag">On-Demand</span></a></li>
       </ul>
     </li>
