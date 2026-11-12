@@ -140,6 +140,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .dd__list b{display:flex;align-items:center;gap:10px;font:500 16px/1.25 var(--f-body)}
 .dd__list b::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--grad)}
 .dd__list b+span{padding-left:16px;color:var(--muted);font-size:13px;line-height:1.4}
+.dd__tag{flex:none;padding:2px 8px;border:1px solid var(--glass-b);border-radius:99px;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .dd .dd__list a.dd__all{display:flex;align-items:center;justify-content:space-between;margin-top:4px;padding:0 14px;border-top:1px solid var(--glass-b);border-radius:0 0 14px 14px;color:var(--cyan);font-size:15px}
 .dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn{color:var(--text)}
 .dd:is(:hover,:focus-within,.open):not(.hush) .dd__btn svg{transform:rotate(180deg)}
@@ -657,7 +658,7 @@ document.addEventListener("DOMContentLoaded",function(){
             <ul class="dd__list">
               <li style="--i:0"><a href="/ai-automation"><b>AI Agents &amp; Automation</b><span>Lead capture, replies &amp; follow-up, hands-free.</span></a></li>
               <li style="--i:1"><a href="/services#web"><b>AI Web Engineering</b><span>Website + AI layer, built together.</span></a></li>
-              <li style="--i:2"><a href="/web-app-development"><b>AI Product Engineering</b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
+              <li style="--i:2"><a href="/web-app-development"><b>AI Product Engineering <span class="dd__tag">On-Demand</span></b><span>SaaS platforms &amp; apps with AI at the core.</span></a></li>
               <li style="--i:3"><a class="dd__all" href="/services">View all solutions <span class="arrow" aria-hidden="true">→</span></a></li>
             </ul>
           </div>
@@ -677,7 +678,7 @@ document.addEventListener("DOMContentLoaded",function(){
       <ul class="mmenu__sub">
         <li><a href="/ai-automation">AI Agents &amp; Automation</a></li>
         <li><a href="/services#web">AI Web Engineering</a></li>
-        <li><a href="/web-app-development">AI Product Engineering</a></li>
+        <li><a href="/web-app-development">AI Product Engineering <span class="dd__tag">On-Demand</span></a></li>
       </ul>
     </li>
     <li style="--i:1"><a class="mmenu__big" href="/work">Work <span class="arrow" aria-hidden="true">→</span></a></li>
