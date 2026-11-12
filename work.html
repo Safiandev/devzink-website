@@ -271,6 +271,9 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .case__cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start}
 .case__cols h4{font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
 .case__cols p{color:var(--muted)}
+.case__cols ul,.dm-cols ul{list-style:none;display:grid;gap:8px}
+.case__cols ul li,.dm-cols ul li{position:relative;padding-left:20px;color:var(--muted)}
+.case__cols ul li::before,.dm-cols ul li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#22D3EE)}
 .case__foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--border)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips li{display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:99px;background:linear-gradient(rgba(139,92,246,.1),rgba(139,92,246,.1)) transparent;border:1px solid rgba(139,92,246,.32);color:var(--muted);font-size:15px}
@@ -778,8 +781,8 @@ document.addEventListener("DOMContentLoaded",function(){
             <div class="case__top"><p class="mono case__cat">AI Agent · B2B Sales</p><p class="mono case__num">01 / 03</p></div>
             <h3>Multi-Lead Qualification &amp; Auto-Email Agent</h3>
             <div class="case__cols">
-              <div><h4>The problem</h4><p>Leads arrive from forms and webhooks all day. Sorting them by hand is slow, hot leads wait hours for a reply, and low-budget enquiries eat the team&#x27;s time.</p></div>
-              <div><h4>What we built</h4><p>An agent that scores every incoming lead with OpenAI as hot, warm or cold, logs it to the right sheet, alerts the sales rep, and sends the lead a tailored email. Qualified form leads also get a ready-to-send meeting email drafted in Gmail.</p></div>
+              <div><h4>The problem</h4><ul><li>Leads arrive all day from forms and webhooks</li><li>Hot leads wait hours for a reply</li><li>Low-budget enquiries eat the team&#x27;s time</li></ul></div>
+              <div><h4>What we built</h4><ul><li>Scores every lead: hot, warm or cold</li><li>Instant tailored email to the lead</li><li>Gmail meeting draft for qualified leads</li></ul></div>
             </div>
             <div class="case__foot">
               <ul class="chips chips--cap" aria-label="Highlights"><li><b>Hot / warm / cold scoring</b></li><li><b>Instant tailored emails</b></li><li><b>Gmail meeting drafts</b></li></ul>
@@ -792,8 +795,8 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="dm-lead">Two connected workflows that turn every new lead into a scored, logged and answered lead within minutes.</p>
               <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-lead-qualification.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-lead-qualification.webp" loading="lazy" decoding="async" alt="n8n workflow: webhook into an OpenAI AI agent with structured output, a hot/warm/cold switch, Supabase logging and Gmail emails, plus a form flow that drafts meeting emails" /></a></div><figcaption>Lead scoring + email workflow</figcaption></figure></div>
               <div class="dm-cols">
-                <div><h3>The problem</h3><p>Leads arrive from forms and webhooks all day. Sorting them by hand is slow, hot leads wait hours for a reply, and low-budget enquiries eat the team&#x27;s time.</p></div>
-                <div><h3>What we built</h3><p>An agent that scores every incoming lead with OpenAI as hot, warm or cold, logs it to the right sheet, alerts the sales rep, and sends the lead a tailored email. Qualified form leads also get a ready-to-send meeting email drafted in Gmail.</p></div>
+                <div><h3>The problem</h3><ul><li>Leads arrive all day from forms and webhooks</li><li>Hot leads wait hours for a reply</li><li>Low-budget enquiries eat the team&#x27;s time</li></ul></div>
+                <div><h3>What we built</h3><ul><li>Scores every lead: hot, warm or cold</li><li>Instant tailored email to the lead</li><li>Gmail meeting draft for qualified leads</li></ul></div>
               </div>
               <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>A lead arrives through a webhook or the website form.</li><li>An OpenAI AI agent reads it and returns a structured score: hot, warm or cold.</li><li>A switch routes the lead: each tier is saved to its own Supabase table.</li><li>Hot and warm leads trigger an email to the sales rep plus a tailored email to the lead.</li><li>Cold leads get a polite, helpful reply so nobody is ignored.</li><li>Form leads are checked for budget: qualified ones alert the owner and get a book-a-meeting email drafted in Gmail; low-budget leads get a separate reply.</li></ol></div>
               <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Hot / warm / cold scoring</b></li><li><b>Instant tailored emails</b></li><li><b>Gmail meeting drafts</b></li></ul></div>
@@ -808,8 +811,8 @@ document.addEventListener("DOMContentLoaded",function(){
             <div class="case__top"><p class="mono case__cat">AI Agent · Customer Support</p><p class="mono case__num">02 / 03</p></div>
             <h3>RAG Customer Support Agent</h3>
             <div class="case__cols">
-              <div><h4>The problem</h4><p>Customers ask the same questions all day. The team copies answers from docs, replies are slow outside business hours, and generic chatbots make things up.</p></div>
-              <div><h4>What we built</h4><p>A support agent trained on the business&#x27;s own website and documents. It answers in seconds with grounded, accurate replies, remembers the conversation, and hands off to a human when it isn&#x27;t sure.</p></div>
+              <div><h4>The problem</h4><ul><li>Same questions all day, every day</li><li>Replies are slow outside business hours</li><li>Generic chatbots make things up</li></ul></div>
+              <div><h4>What we built</h4><ul><li>Answers from your own website and docs</li><li>Replies in seconds, 24/7</li><li>Hands off to a human when unsure</li></ul></div>
             </div>
             <div class="case__foot">
               <ul class="chips chips--cap" aria-label="Highlights"><li><b>Answers from your own docs</b></li><li><b>24/7 replies</b></li><li><b>Conversation memory</b></li></ul>
@@ -822,8 +825,8 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="dm-lead">A retrieval-augmented (RAG) chatbot that only answers from your approved content, so replies are fast and accurate.</p>
               <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="image-988baf736cc8.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="image-988baf736cc8.webp" loading="lazy" decoding="async" alt="n8n workflow of the RAG support agent: website pages are crawled into a Pinecone vector store that an OpenAI chat agent queries" /></a></div><figcaption>Production workflow</figcaption></figure></div>
               <div class="dm-cols">
-                <div><h3>The problem</h3><p>Customers ask the same questions all day. The team copies answers from docs, replies are slow outside business hours, and generic chatbots make things up.</p></div>
-                <div><h3>What we built</h3><p>A support agent trained on the business&#x27;s own website and documents. It answers in seconds with grounded, accurate replies, remembers the conversation, and hands off to a human when it isn&#x27;t sure.</p></div>
+                <div><h3>The problem</h3><ul><li>Same questions all day, every day</li><li>Replies are slow outside business hours</li><li>Generic chatbots make things up</li></ul></div>
+                <div><h3>What we built</h3><ul><li>Answers from your own website and docs</li><li>Replies in seconds, 24/7</li><li>Hands off to a human when unsure</li></ul></div>
               </div>
               <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>The agent crawls your website pages and documents (home, about, services, contact, FAQs).</li><li>Content is cleaned, split into chunks and embedded into a Pinecone vector store.</li><li>When a customer asks a question, the agent retrieves the most relevant passages.</li><li>OpenAI writes a short, accurate answer using only those passages, with conversation memory for follow-ups.</li><li>Unclear or sensitive questions are handed to a human.</li></ol></div>
               <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Answers from your own docs</b></li><li><b>24/7 replies</b></li><li><b>Conversation memory</b></li></ul></div>
@@ -838,8 +841,8 @@ document.addEventListener("DOMContentLoaded",function(){
             <div class="case__top"><p class="mono case__cat">AI Agent · Home Services</p><p class="mono case__num">03 / 03</p></div>
             <h3>Home Services Missed-Call Agent</h3>
             <div class="case__cols">
-              <div><h4>The problem</h4><p>Home service owners are on job sites and miss calls. Callers move on to the next plumber or HVAC company, bookings happen by phone tag, and reminders and review requests are forgotten.</p></div>
-              <div><h4>What we built</h4><p>Four workflows working as one system: missed calls get a text-back and are booked over SMS with calendar clash checks, customers get 24h and 2h reminders, finished jobs trigger review requests, and the owner gets a daily digest plus instant error alerts.</p></div>
+              <div><h4>The problem</h4><ul><li>Owners are on job sites, calls get missed</li><li>Callers move on to the next plumber</li><li>Bookings happen by phone tag</li></ul></div>
+              <div><h4>What we built</h4><ul><li>Missed call &rarr; instant SMS text-back</li><li>Books over SMS with calendar checks</li><li>24h + 2h reminders, auto review requests</li></ul></div>
             </div>
             <div class="case__foot">
               <ul class="chips chips--cap" aria-label="Highlights"><li><b>Missed call → SMS booking</b></li><li><b>24h + 2h reminders</b></li><li><b>Auto review requests</b></li></ul>
@@ -852,8 +855,8 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="dm-lead">Every missed call becomes a conversation, and most conversations become a booked job, without the owner touching the phone.</p>
               <div class="dm-gal"><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-a-booking.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-a-booking.webp" loading="lazy" decoding="async" alt="Workflow A: missed-call and SMS webhooks, opt-out and duplicate checks, text-back, intent switch, booking questions, Google Calendar clash check and confirmations" /></a></div><figcaption>A · Missed call + SMS booking</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-b-reminders.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-b-reminders.webp" loading="lazy" decoding="async" alt="Workflow B: scheduled reminders that read bookings, filter due jobs and send 24-hour and 2-hour SMS reminders" /></a></div><figcaption>B · Appointment reminders</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-c-reviews.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-c-reviews.webp" loading="lazy" decoding="async" alt="Workflow C: scheduled review requests with link check, review SMS and follow-up flag" /></a></div><figcaption>C · Review requests</figcaption></figure><figure class="dm-shot"><div class="win"><div class="win__bar" aria-hidden="true"><i></i><i></i><i></i></div><a href="wf-missed-call-d-digest-alerts.webp" target="_blank" rel="noopener" class="dm-zoom" aria-label="Open full-size workflow image"><img src="wf-missed-call-d-digest-alerts.webp" loading="lazy" decoding="async" alt="Workflow D: daily digest by email and SMS, plus an error trigger that emails failures" /></a></div><figcaption>D · Daily digest + error alerts</figcaption></figure></div>
               <div class="dm-cols">
-                <div><h3>The problem</h3><p>Home service owners are on job sites and miss calls. Callers move on to the next plumber or HVAC company, bookings happen by phone tag, and reminders and review requests are forgotten.</p></div>
-                <div><h3>What we built</h3><p>Four workflows working as one system: missed calls get a text-back and are booked over SMS with calendar clash checks, customers get 24h and 2h reminders, finished jobs trigger review requests, and the owner gets a daily digest plus instant error alerts.</p></div>
+                <div><h3>The problem</h3><ul><li>Owners are on job sites, calls get missed</li><li>Callers move on to the next plumber</li><li>Bookings happen by phone tag</li></ul></div>
+                <div><h3>What we built</h3><ul><li>Missed call &rarr; instant SMS text-back</li><li>Books over SMS with calendar checks</li><li>24h + 2h reminders, auto review requests</li></ul></div>
               </div>
               <div class="dm-block"><h3>How it works</h3><ol class="dm-steps"><li>A missed call or inbound SMS hits the webhook. Opt-outs and duplicates are filtered first.</li><li>The caller gets an instant text-back and is saved as a lead.</li><li>The agent understands each reply (book, help, STOP) and asks the next booking question by SMS.</li><li>When details are complete, Google Calendar is checked. On a clash, alternative times are offered; otherwise the event is created.</li><li>The customer gets a confirmation SMS; the owner gets an SMS and email alert.</li><li>A scheduled workflow sends reminders 24 hours and 2 hours before each job.</li><li>After the job, a review request goes out, with one follow-up if needed.</li><li>The owner receives a daily digest by email and SMS, and any workflow error is emailed instantly.</li></ol></div>
               <div class="dm-block"><h3>Highlights</h3><ul class="chips chips--cap" aria-label="Highlights"><li><b>Missed call → SMS booking</b></li><li><b>24h + 2h reminders</b></li><li><b>Auto review requests</b></li></ul></div>
