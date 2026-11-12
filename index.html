@@ -300,6 +300,8 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .compare__label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
 .compare__col--new .compare__label{color:var(--cyan)}
 .compare__col .fit-list{max-width:none}
+.compare__col--old .fit-list li{position:relative}
+.strike-line{position:absolute;left:40px;right:0;top:.725em;height:2px;background:linear-gradient(90deg,rgba(255,77,77,.18),#ff4d4d,rgba(255,77,77,.18));box-shadow:0 0 14px rgba(255,77,77,.16)}
 @media (max-width:760px){.compare{grid-template-columns:1fr}}
 
 /* ===== Founder ===== */
@@ -952,7 +954,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec sec--plain" id="problem">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">01 / The problem</p>
         <h2>Every late reply is a <span class="gtext">job lost.</span></h2>
         <p class="sec__sub">Three things happen to every enquiry when nobody answers it in seconds.</p>
       </div>
@@ -968,7 +969,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec sec--plain" id="old-way">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">02 / The old way vs the DevZink way</p>
         <h2>The old way loses leads. <span class="gtext">The DevZink way books them.</span></h2>
         <p class="sec__sub">Same enquiry. Two very different outcomes.</p>
       </div>
@@ -976,12 +976,12 @@ document.addEventListener("DOMContentLoaded",function(){
         <div class="compare__col compare__col--old">
           <p class="compare__label mono">The old way</p>
           <ul class="fit-list fit-list--not">
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Run ads or rely on word of mouth and hope</li>
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Reply hours later, when you finally get a minute</li>
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Leads go cold overnight</li>
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Missed calls after hours or while you&rsquo;re on a job</li>
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Manual follow-up gets forgotten</li>
-            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Lose jobs to faster competitors</li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Run ads or rely on word of mouth and hope<span class="strike-line" aria-hidden="true"></span></li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Reply hours later, when you finally get a minute<span class="strike-line" aria-hidden="true"></span></li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Leads go cold overnight<span class="strike-line" aria-hidden="true"></span></li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Missed calls after hours or while you&rsquo;re on a job<span class="strike-line" aria-hidden="true"></span></li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Manual follow-up gets forgotten<span class="strike-line" aria-hidden="true"></span></li>
+            <li><span class="x-ico" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 3.5L8.5 8.5M8.5 3.5L3.5 8.5"/></svg></span>Lose jobs to faster competitors<span class="strike-line" aria-hidden="true"></span></li>
           </ul>
         </div>
         <div class="compare__col compare__col--new">
@@ -1002,7 +1002,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec sec--glow" id="how-it-works">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">03 / How it works</p>
         <h2>From enquiry to booked job, <span class="gtext">without you lifting a finger.</span></h2>
         <p class="sec__sub">Four steps. Every lead, every time.</p>
       </div>
@@ -1025,7 +1024,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec" id="solutions">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">04 / Solutions</p>
         <h2>Two solutions. <span class="gtext">One outcome: no lead left waiting.</span></h2>
         <p class="sec__sub">Everything we build for home service businesses comes down to these two.</p>
       </div>
@@ -1066,7 +1064,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec sec--band" id="deals">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">05 / Deals</p>
         <h2>One website. <span class="gtext">Every lead answered.</span></h2>
         <p class="sec__sub">Pick a deal. We build it, connect it, and watch the first 7 days with you.</p>
       </div>
@@ -1179,7 +1176,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec sec--plain" id="who-for">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">06 / Who it&rsquo;s for</p>
         <h2>Built for home service businesses. <span class="gtext">Not for everyone.</span></h2>
         <p class="sec__sub">If this sounds like you, the system will fit.</p>
       </div>
@@ -1196,7 +1192,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec" id="who-not">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">07 / Who it&rsquo;s not for</p>
         <h2>Honest about fit. <span class="gtext">We say no, too.</span></h2>
         <p class="sec__sub">If any of these is you, we&rsquo;re not the right team &mdash; and we&rsquo;ll tell you that on the first call.</p>
       </div>
@@ -1212,7 +1207,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <section class="sec" id="founder">
     <div class="wrap">
       <div class="sec__head" data-reveal>
-        <p class="eyebrow mono">08 / Meet the founder</p>
         <h2>Meet the founder. <span class="gtext">Safian Abid.</span></h2>
       </div>
       <div class="founder" data-reveal>
@@ -1230,7 +1224,6 @@ document.addEventListener("DOMContentLoaded",function(){
   <!-- 9. FINAL CTA -->
   <section class="final" id="contact">
     <div class="wrap" data-reveal>
-      <p class="eyebrow mono">Next step</p>
       <h2>Stop losing leads<br>to <span class="sel">slow replies.</span></h2>
       <p class="final__sub">Book a 30-minute demo and watch the agent answer a lead live. Prefer to message first? DM &ldquo;Demo&rdquo; on <a href="https://www.linkedin.com/in/safianabid-ai/" target="_blank" rel="noopener">LinkedIn</a>, Facebook or Instagram and we&rsquo;ll set it up.</p>
       <div class="cta">
