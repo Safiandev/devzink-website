@@ -114,8 +114,9 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .nav__bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .5s var(--ease)}
 .nav::before{content:"";position:absolute;inset:0;background:rgba(8,8,16,.72);border-bottom:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);opacity:0;transition:opacity .4s var(--ease)}
 .nav.scrolled::before{opacity:1}
-.nav.scrolled .nav__bar{height:64px}
-.logo{position:relative;display:flex;align-items:center;gap:10px;font:800 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
+.nav.scrolled .nav__bar{height:56px}
+.nav.scrolled .logo{transform:scale(.88);transform-origin:left center}
+.logo{position:relative;display:flex;align-items:center;gap:10px;font:800 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap);transition:transform .5s var(--ease)}
 .logo svg{width:28px;height:28px}
 .nav__links{position:relative;display:flex;gap:4px}
 .nav__links a{display:flex;align-items:center;min-height:var(--tap);padding:0 16px;color:var(--muted);font-weight:500;font-size:16px;border-radius:99px;transition:color .3s}
@@ -277,9 +278,8 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 /* ===== ICP section treatments: plain / glow / band alternate, CTAs stand out ===== */
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--grad);opacity:.8;pointer-events:none}
 .hero__note{margin-top:20px;padding-left:14px;border-left:2px solid;border-image:linear-gradient(#8B5CF6,#22D3EE) 1;color:var(--muted);font-size:15px;line-height:1.55;max-width:560px}
-.sec--plain{background:var(--bg);border-top:1px solid var(--border)}
-.sec--band{position:relative;background:var(--bg-2);border-top:1px solid var(--border)}
-.sec--band::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--grad);opacity:.85;pointer-events:none}
+.sec--plain{background:var(--bg)}
+.sec--band{position:relative;background:var(--bg-2)}
 .x-example{margin-top:clamp(40px,5vw,64px);padding:clamp(28px,3vw,40px);border-radius:var(--r)}
 .x-example .mono{color:var(--cyan)}
 .x-example h3{margin:12px 0 10px;font-size:clamp(24px,2.4vw,32px)}
@@ -466,6 +466,9 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 
 /* ===== Studio ===== */
 .sec--glow{overflow:hidden;isolation:isolate}
+/* attention sections: background does the dividing, not lines */
+#problem{background:#17121C}
+#old-way{background:#0F1220}
 .sec--glow::before{content:"";position:absolute;z-index:-1;width:900px;height:900px;left:50%;top:30%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(139,92,246,.22),rgba(34,211,238,.08) 60%,transparent);pointer-events:none}
 .princ{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .pr{display:grid;gap:14px;align-content:start;padding:clamp(28px,3vw,44px);border-radius:var(--r)}

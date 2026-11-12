@@ -121,8 +121,9 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .nav__bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .5s var(--ease)}
 .nav::before{content:"";position:absolute;inset:0;background:rgba(8,8,16,.72);border-bottom:1px solid var(--glass-b);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);opacity:0;transition:opacity .4s var(--ease)}
 .nav.scrolled::before{opacity:1}
-.nav.scrolled .nav__bar{height:64px}
-.logo{position:relative;display:flex;align-items:center;gap:10px;font:800 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap)}
+.nav.scrolled .nav__bar{height:56px}
+.nav.scrolled .logo{transform:scale(.88);transform-origin:left center}
+.logo{position:relative;display:flex;align-items:center;gap:10px;font:800 22px/1 var(--f-head);letter-spacing:-.03em;min-height:var(--tap);transition:transform .5s var(--ease)}
 .logo svg{width:28px;height:28px}
 .nav__links{position:relative;display:flex;gap:4px}
 .nav__links a{display:flex;align-items:center;min-height:var(--tap);padding:0 16px;color:var(--muted);font-weight:500;font-size:16px;border-radius:99px;transition:color .3s}
