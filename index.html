@@ -280,7 +280,7 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .hero__note{margin-top:20px;padding-left:14px;border-left:2px solid;border-image:linear-gradient(#8B5CF6,#22D3EE) 1;color:var(--muted);font-size:15px;line-height:1.55;max-width:560px}
 .sec--plain{background:var(--bg)}
 .sec--band{position:relative;background:var(--bg-2)}
-.deal__price{font:800 30px/1 var(--f-head);letter-spacing:-.02em;margin:18px 0 6px}
+.deal__price{font:800 26px/1 var(--f-head);letter-spacing:-.02em;margin:18px 0 6px}
 .deal__price span{font:400 15px/1.4 var(--f-body);letter-spacing:0;color:var(--muted)}
 .deal__care{color:var(--muted);font-size:15px}
 .fit-list{display:grid;gap:16px;max-width:760px}
@@ -638,9 +638,10 @@ h1,h2,h3{font-family:var(--f-head);font-weight:800;letter-spacing:-.025em;line-h
 .x-allwork p{color:var(--dim);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:block;cursor:zoom-in}
 .case__detail{display:none}
+.case__in>h3+p{font-weight:700;color:var(--text);font-size:17px;line-height:1.55}
 .dm{position:fixed;inset:0;margin:auto;width:min(1040px,calc(100vw - 32px));max-height:calc(100dvh - 48px);padding:0;border:0;border-radius:var(--r);background:transparent;color:var(--text);overflow:visible}
-.dm::backdrop{background:rgba(3,3,8,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.dm[open]{animation:dmIn .45s cubic-bezier(.22,1,.36,1)}
+.dm::backdrop{background:rgba(3,3,8,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.dm[open]{animation:dmIn .35s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
 .dm[open]::backdrop{animation:dmFade .35s ease}
 @keyframes dmIn{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes dmFade{from{opacity:0}}
@@ -656,11 +657,15 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 .dm h3{font:400 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
 .dm-cols p{color:var(--muted)}
 .dm-block{padding-top:clamp(20px,2.5vw,28px);border-top:1px solid var(--border)}
+.dm-block>p{line-height:1.7;color:var(--muted)}
+.dm__body>p{line-height:1.7;color:var(--muted)}
+.dm__body>p.dm-price-note{font-size:14px;line-height:1.6;color:var(--dim)}
+.dm-price-note b{color:var(--text)}
 .dm-steps{list-style:none;counter-reset:st;display:grid;gap:12px}
 .dm-steps li{counter-increment:st;position:relative;padding:14px 16px 14px 60px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--glass-b);color:var(--muted)}
 .dm-steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:14px;font:600 14px/1.6 var(--f-mono);background:linear-gradient(90deg,#A78BFA,#22D3EE);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .dm-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
-.dm-feats li{position:relative;padding-left:28px;color:var(--muted)}
+.dm-feats li{position:relative;padding-left:28px;color:var(--muted);line-height:1.55}
 .dm-feats li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#22D3EE);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
 .dm-gal{display:grid;gap:16px}
 .dm-shot figcaption{margin-top:10px;color:var(--dim);font:400 12px/1.4 var(--f-mono);letter-spacing:.04em;text-transform:uppercase}
@@ -1067,7 +1072,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="mono dm-cat">AI Agent &middot; Lead Automation</p>
               <h2 class="dm-title" id="dm-title">AI Lead Response &amp; Follow-Up System</h2>
               <p class="dm-lead">Reply in seconds. Follow up automatically. Close more.</p>
-              <p><b>From $600</b> one-time setup &middot; Care from $79/mo &middot; Live in 3&ndash;5 days (Starter) &middot; 7 days close support after launch. <b>20% off setup until 30 Nov 2026.</b></p>
+              
               <p>Every website enquiry gets an instant reply, a quality score and a follow-up &mdash; and you only step in where a human is needed.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
                 <li>Instant confirmation to the lead and instant alert to you &mdash; within about a minute.</li>
@@ -1094,6 +1099,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 <p>Problems, features, safety rules, limits and FAQ &mdash; read the full 7-page detail, or download it below:</p>
                 <div class="dm-btns"><a class="btn btn--grad" href="/DevZink-Lead-Automation-Details.pdf" target="_blank" rel="noopener">Open Product Details (PDF) <span class="arrow" aria-hidden="true">&nearr;</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Details.pdf" download="DevZink-Lead-Automation-Details.pdf">Download Product Details (PDF) <span class="arrow" aria-hidden="true">&darr;</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Setup-Guide.pdf" download="DevZink-Lead-Automation-Setup-Guide.pdf">Download Setup Guide (PDF) <span class="arrow" aria-hidden="true">&darr;</span></a></div>
               </div>
+              <p class="dm-price-note">From $600 one-time setup &middot; Care from $79/mo &middot; Live in 3&ndash;5 days (Starter) &middot; 7 days close support after launch. <b>20% off setup until 30 Nov 2026.</b></p>
               <div class="dm-cta"><div><h3>Ready to stop losing leads?</h3><p>Book your free 20-minute setup call. We confirm the fit and the package, you share the checklist, we build and test &mdash; then you approve before anything goes live.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">&rarr;</span></a></div></div>
             </template>
           </div></div>
@@ -1111,7 +1117,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="mono dm-cat">AI Agent &middot; Customer Support</p>
               <h2 class="dm-title" id="dm-title">RAG Customer Support Agent</h2>
               <p class="dm-lead">Answers from your own content. Instantly, 24/7.</p>
-              <p><b>From $500</b> one-time setup &middot; Care from $69/mo &middot; Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
+              
               <p>Customers ask the same questions all day &mdash; opening hours, prices, delivery, bookings. This agent answers them instantly from your entire business data &mdash; every document, PDF and page on your website, day or night &mdash; and hands over to a human whenever it is unsure.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
                 <li>Instant answers from your entire business data &mdash; docs, PDFs, website.</li>
@@ -1134,6 +1140,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 <li><b>Growth &middot; $1,000</b> &mdash; Answer + WhatsApp: up to 50 documents and 20 website pages, WhatsApp chat, conversation log in Google Sheets. Care $129/mo. Live in about 1&ndash;2 weeks.</li>
                 <li><b>Pro &middot; $1,800</b> &mdash; Full Support Agent: up to 100 documents and 50 website pages, custom tone and greeting, monthly content updates (care plan). Care $229/mo. Live in 2&ndash;3 weeks.</li>
               </ul></div>
+              <p class="dm-price-note">From $500 one-time setup &middot; Care from $69/mo &middot; Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
               <div class="dm-cta"><div><h3>Want this on your website?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it with your own content. Only need one part of this system &mdash; for example just the follow-ups? Mention it on the call and we will scope just that piece.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">&rarr;</span></a></div></div>
             </template>
           </div></div>
@@ -1151,7 +1158,7 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="mono dm-cat">Automation &middot; E-commerce</p>
               <h2 class="dm-title" id="dm-title">Abandoned Cart Recovery System</h2>
               <p class="dm-lead">Bring back the carts. Recover the sales.</p>
-              <p><b>From $400</b> one-time setup &middot; Care from $59/mo &middot; Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
+              
               <p>Most shoppers who add to cart never check out. This system follows up automatically &mdash; a reminder at 1 hour, 24 hours and 72 hours &mdash; and stops the moment they buy.</p>
               <div class="dm-block"><h3>What you get</h3><ul class="dm-feats">
                 <li>Automatic reminders at 1h, 24h and 72h.</li>
@@ -1174,6 +1181,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 <li><b>Growth &middot; $800</b> &mdash; Recover + WhatsApp: WhatsApp reminders, discount codes, owner alerts for high-value carts. Care $99/mo. Live in about 1&ndash;2 weeks.</li>
                 <li><b>Pro &middot; $1,500</b> &mdash; Full Recovery: win-back campaigns for old carts, monthly sequence review (care plan). Care $199/mo. Live in 2&ndash;3 weeks.</li>
               </ul></div>
+              <p class="dm-price-note">From $400 one-time setup &middot; Care from $59/mo &middot; Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
               <div class="dm-cta"><div><h3>Want your carts back?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it on your store.</p></div><div class="dm-btns"><a class="btn btn--grad" href="/contact#book">Book a free setup call <span class="arrow" aria-hidden="true">&rarr;</span></a></div></div>
             </template>
           </div></div>
