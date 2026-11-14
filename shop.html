@@ -622,11 +622,6 @@ button,.btn,summary,[role="button"],label[for]{cursor:pointer}.dm-zoom{display:b
 .sh-card-price{font-family:var(--f-head);font-size:clamp(22px,2vw,26px);line-height:1.05;margin:14px 0 2px}
 .sh-card-price span{font-family:var(--f-body);font-size:14px;color:var(--muted)}
 .sh-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top center;border-radius:14px;display:block;margin:2px 0 14px}
-.sh-sale{display:inline-block;margin:0 0 14px;padding:7px 12px;border-radius:99px;background:linear-gradient(135deg,#8B5CF6,#22D3EE);color:#030305;font:800 12px/1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:.04em}
-.sh-sale-banner{margin:0 0 28px;padding:18px 20px;border-radius:18px;border:1px solid rgba(139,92,246,.45);background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(34,211,238,.10));text-align:center}
-.sh-sale-banner__tag{display:inline-block;margin:0 0 8px;padding:5px 12px;border-radius:99px;background:linear-gradient(135deg,#8B5CF6,#22D3EE);color:#030305;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.sh-sale-banner__text{margin:0 0 6px;font-size:clamp(16px,1.5vw,19px)}
-.sh-sale-banner__count{margin:0;color:var(--cyan);font-size:15px;letter-spacing:.06em}
 .sh-card-care{color:var(--muted);font-size:14px;margin-bottom:4px}
 .sh-price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
 @media(max-width:900px){.sh-price{grid-template-columns:1fr}}
@@ -930,12 +925,6 @@ document.addEventListener("DOMContentLoaded",function(){
         </article>
       </div>
       <h3 class="sh-subhead" data-reveal>More automations</h3>
-      <div class="sh-sale-banner" data-reveal>
-        <p class="mono sh-sale-banner__tag">Limited offer</p>
-        <p class="sh-sale-banner__text"><b>20% off setup fees</b> on all three systems — ends 30 November 2026</p>
-        <p class="mono sh-sale-banner__count" id="sh-sale-count">Ends in …</p>
-      </div>
-      <script>(function(){var el=document.getElementById("sh-sale-count");if(!el)return;var end=new Date("2026-11-30T23:59:59+05:00").getTime();function tick(){var d=end-Date.now();if(d<=0){el.textContent="Offer has ended";return}var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);el.textContent="Ends in "+days+"d "+String(h).padStart(2,"0")+"h "+String(m).padStart(2,"0")+"m "+String(sec).padStart(2,"0")+"s"}tick();setInterval(tick,1000)})();</script>
 
       <div class="sh-grid" data-fx=".case__in">
         <article class="case" id="case-lead-automation" data-reveal style="--i:0;--s:.94">
@@ -946,7 +935,6 @@ document.addEventListener("DOMContentLoaded",function(){
             <p>Never lose a lead again. Every enquiry gets an instant reply in seconds, a quality score, and an owner alert &mdash; more jobs, more revenue, no extra staff.</p>
             <p class="sh-card-price">Book a Demo Call for pricing</p>
             <p class="sh-card-care">Care plans available · Tested live on our website</p>
-            <p><span class="sh-sale">20% off setup — ends 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Get a Quote <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">AI Agent · Lead Automation</p>
@@ -1020,7 +1008,7 @@ document.addEventListener("DOMContentLoaded",function(){
                 <p>Problems, features, safety rules, limits and FAQ — read the full 7-page detail, or download it below:</p>
                 <div class="dm-btns"><a class="btn btn--grad" href="/DevZink-Lead-Automation-Details.pdf" target="_blank" rel="noopener">Open Product Details (PDF) <span class="arrow" aria-hidden="true">↗</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Details.pdf" download="DevZink-Lead-Automation-Details.pdf">Download Product Details (PDF) <span class="arrow" aria-hidden="true">↓</span></a><a class="btn btn--ghost" href="/DevZink-Lead-Automation-Setup-Guide.pdf" download="DevZink-Lead-Automation-Setup-Guide.pdf">Download Setup Guide (PDF) <span class="arrow" aria-hidden="true">↓</span></a></div>
               </div>
-              <p class="dm-price-note">Live in 3–5 days (Starter) · 7 days close support after launch. <b>20% off setup until 30 Nov 2026.</b></p>
+              <p class="dm-price-note">Live in 3–5 days (Starter) · 7 days close support after launch.</p>
               <div class="dm-cta"><div><h3>Ready to stop losing leads?</h3><p>Book your free 20-minute setup call. We confirm the fit and the package, you share the checklist, we build and test — then you approve before anything goes live.</p></div><div class="dm-btns"><a class="btn btn--grad" href="https://calendly.com/devzink/30min" target="_blank" rel="noopener">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
           </div></div>
@@ -1034,7 +1022,6 @@ document.addEventListener("DOMContentLoaded",function(){
             <p>Customers get answers instantly, day or night — so they buy instead of leaving. Your team only handles the questions that need a human.</p>
             <p class="sh-card-price">Book a Demo Call for pricing</p>
             <p class="sh-card-care">Care plans available · Built and tested</p>
-            <p><span class="sh-sale">20% off setup — ends 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Get a Quote <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">AI Agent · Customer Support</p>
@@ -1102,7 +1089,7 @@ document.addEventListener("DOMContentLoaded",function(){
                   </article>
                 </div>
               </div>
-              <p class="dm-price-note">Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
+              <p class="dm-price-note">Live in about 1 week (Starter).</p>
               <div class="dm-cta"><div><h3>Want this on your website?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it with your own content. Only need one part of this system — for example just the follow-ups? Mention it on the call and we will scope just that piece.</p></div><div class="dm-btns"><a class="btn btn--grad" href="https://calendly.com/devzink/30min" target="_blank" rel="noopener">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
           </div></div>
@@ -1116,7 +1103,6 @@ document.addEventListener("DOMContentLoaded",function(){
             <p>Win back the sales you’re already losing. Timed reminders bring shoppers back to buy — recovered revenue, automatically.</p>
             <p class="sh-card-price">Book a Demo Call for pricing</p>
             <p class="sh-card-care">Care plans available · Built and tested</p>
-            <p><span class="sh-sale">20% off setup — ends 30 Nov 2026</span></p>
             <div class="x-more"><a class="btn btn--grad" href="/contact#book">Get a Quote <span class="arrow" aria-hidden="true">→</span></a><button class="btn btn--ghost case__open" type="button" aria-haspopup="dialog">Details <span class="arrow" aria-hidden="true">→</span></button></div>
             <template class="case__detail">
               <p class="mono dm-cat">Automation · E-commerce</p>
@@ -1182,7 +1168,7 @@ document.addEventListener("DOMContentLoaded",function(){
                   </article>
                 </div>
               </div>
-              <p class="dm-price-note">Live in about 1 week (Starter). <b>20% off setup until 30 Nov 2026.</b></p>
+              <p class="dm-price-note">Live in about 1 week (Starter).</p>
               <div class="dm-cta"><div><h3>Want your carts back?</h3><p>Book a free 20-minute call. We confirm the fit and the package, then build and test it on your store.</p></div><div class="dm-btns"><a class="btn btn--grad" href="https://calendly.com/devzink/30min" target="_blank" rel="noopener">Book a free setup call <span class="arrow" aria-hidden="true">→</span></a></div></div>
             </template>
           </div></div>
