@@ -1,6 +1,6 @@
 # DevZink Website
 
-The DevZink agency website — AI Agents & Automation, AI Product Engineering, Web & App Development.
+The DevZink agency website — AI Agents & Automation and AI Web Engineering.
 
 **Live:** https://devzink.com
 
@@ -14,7 +14,7 @@ This repository is connected to Cloudflare: **every push to `main` deploys autom
 
 ## Structure
 
-- `index.html`, `services.html`, `ai-automation.html`, `web-app-development.html`, `work.html`, `about.html`, `contact.html` — the 7 pages (flat root, clean URLs)
+- `index.html`, `services.html`, `ai-automation.html`, `ai-web-engineering.html`, `work.html`, `about.html`, `contact.html`, `shop.html` — the 8 pages (flat root, clean URLs)
 - `cookie-consent.js` — consent banner, posts records to `/api/consent`
 - `*.woff2` — self-hosted fonts (Clash Display, General Sans, JetBrains Mono)
 - `favicon*`, `apple-touch-icon.png`, `logo-512.png`, `og-image.png` — brand assets
