@@ -650,6 +650,10 @@ document.addEventListener("DOMContentLoaded",function(){
               <p class="x-err" id="e-email" aria-live="polite"><span></span></p>
             </div>
             <div class="x-f x-f--full">
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder=" " />
+              <label for="f-phone">Phone <small>(optional)</small></label>
+            </div>
+            <div class="x-f x-f--full">
               <input id="f-company" name="company" type="text" autocomplete="organization" placeholder=" " />
               <label for="f-company">Company</label>
             </div>
@@ -880,6 +884,7 @@ document.querySelector("#contact-form").addEventListener("submit", function(e) {
   const data = {
     name: document.querySelector('[name="name"]').value,
     email: document.querySelector('[name="email"]').value,
+    phone: document.querySelector('[name="phone"]')?.value || "",
     company: document.querySelector('[name="company"]')?.value || "",
     service_interest: document.querySelector('[name="service"]')?.value || "",
     budget_range: document.querySelector('[name="budget"]')?.value || "",
