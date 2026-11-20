@@ -120,7 +120,7 @@ var PAGE_HDR = {
   "X-Permitted-Cross-Domain-Policies": "none"
 };
 
-var csp_default = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://n8n.devzink.com https://api.web3forms.com https://calendly.com https://*.calendly.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; frame-src https://calendly.com https://*.calendly.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests";
+var csp_default = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://n8n.devzink.com https://api.web3forms.com https://calendly.com https://*.calendly.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://cloudflareinsights.com; frame-src https://calendly.com https://*.calendly.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests";
 
 // Same routing/header/cache behaviour as the deployed bundle, but assets come
 // from the ASSETS binding (the ./site directory) instead of embedded imports.
